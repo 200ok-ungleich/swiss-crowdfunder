@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 20170917152021) do
 
   create_table "campaigns", force: :cascade do |t|
     t.integer "goal"
-    t.datetime "start"
-    t.datetime "end"
+    t.date "start"
+    t.date "end"
     t.string "title"
     t.string "youtube_url"
     t.datetime "created_at", null: false
