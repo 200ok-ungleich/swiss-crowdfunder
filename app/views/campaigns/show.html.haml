@@ -1,5 +1,10 @@
 %p#notice= notice
 
+- unless @campaign.youtube_url.empty?
+  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src =>  @campaign.youtube_url, :width => "560"}
+- else
+  %img{src: "http://placekitten.com/g/560/315"}
+
 %p
   %b Goal:
   = @campaign.goal
@@ -12,9 +17,6 @@
 %p
   %b Title:
   = @campaign.title
-%p
-  %b Youtube url:
-  = @campaign.youtube_url
 
 %h1 Listing goodies
 
@@ -26,7 +28,6 @@
       %th Image
       %th Price
       %th Quantity
-      %th Campaign
       %th
       %th
       %th
@@ -39,4 +40,3 @@
         %td= goodie.image
         %td= goodie.price
         %td= goodie.quantity
-        %td= goodie.campaign_id

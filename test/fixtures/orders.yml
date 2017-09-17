@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantity: 1
+  amount: 1
+  payment_type: MyString
+  paid: false
+
+two:
+  quantity: 1
+  amount: 1
+  payment_type: MyString
+  paid: false

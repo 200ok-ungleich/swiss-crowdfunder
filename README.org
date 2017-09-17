@@ -14,4 +14,8 @@ rails s
 
 ** TODOs
 
-*** TODO More secret creation of Admin User than through =db/seeds.rb=
+
+*** PROJECT Secret Keys
+
+- [ ]  More secret creation of Admin User than through =db/seeds.rb=
+- [ ]  More secret devise keys than in =config/devise.rb=
