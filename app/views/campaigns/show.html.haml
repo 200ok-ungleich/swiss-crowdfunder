@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Goal:
+  = @campaign.goal
+%p
+  %b Start:
+  = @campaign.start
+%p
+  %b End:
+  = @campaign.end
+%p
+  %b Title:
+  = @campaign.title
+%p
+  %b Youtube url:
+  = @campaign.youtube_url
+
+= link_to 'Edit', edit_campaign_path(@campaign)
+\|
+= link_to 'Back', campaigns_path
