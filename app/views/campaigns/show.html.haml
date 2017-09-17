@@ -1,49 +1,62 @@
 %p#notice= notice
 
-- unless @campaign.youtube_url.empty?
-  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src =>  @campaign.youtube_url, :width => "560"}
-- else
-  %img{src: "http://placekitten.com/g/560/315"}
 
-%p
-  %b Our funding goal is:
-  = @campaign.goal
+/ Main jumbotron for a primary marketing message or call to action
+.container
+  .row
+    %h1
+      = @campaign.title
 
-%p
-  %b We have reached:
-  = @campaign.amount_raised
+  .row
+    %p
+      = @campaign.description
+  .row
+    .col-lg-6
+      - unless @campaign.youtube_url.empty?
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src =>  @campaign.youtube_url, :width => "560"}
+      - else
+        %img{src: "http://placekitten.com/g/560/315"}
 
-  %progress{max: @campaign.goal, value: @campaign.amount_raised}
+    .col-lg-6
+      %p
+        %b Our funding goal is:
+        = @campaign.goal
 
-%p
-  %b Start:
-  = @campaign.start
-%p
-  %b End:
-  = @campaign.end
-%p
-  %b Title:
-  = @campaign.title
+      %p
+        %b We have reached:
+        = @campaign.amount_raised
 
-%h1 Listing goodies
+      %progress{max: @campaign.goal, value: @campaign.amount_raised}
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Description
-      %th Image
-      %th Price
-      %th Quantity
-      %th
-      %th
-      %th
+      %p
+        %b Start:
+        = @campaign.start
+      %p
+        %b End:
+        = @campaign.end
 
-  %tbody
+      %p
+        %a.btn.btn-primary.btn-lg{:href => "#", :role => "button"} Support the project »
+.container
+
+  %hr/
+
+
+  %h1 Goodies
+
+  .row
     - @campaign.goodies.each do |goodie|
-      %tr
-        %td= goodie.title
-        %td= goodie.description
-        %td= goodie.image
-        %td= goodie.price
-        %td= goodie.quantity
+      .col-md-4
+        %h2
+          = goodie.title
+        %p
+          = goodie.description
+        %p= goodie.image
+        %p= goodie.price
+        %p= goodie.quantity
+
+
+
+
+  %footer
+    %p © 200ok LLC & Ungleich LLC 2017
