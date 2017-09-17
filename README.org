@@ -14,6 +14,9 @@ rails s
 
 ** TODOs
 
+*** TODO i18n all the strings
+
+*** TODO Add Boostrap
 
 *** PROJECT Secret Keys
 

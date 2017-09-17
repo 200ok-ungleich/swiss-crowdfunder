@@ -3,6 +3,10 @@ class Campaign < ApplicationRecord
 
   before_save :use_youtube_embedd_url
 
+  def amount_raised
+    goodies.reduce { |g| g.orders.sum(&:amount) }
+  end
+
   private
 
   # Regular Youtube URLs cannot be embedded into an iframe

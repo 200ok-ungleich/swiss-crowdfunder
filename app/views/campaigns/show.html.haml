@@ -6,8 +6,15 @@
   %img{src: "http://placekitten.com/g/560/315"}
 
 %p
-  %b Goal:
+  %b Our funding goal is:
   = @campaign.goal
+
+%p
+  %b We have reached:
+  = @campaign.amount_raised
+
+  %progress{max: @campaign.goal, value: @campaign.amount_raised}
+
 %p
   %b Start:
   = @campaign.start
