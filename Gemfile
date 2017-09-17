@@ -13,6 +13,9 @@ gem 'sqlite3'
 # Unicorn as app
 gem 'unicorn'
 
+# Postgres
+gem 'pg'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
