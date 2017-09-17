@@ -15,3 +15,31 @@
 %p
   %b Youtube url:
   = @campaign.youtube_url
+
+-# %h1 Listing goodies
+
+-# %table
+-#   %thead
+-#     %tr
+-#       %th Title
+-#       %th Description
+-#       %th Image
+-#       %th Price
+-#       %th Quantity
+-#       %th Campaign
+-#       %th
+-#       %th
+-#       %th
+
+-#   %tbody
+-#     - @goodies.each do |goodie|
+-#       %tr
+-#         %td= goodie.title
+-#         %td= goodie.description
+-#         %td= goodie.image
+-#         %td= goodie.price
+-#         %td= goodie.quantity
+-#         %td= goodie.campaign_id
+-#         %td= link_to 'Show', goodie
+-#         %td= link_to 'Edit', edit_goodie_path(goodie)
+-#         %td= link_to 'Destroy', goodie, method: :delete, data: { confirm: 'Are you sure?' }
