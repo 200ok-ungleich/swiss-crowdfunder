@@ -10,7 +10,19 @@ rails s
 
 #+END_SRC
 
+**
 
+** Deployment
+
+#+BEGIN_SRC sh
+ssh app@crowdfunding.ungleich.ch
+
+cd crowdfunding
+git pull
+rake assets:precompile
+SECRET_KEY_BASE=f8ff44b8554e86dbc136671a17e5dfff6530cd34f6ae35631d7a421d136ef96899813d3ccfa06e99ef42ccc576808b013193a875e4ab4e5eca85d843210a645b unicorn_wrapper restart
+
+#+END_SRC
 
 ** TODOs
 
@@ -22,3 +34,4 @@ rails s
 
 - [ ]  More secret creation of Admin User than through =db/seeds.rb=
 - [ ]  More secret devise keys than in =config/devise.rb=
+- [ ] Do not expose =SECRET_KEY_BASE= in this README
