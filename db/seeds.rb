@@ -1,5 +1,5 @@
 if Rails.env.development?
-  AdminUser.create! email: 'admin@example.com',
-    password: 'password',
-    password_confirmation: 'password'
+  AdminUser.create! email: 'info@ungleich.ch',
+    password: 'thahph6AuhieLu6j',
+    password_confirmation: 'thahph6AuhieLu6j'
 end
