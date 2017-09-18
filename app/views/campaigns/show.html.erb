@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <h1>
+      <div class="col-xs-12 col-centered">
+        <%= @campaign.title %>
+      </div>
+    </h1>
+  </div>
+  <div class="row">
+    <p>
+      <div class="col-xs-12 col-centered">
+        <%= @campaign.description %>
+      </div>
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <% unless @campaign.youtube_url.empty? %>
+        <iframe frameborder="0" height="315" src="<%= @campaign.youtube_url %>" width="560"></iframe>
+      <% else %>
+        <img src="http://placekitten.com/g/560/315"/>
+      <% end %>
+    </div>
+    <div class="col-lg-6">
+      <p>
+        <b>Our funding goal is:</b>
+        <%= @campaign.goal %>
+      </p>
+      <p>
+        <b>We have reached:</b>
+        <%= @campaign.amount_raised %>
+      </p>
+      <progress max="<%= @campaign.goal %>" value="<%= @campaign.amount_raised %>"></progress>
+      <p>
+        <b>Start:</b>
+        <%= @campaign.start %>
+      </p>
+      <p>
+        <b>End:</b>
+        <%= @campaign.end %>
+      </p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Support the project</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <hr/>
+  <h1>Goodies</h1>
+  <div class="row">
+    <% @campaign.goodies.each do |goodie| %>
+      <div class="col-md-4">
+        <h2>
+          <%= goodie.title %>
+        </h2>
+        <p>
+          <%= goodie.description %>
+        </p>
+        <p>
+          <%= goodie.image %>
+        </p>
+        <p>
+          <%= goodie.price %>
+        </p>
+        <p>
+          <%= goodie.quantity %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
+<footer>
+  <p>© 2200ok LLC & Ungleich LLC 2017</p>
+</footer>

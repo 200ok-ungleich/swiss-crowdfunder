@@ -1,0 +1,38 @@
+<h1>
+  <%= "Goodies for: " + @goodies.first.campaign.title %>
+</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @goodies.each do |goodies| %>
+      <tr>
+        <td>
+          <%= goodies.title %>
+        </td>
+        <td>
+          <%= goodies.description %>
+        </td>
+        <td>
+          <%= goodies.image %>
+        </td>
+        <td>
+          <%= goodies.price %>
+        </td>
+        <td>
+          <%= goodies.quantity %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<h2>Stripe Payment</h2>
+<h2>Bank Payment</h2>
+<%= link_to "Kaufen" %>
