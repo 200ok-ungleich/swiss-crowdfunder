@@ -1,0 +1,52 @@
+<div class="site-wrapper">
+
+  <div class="site-wrapper-inner">
+
+    <div class="cover-container">
+
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">
+            <%= image_tag "fridolin.png", size: 46 %>
+          </h3>
+          <nav class="nav nav-masthead">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="inner cover">
+
+        <h1 class="cover-heading">Glarner Crowdfunding</h1>
+        <p class="lead">Featuring the best projects!</p>
+
+        <div class="row campaign center-block mt-5">
+          <%- if !@campaigns %>
+            There are no campaigns currently featured.
+          <%- end %>
+          <% @campaigns.each do |campaign| %>
+            <div>
+              <h2>
+                <%= campaign.title %>
+              </h2>
+              <p>
+                <%= campaign.description %>
+                </p>
+                <p class="lead">
+                  <a href="<%= campaign_path(campaign)%>"
+                     class="btn btn-lg btn-secondary">
+                    Learn more
+                  </a>
+                </p>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
