@@ -1,42 +1,37 @@
-<h1>
-  <%= "Goodies for: " + @goodies.first.campaign.title %>
-</h1>
+<div class="container">
+  <div class="row center-block">
+    <h1>
+      <div class="col-xs-12 col-centered">
+        <%= @campaign.title %>
+      </div>
+    </h1>
+  </div>
+  <div class="row center-block">
+    <p>
+      <div class="col-xs-12 col-centered">
+        <%= @campaign.claim %>
+      </div>
+    </p>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Price</th>
-      <th>Quantity</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @goodies.each do |goodies| %>
-      <tr>
-        <td>
-          <%= goodies.title %>
-        </td>
-        <td>
-          <%= goodies.description %>
-        </td>
-        <td>
-          <%= goodies.image %>
-        </td>
-        <td>
-          <%= goodies.price %>
-        </td>
-        <td>
-          <%= goodies.quantity %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<h2>Stripe Payment</h2>
+<h1>Support this project</h1>
 
-<h2>Bank Payment</h2>
+<% @goodies.each do |goodie| %>
 
-<%= link_to "Kaufen" %>
+  <div class="card" style="width: 20rem;">
+    <img class="card-img-top" src="<%= image_url(goodie) %>">
+    <div class="card-block">
+      <h4 class="card-title">
+        <%= goodie.title %>
+      </h4>
+      <p class="card-text"><%= goodie.description %></p>
+      <p>Price: <%= goodie.price %></p>
+      <!-- TODO: Show only remaining quantity -->
+      <p>Quantity: <%= goodie.quantity %></p>
+      <a href="#" class="btn btn-primary">Pledge</a>
+      </div>
+      </div>
+
+<% end %>
