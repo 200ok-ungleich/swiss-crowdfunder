@@ -23,6 +23,11 @@ guard
 For Emacs Users: When using `enh-ruby-mode`, this will also
 automatically color your status bar either green on success or red on error.
 
+** Live Reload
+
+Using the Gems =guard-livereload= and =rack-livereload=, development
+and saving of =*.erb= files will reload your browser.
+
 ** Deployment
 
 #+BEGIN_SRC sh :dir /ssh:app@crowdfunding.ungleich.ch:/home/app/crowdfunding
