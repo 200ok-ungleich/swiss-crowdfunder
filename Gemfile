@@ -51,6 +51,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6'
   gem 'guard-rspec', require: false
+  gem "rack-livereload"
+  gem 'guard-livereload', '~> 2.5', require: false
 end
 
 group :development do
