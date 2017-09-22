@@ -10,7 +10,16 @@ rails s
 
 #+END_SRC
 
-**
+** Run tests
+
+Automatically run tests while development
+
+#+BEGIN_SRC sh
+guard
+#+END_SRC
+
+For Emacs Users: When using `enh-ruby-mode`, this will also
+automatically color your status bar either green on success or red on error.
 
 ** Deployment
 
@@ -28,9 +37,13 @@ SECRET_KEY_BASE=f8ff44b8554e86dbc136671a17e5dfff6530cd34f6ae35631d7a421d136ef968
 
 ** TODOs
 
-*** TODO i18n all the strings
+*** TODO Scope styling to Controller
 
-*** TODO Add Boostrap
+*** TODO Implement Stripe
+
+*** TODO Implement Bank Transfer
+
+*** TODO i18n all the strings
 
 *** PROJECT Secret Keys
 
