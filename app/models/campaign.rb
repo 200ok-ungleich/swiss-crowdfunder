@@ -11,7 +11,7 @@ class Campaign < ApplicationRecord
 
   # Regular Youtube URLs cannot be embedded into an iframe
   def use_youtube_embedd_url
-    if youtube_url.include? "watch"
+    if youtube_url =~ /watch/
       youtube_url.sub!("watch?v=", "embed/")
     end
   end
