@@ -1,5 +1,7 @@
 * README
 
+[[https://gitlab.com/200ok/crowdfunding/commits/master][[[https://gitlab.com/200ok/crowdfunding/badges/master/pipeline.svg]]]]
+
 ** Setup
 
 #+BEGIN_SRC sh
