@@ -3,7 +3,7 @@ ActiveAdmin.register Campaign do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
   permit_params :goal, :start_date, :end_date, :title, :youtube_url,
-  :description
+  :description, :claim
 #
 # or
 #
