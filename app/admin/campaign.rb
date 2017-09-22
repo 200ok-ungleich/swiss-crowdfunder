@@ -15,13 +15,14 @@ ActiveAdmin.register Campaign do
 
   form do |f|
     inputs do
-      title
-      goal
-      start_date
-      end_date
-      youtube_url
-      description
+      input :title
+      input :goal
+      input :start_date
+      input :end_date
+      input :youtube_url
+      input :description, label: "Description(Markdown)"
     end
+    actions
   end
 
 end
