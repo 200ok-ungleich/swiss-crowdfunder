@@ -5,6 +5,13 @@ before_script:
   - gem install bundler --no-ri --no-rdoc
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
 
+# Cache gems in between builds
+cache:
+  paths:
+    - vendor/ruby
+
 rspec:
   script:
+    - bundle exec rails db:migrate
+    - bundle exec rails db:seed
     - bundle exec rspec
