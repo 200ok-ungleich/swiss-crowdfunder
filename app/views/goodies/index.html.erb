@@ -18,9 +18,19 @@
 
 <h1>Support this project</h1>
 
+
+<div class="card mt-5" style="width: 20rem;">
+  <div class="card-block">
+    <h4 class="card-title">
+      Make a pledge without reward.
+    </h4>
+    <a href="#" class="btn btn-primary">Pledge</a>
+  </div>
+</div>
+
 <% @goodies.each do |goodie| %>
 
-  <div class="card" style="width: 20rem;">
+  <div class="card mt-5" style="width: 20rem;">
     <img class="card-img-top" src="<%= image_url(goodie) %>">
     <div class="card-block">
       <h4 class="card-title">
@@ -31,7 +41,7 @@
       <!-- TODO: Show only remaining quantity -->
       <p>Quantity: <%= goodie.quantity %></p>
       <a href="#" class="btn btn-primary">Pledge</a>
-      </div>
-      </div>
+    </div>
+  </div>
 
 <% end %>
