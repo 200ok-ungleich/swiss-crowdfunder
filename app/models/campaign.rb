@@ -1,6 +1,8 @@
 class Campaign < ApplicationRecord
   has_many :goodies
 
+  validates_presence_of :description
+
   before_save :use_youtube_embedd_url
 
   before_save :convert_description
