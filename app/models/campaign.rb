@@ -4,7 +4,7 @@ class Campaign < ApplicationRecord
   before_save :use_youtube_embedd_url
 
   def amount_raised
-    goodies.reduce { |g| g.orders.sum(&:amount) }
+    goodies.reduce(0) { |sum, g| g.orders.sum(&:amount) if g.orders }
   end
 
   private
