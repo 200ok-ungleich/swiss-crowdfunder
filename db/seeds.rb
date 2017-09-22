@@ -3,6 +3,7 @@ AdminUser.create! email: 'info@ungleich.ch',
   password_confirmation: 'thahph6AuhieLu6j'
 
 Campaign.create! title: "Data Center Light",
+  claim: "The best hosting in the world",
   description: """You're going to need it, because:
 
   - It's the best

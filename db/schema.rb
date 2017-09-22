@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170922084615) do
+ActiveRecord::Schema.define(version: 20170922095416) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20170922084615) do
     t.datetime "updated_at", null: false
     t.text "description"
     t.text "description_html"
+    t.text "claim"
   end
 
   create_table "goodies", force: :cascade do |t|
