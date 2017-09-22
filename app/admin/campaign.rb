@@ -16,6 +16,7 @@ ActiveAdmin.register Campaign do
   form do |f|
     inputs do
       input :title
+      input :claim
       input :goal
       input :start_date
       input :end_date
