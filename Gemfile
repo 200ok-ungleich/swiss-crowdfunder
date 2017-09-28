@@ -27,6 +27,7 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'devise'
 gem 'activeadmin'
 gem 'redcarpet'
+gem 'simple_form'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
