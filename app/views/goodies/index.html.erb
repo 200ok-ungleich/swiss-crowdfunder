@@ -39,7 +39,7 @@
       <p>Price: <%= goodie.price %></p>
       <!-- TODO: Show only remaining quantity -->
       <p>Quantity: <%= goodie.quantity %></p>
-      <a href="#" class="btn btn-primary">Pledge</a>
+      <%= link_to "Pledge", campaign_goodie_orders_path(@campaign, goodie), class: "btn btn-primary" %>
     </div>
   </div>
 
