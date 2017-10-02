@@ -12,7 +12,10 @@ RSpec.describe Campaign, type: :model do
     it "works for one goody/one order" do
       campaign = Campaign.create! title: "foo", description: "bar"
       goody = Goody.create! title: "goody1", campaign: campaign
-      goody.orders.create! payment_type: "stripe", quantity: 1, amount: 123
+      goody.orders.create! payment_type: "stripe",
+        quantity: 1,
+        amount: 123,
+        agreement: true
       expect(campaign.amount_raised).to eq(123)
     end
 
@@ -21,10 +24,10 @@ RSpec.describe Campaign, type: :model do
       goody1 = Goody.create! title: "goody1", campaign: campaign
       goody2 = Goody.create! title: "goody2", campaign: campaign
       goody3 = Goody.create! title: "goody3", campaign: campaign
-      goody1.orders.create! payment_type: "stripe", quantity: 1, amount: 10
+      goody1.orders.create! payment_type: "stripe", quantity: 1, amount: 10, agreement: true
       # goody2 has no orders
-      goody3.orders.create! payment_type: "stripe", quantity: 1, amount: 30
-      goody3.orders.create! payment_type: "stripe", quantity: 1, amount: 40
+      goody3.orders.create! payment_type: "stripe", quantity: 1, amount: 30, agreement: true
+      goody3.orders.create! payment_type: "stripe", quantity: 1, amount: 40, agreement: true
       expect(campaign.amount_raised).to eq(80)
     end
   end
