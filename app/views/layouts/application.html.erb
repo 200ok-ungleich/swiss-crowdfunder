@@ -7,15 +7,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <% if Rails.env.development? %>
+    <% unless Rails.env.development? %>
       <!-- Global Site Tag (gtag.js) - Google Analytics -->
-      <script src="https://www.googletagmanager.com/gtag/js?id=UA-62285904-11"></script>
+      <script src="https://www.googletagmanager.com/gtag/js?id=UA-107377421-1"></script>
       <script>
 
        function gtag(){dataLayer.push(arguments)};
        gtag('js', new Date());
 
-       gtag('config', 'UA-62285904-11');
+       gtag('config', 'UA-107377421-1');
       </script>
     <% end %>
 
