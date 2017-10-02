@@ -8,21 +8,40 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <% if Rails.env.development? %>
-      <!-- Global Site Tag (gtag.js) - Google Analytics
-      -->
+      <!-- Global Site Tag (gtag.js) - Google Analytics -->
       <script src="https://www.googletagmanager.com/gtag/js?id=UA-62285904-11"></script>
       <script>
 
-        function gtag(){dataLayer.push(arguments)};
-        gtag('js', new Date());
+       function gtag(){dataLayer.push(arguments)};
+       gtag('js', new Date());
 
-        gtag('config', 'UA-62285904-11');
+       gtag('config', 'UA-62285904-11');
       </script>
     <% end %>
 
   </head>
   <body class="<%= [controller_name, action_name] * '-' %>">
-    <%= yield %>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">
+                <%= link_to image_tag("fridolin.png", size: 46), root_path %>
+              </h3>
+              <nav class="nav nav-masthead">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Contact</a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
 
