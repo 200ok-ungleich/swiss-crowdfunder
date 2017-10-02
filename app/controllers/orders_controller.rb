@@ -1,14 +1,14 @@
 class OrdersController < ApplicationController
 
   def create
-    @goodie = Goodie.find(params[:goodie_id])
+    @goody = Goody.find(params[:goody_id])
   end
 
   def index
-    @goodie = Goodie.find(params[:goodie_id])
-    @order = Order.new goodie: @goodie,
-      goodie: @goodie,
-      amount: @goodie.price,
+    @goody = Goody.find(params[:goody_id])
+    @order = Order.new goody: @goody,
+      goody: @goody,
+      amount: @goody.price,
       payment_type: "stripe",
       paid: false,
       quantity: 1

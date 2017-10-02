@@ -5,5 +5,4 @@ require_relative 'application'
 Rails.application.initialize!
 
 ActiveSupport::Inflector.inflections do |inflect|
-  inflect.irregular 'goodie', 'goodies'
 end

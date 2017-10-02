@@ -55,22 +55,22 @@
   <hr/>
   <h1>Goodies</h1>
   <div class="row">
-    <% @campaign.goodies.each do |goodie| %>
+    <% @campaign.goodies.each do |goody| %>
       <div class="col-md-4">
         <h2>
-          <%= goodie.title %>
+          <%= goody.title %>
         </h2>
         <p>
-          <%= goodie.description %>
+          <%= goody.description %>
         </p>
         <p>
-          <%= goodie.image %>
+          <%= goody.image %>
         </p>
         <p>
-          <%= goodie.price %>
+          <%= goody.price %>
         </p>
         <p>
-          <%= goodie.quantity %>
+          <%= goody.quantity %>
         </p>
       </div>
     <% end %>

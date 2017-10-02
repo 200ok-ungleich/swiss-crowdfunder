@@ -3,14 +3,14 @@
   <h2>Verfication</h2>
 
   <p>
-    You have selected the package <b> <%= @goodie.title %> </b>.
+    You have selected the package <b> <%= @goody.title %> </b>.
   </p>
 
   <p>
-    You hereby acknowledge that you will want to pay <b><%= @goodie.price %>CHF</b> for it.
+    You hereby acknowledge that you will want to pay <b><%= @goody.price %>CHF</b> for it.
   </p>
 
-  <%= simple_form_for [@goodie.campaign, @goodie, @order] do |f| %>
+  <%= simple_form_for [@goody.campaign, @goody, @order] do |f| %>
     <%= f.input :agreement, required: true, label: "I agree and want to support this project" %>
     <%= f.submit %>
   <% end %>

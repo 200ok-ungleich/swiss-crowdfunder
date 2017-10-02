@@ -27,19 +27,19 @@
      </div>
      </div> -->
 
-<% @goodies.each do |goodie| %>
+<% @goodies.each do |goody| %>
 
   <div class="card mt-5" style="width: 20rem;">
-    <img class="card-img-top" src="<%= image_url(goodie) %>">
+    <img class="card-img-top" src="<%= image_url(goody) %>">
     <div class="card-block">
       <h4 class="card-title">
-        <%= goodie.title %>
+        <%= goody.title %>
       </h4>
-      <p class="card-text"><%= goodie.description %></p>
-      <p>Price: <%= goodie.price %></p>
+      <p class="card-text"><%= goody.description %></p>
+      <p>Price: <%= goody.price %></p>
       <!-- TODO: Show only remaining quantity -->
-      <p>Quantity: <%= goodie.quantity %></p>
-      <%= link_to "Pledge", campaign_goody_orders_path(@campaign, goodie), class: "btn btn-primary" %>
+      <p>Quantity: <%= goody.quantity %></p>
+      <%= link_to "Pledge", campaign_goody_orders_path(@campaign, goody), class: "btn btn-primary" %>
     </div>
   </div>
 

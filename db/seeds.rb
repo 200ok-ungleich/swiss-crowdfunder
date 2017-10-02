@@ -13,19 +13,20 @@ Campaign.create! title: "Data Center Light",
   end_date: 40.days.from_now,
   youtube_url: "https://www.youtube.com/embed/X6rSpJu-tLI"
 
-Goodie.create! title: "Stickers",
+Goody.create! title: "Stickers",
   description: "We also have the best stickers",
   price: 10,
   quantity: 100,
   campaign: Campaign.first
 
-Goodie.create! title: "Gasoline",
+Goody.create! title: "Gasoline",
   description: "To remove other peoples stickers so that ours have _more_ space!",
   price: 55,
   quantity: 200,
   campaign: Campaign.first
 
-Order.create! goodie: Goodie.first,
+Order.create! goody: Goody.first,
+  agreement: true,
   quantity: 1,
   amount: 10,
   payment_type: "stripe"
