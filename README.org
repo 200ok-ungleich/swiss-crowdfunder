@@ -43,16 +43,19 @@ SECRET_KEY_BASE=f8ff44b8554e86dbc136671a17e5dfff6530cd34f6ae35631d7a421d136ef968
 
 ** TODOs
 
-*** DONE Scope styling to Controller
+*** PROJECT Ready for Demo
 
-*** TODO Implement Stripe
 
-*** TODO Implement Bank Transfer
+*** PROJECT Production Ready
 
-*** TODO i18n all the strings
-
-*** PROJECT Secret Keys
+**** TODO Implement Stripe
+**** TODO Implement Bank Transfer
+**** TODO i18n all the strings
+**** PROJECT Secret Keys
 
 - [ ]  More secret creation of Admin User than through =db/seeds.rb=
 - [ ]  More secret devise keys than in =config/devise.rb=
 - [ ] Do not expose =SECRET_KEY_BASE= in this README
+
+**** TODO Reconfigure GA link to the proper URL
+**** TODO Add CanCanCan and lock down the /whole/ application
