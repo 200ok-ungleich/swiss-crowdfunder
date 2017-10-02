@@ -13,11 +13,16 @@ class OrdersController < ApplicationController
 
     if @order.save
       @order.update_attribute :paid, true
-      render action: 'create'
+      redirect_to [@goody.campaign, @goody, @order]
     else
       render action: 'new'
     end
   end
+
+  def show
+    @goody = Goody.find(params[:goody_id])
+  end
+
 
   def new
     @goody = Goody.find(params[:goody_id])
