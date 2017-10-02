@@ -5,6 +5,5 @@ require_relative 'application'
 Rails.application.initialize!
 
 ActiveSupport::Inflector.inflections do |inflect|
-  inflect.plural(/goodie$/ ,'goodies') # criterion => criteria
-  inflect.singular(/goodies$/, 'goodie') # criteria => criterion
+  inflect.irregular 'goodie', 'goodies'
 end

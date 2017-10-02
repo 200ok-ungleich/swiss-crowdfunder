@@ -10,12 +10,9 @@
     You hereby acknowledge that you will want to pay <b><%= @goodie.price %>CHF</b> for it.
   </p>
 
-  <%= simple_form_for @order do |f| %>
-    <%= f.input :agreement, required: true, :label "I want to support the project" %>
+  <%= simple_form_for [@goodie.campaign, @goodie, @order] do |f| %>
+    <%= f.input :agreement, required: true, label: "I agree and want to support this project" %>
     <%= f.submit %>
   <% end %>
-
-  <input type="checkbox" id="agree" />
-  <label for="agree">Agree</label>
 
 </div>
