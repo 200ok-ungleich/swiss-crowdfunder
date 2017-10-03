@@ -1,23 +1,23 @@
 <div class="container">
 
-  <h2>Verfication</h2>
+  <div class="confirmation">
+    <h2>Confirmation</h2>
 
-  <p>
-    You have selected the package <b> <%= @goody.title %> </b>.
-  </p>
+    <p>
+      You have selected the package <b> <%= @goody.title %> </b>.
+    </p>
 
-  <p>
-    You hereby acknowledge that you will want to pay <b><%= @goody.price %>CHF</b> for it.
-  </p>
-
-  <div style="text-align: left">
-    <%= simple_form_for [@goody.campaign, @goody, @order] do |f| %>
-      <%= f.input :credit_card, label: "Kreditkarte" %>
-      <%= f.input :cvv, label: "CVV" %>
-      <%= f.input :ablaufdatum, as: :date, label: "Ablaufdatum" %>
-      <%= f.input :agreement, required: true, label: "I agree and want to support this project" %>
-      <%= f.submit %>
-    <% end %>
+    <p>
+      You hereby acknowledge that you will want to pay <b><%= @goody.price %>CHF</b> for it.
+    </p>
   </div>
+
+  <%= simple_form_for [@goody.campaign, @goody, @order] do |f| %>
+    <%= f.input :credit_card, label: "Kreditkarte" %>
+    <%= f.input :cvv, label: "CVV" %>
+    <%= f.input :ablaufdatum, as: :date, label: "Ablaufdatum" %>
+    <%= f.input :agreement, required: true, label: "I agree and want to support this project" %>
+    <%= f.submit %>
+  <% end %>
 
 </div>
