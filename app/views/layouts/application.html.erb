@@ -23,25 +23,23 @@
   <body class="<%= [controller_name, action_name] * '-' %>">
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">
-                <%= link_to image_tag("fridolin.png", size: 46), root_path %>
-              </h3>
-              <nav class="nav nav-masthead">
-                <%= link_to "Home",
-                root_path,
-                class: "nav-link #{current_page?(root_path) ? 'active' : ''}" %>
-                <a class="nav-link" href="#">Contact</a>
-              </nav>
-            </div>
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">
+              <%= link_to image_tag("fridolin.png", size: 46), root_path %>
+            </h3>
+            <nav class="nav nav-masthead">
+              <%= link_to "Home",
+              root_path,
+              class: "nav-link #{current_page?(root_path) ? 'active' : ''}" %>
+              <a class="nav-link" href="#">Contact</a>
+            </nav>
           </div>
+        </div>
 
-          <div class="inner cover">
-            <div class="container" >
-                <%= yield %>
-            </div>
+        <div class="inner cover">
+          <div class="container" >
+            <%= yield %>
           </div>
         </div>
       </div>

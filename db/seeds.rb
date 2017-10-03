@@ -11,7 +11,8 @@ Campaign.create! title: "Data Center Light",
   - Resistance is futile""",
   start_date: 10.days.from_now,
   end_date: 40.days.from_now,
-  youtube_url: "https://www.youtube.com/embed/X6rSpJu-tLI"
+  youtube_url: "https://www.youtube.com/embed/X6rSpJu-tLI",
+  goal: 1000
 
 Goody.create! title: "Stickers",
   description: "We also have the best stickers",
