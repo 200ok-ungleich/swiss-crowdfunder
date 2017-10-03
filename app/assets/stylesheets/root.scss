@@ -16,6 +16,8 @@ html, .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .
     color: #fff;
   }
 
+  .btn a, a.btn { color: #333; }
+
   /* Custom default button */
   .btn-secondary,
   .btn-secondary:hover,
@@ -148,11 +150,4 @@ html, .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .
     }
   }
 
-  @media (min-width: 62em) {
-    .masthead,
-    .mastfoot,
-    .cover-container {
-      width: 42rem;
-    }
-  }
 }
