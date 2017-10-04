@@ -26,8 +26,8 @@
       <div id="card-errors" role="alert"></div>
     </div>
     <br/>
-    <%= f.input :agreement, required: true, label: "I agree and want to support this project" %>
-    <%= f.submit %>
+    <%= f.input :agreement, required: true, label: "I agree and want to support this project", input_html: { class: "qa-agreement" } %>
+    <%= f.submit "Create Order", class: "qa-submit" %>
   <% end %>
 
 </div>
