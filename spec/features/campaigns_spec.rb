@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "campaigns", :type => :feature do
+describe "campaigns" do
 
   before :each do
     @campaign = Campaign.create! title: "Data Center Light",
@@ -50,6 +50,4 @@ describe "campaigns", :type => :feature do
       end.to change{Order.count}.from(0).to(1)
     end
   end
-
-
 end
