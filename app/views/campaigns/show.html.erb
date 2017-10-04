@@ -25,12 +25,17 @@
       <p>
         <b>Our funding goal is:</b>
         <%= @campaign.goal %>
+        CHF
       </p>
       <p>
         <b>We have reached:</b>
         <%= @campaign.amount_raised %>
+        CHF
       </p>
+      <p>
       <progress max="<%= @campaign.goal %>" value="<%= @campaign.amount_raised %>"></progress>
+      <%= number_to_percentage(100* (@campaign.amount_raised.to_f / @campaign.goal), precision: 1) %>
+      </p>
       <p>
         <b>Start:</b>
         <%= @campaign.start_date %>
