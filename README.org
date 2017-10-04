@@ -45,6 +45,7 @@ SECRET_KEY_BASE=f8ff44b8554e86dbc136671a17e5dfff6530cd34f6ae35631d7a421d136ef968
 
 #+BEGIN_SRC
 
+unicorn_wrapper stop
 DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 
 #+END_SRC
