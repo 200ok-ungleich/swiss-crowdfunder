@@ -1,3 +1,5 @@
+<script src="https://js.stripe.com/v3/"></script>
+
 <div class="container">
 
   <div class="confirmation">
@@ -13,9 +15,17 @@
   </div>
 
   <%= simple_form_for [@goody.campaign, @goody, @order] do |f| %>
-    <%= f.input :credit_card, label: "Kreditkarte" %>
-    <%= f.input :cvv, label: "CVV" %>
-    <%= f.input :ablaufdatum, as: :date, label: "Ablaufdatum" %>
+    <div class="form-row">
+      <label for="card-element">
+        Credit or debit card
+      </label>
+      <div id="card-element">
+        <!-- a Stripe Element will be inserted here. -->
+      </div>
+      <!-- Used to display form errors -->
+      <div id="card-errors" role="alert"></div>
+    </div>
+    <br/>
     <%= f.input :agreement, required: true, label: "I agree and want to support this project" %>
     <%= f.submit %>
   <% end %>
