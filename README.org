@@ -41,6 +41,14 @@ SECRET_KEY_BASE=f8ff44b8554e86dbc136671a17e5dfff6530cd34f6ae35631d7a421d136ef968
 
 #+RESULTS:
 
+*** Delete DB in Production
+
+#+BEGIN_SRC
+
+DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
+
+#+END_SRC
+
 ** TODOs
 
 *** PROJECT Ready for Demo
@@ -57,5 +65,5 @@ SECRET_KEY_BASE=f8ff44b8554e86dbc136671a17e5dfff6530cd34f6ae35631d7a421d136ef968
 - [ ]  More secret devise keys than in =config/devise.rb=
 - [ ] Do not expose =SECRET_KEY_BASE= in this README
 
-**** TODO Reconfigure GA link to the proper URL
 **** TODO Add CanCanCan and lock down the /whole/ application
+**** DONE Reconfigure GA link to the proper URL
