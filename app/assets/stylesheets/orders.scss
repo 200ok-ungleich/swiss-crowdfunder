@@ -3,13 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.orders-new {
-  text-align: left !important;
-
-  .confirmation {
-    text-align: center;
-  }
+#card-element {
+  width: 100% !important;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+label[for=card-element] {
+  display: block;
+  width: 100%;
+}
+
+.confirmation {
+  margin-bottom: 3em;
+  }
+
 .StripeElement {
   background-color: white;
   padding: 8px 12px;
