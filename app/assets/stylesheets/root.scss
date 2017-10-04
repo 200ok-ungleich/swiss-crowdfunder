@@ -8,9 +8,38 @@ html, .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .
 
 .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .orders-create {
 
+  main {
+    margin-top: 7em;
+
+    }
+
+  p {
+    font-size: 1em;
+  }
+
+  .container.description * {
+    font-size: 1em !important;
+    list-style: none;
+  }
+
+  .container.description h1 {
+    font-size: 2.5rem !important;
+    }
+
   .card-img-top {
     height: 100px;
-    }
+   }
+  .card {
+    margin: auto;
+    background-color: #555;
+  }
+  .card-title, .container>h1 {
+    background-color: darkgrey;
+    padding: 10px;
+  }
+  .card-text {
+    padding: 10px;
+  }
 
   background-color: #333;
   color: #fff;

@@ -46,13 +46,12 @@
   </div>
 </div>
 
-<div class="container">
-  <h2>Description</h2>
+<div class="container description">
+  <h1>Description</h1>
   <%= raw @campaign.description_html %>
 </div>
 
 <div class="container">
-  <hr/>
   <h1>Goodies</h1>
   <div class="row">
     <% @campaign.goodies.each do |goody| %>
