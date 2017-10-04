@@ -18,12 +18,21 @@ Goody.create! title: "Stickers",
   description: "We also have the best stickers",
   price: 10,
   quantity: 100,
+  image: "https://digitalglarus.ch/static/digitalglarus/img/services/network.svg",
   campaign: Campaign.first
 
 Goody.create! title: "Gasoline",
   description: "To remove other peoples stickers so that ours have _more_ space!",
   price: 55,
   quantity: 200,
+  image: "https://digitalglarus.ch/static/digitalglarus/img/services/enjoy.svg",
+  campaign: Campaign.first
+
+Goody.create! title: "Something expensive",
+  description: "Boosting morale!",
+  price: 555,
+  quantity: 200,
+  image: "https://digitalglarus.ch/static/digitalglarus/img/services/beinspired.svg",
   campaign: Campaign.first
 
 Order.create! goody: Goody.first,

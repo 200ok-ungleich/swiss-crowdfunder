@@ -2,7 +2,15 @@ html, .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .
   height: 100%;
 }
 
+.footer {
+  position: relative !important;
+}
+
 .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .orders-create {
+
+  .card-img-top {
+    height: 100px;
+    }
 
   background-color: #333;
   color: #fff;
