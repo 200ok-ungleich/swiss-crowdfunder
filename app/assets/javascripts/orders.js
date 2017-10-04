@@ -1,4 +1,4 @@
-window.onload = function() {
+jQuery(function() {
 
   var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
 
@@ -38,4 +38,4 @@ window.onload = function() {
       displayError.textContent = '';
     }
   });
-}
+});
