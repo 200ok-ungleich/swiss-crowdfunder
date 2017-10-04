@@ -31,6 +31,9 @@
         <b>We have reached:</b>
         <%= @campaign.amount_raised %>
         CHF
+      <p>
+        <b>Number of supporters:</b>
+        <%= Supporter.count %>
       </p>
       <p>
       <progress max="<%= @campaign.goal %>" value="<%= @campaign.amount_raised %>"></progress>
