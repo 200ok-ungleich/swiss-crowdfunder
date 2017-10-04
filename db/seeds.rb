@@ -39,4 +39,5 @@ Order.create! goody: Goody.first,
   agreement: true,
   quantity: 1,
   amount: 10,
+  paid: true,
   payment_type: "stripe"
