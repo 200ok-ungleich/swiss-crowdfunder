@@ -1,8 +1,24 @@
 .campaigns-show {
+
+  .claim {
+    font-size: 1.5em;
+  }
+
+  .campaign-statistics {
+    align-self: center;
+    }
+
   progress {
     background-color: #f3f3f3;
     border: 0;
     height: 18px;
     border-radius: 9px;
-    }
   }
+
+  .description {
+    padding: 2em 0;
+  }
+  .description h1 {
+    margin-bottom: 1em;
+  }
+}

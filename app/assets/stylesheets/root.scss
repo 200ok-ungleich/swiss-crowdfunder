@@ -2,8 +2,8 @@ html, .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .
   height: 100%;
 }
 
-.footer {
-  position: relative !important;
+.root-index {
+  footer { position: absolute; }
 }
 
 .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .orders-create {
@@ -18,17 +18,24 @@ html, .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .
     }
 
   p {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   .container.description * {
-    font-size: 1em !important;
+    font-size: 1.2em !important;
+    line-height: 1.2em;
     list-style: none;
   }
 
   .container.description h1 {
     font-size: 2.5rem !important;
-    }
+  }
+
+  .container>h1 {
+    background: linear-gradient(to right, #333, darkgrey, #333);
+    border-radius: 10px;
+    padding: 10px;
+  }
 
   .card-img-top {
     height: 100px;
@@ -37,7 +44,7 @@ html, .root-index, .campaigns-show, .goodies-index, .orders-new, .orders-show, .
     margin: auto;
     background-color: #555;
   }
-  .card-title, .container>h1 {
+  .card-title {
     background-color: darkgrey;
     padding: 10px;
   }
