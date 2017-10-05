@@ -3,6 +3,13 @@ en:
     index:
       support_the_project: "Support this project"
       pledge: "Pledge"
+  orders:
+    new:
+      confirmation: "Cerification"
+      selected_package: "You have selected the package"
+      i_hereby_acknowledge: "I hereby acknowledge that I want to pay <b>%{price} %{currency}</b> for it."
+      credit_card: "Credit or debit card"
+      i_agree: "I agree and want to support this project"
   campaigns:
     show:
       funding_goal: "Our funding goal is:"
