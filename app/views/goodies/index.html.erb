@@ -16,7 +16,7 @@
 </div>
 
 
-<h1>Support this project</h1>
+<h1><%= t('.support_the_project') %></h1>
 
 <!-- <div class="card mt-5" style="width: 20rem;">
      <div class="card-block">
@@ -38,9 +38,10 @@
       <div class="card-text">
         <p><%= goody.description %></p>
         <p>Price: <%= goody.price %></p>
-        <!-- TODO: Show only remaining quantity -->
         <p>Quantity: <%= goody.quantity %></p>
-        <%= link_to "Pledge", new_campaign_goody_order_path(@campaign, goody), class: "btn btn-secondary qa-pledge" %>
+        <%= link_to t('.pledge'),
+        new_campaign_goody_order_path(@campaign, goody),
+        class: "btn btn-secondary qa-pledge" %>
       </div>
     </div>
   </div>

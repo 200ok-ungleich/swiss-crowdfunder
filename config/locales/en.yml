@@ -1,9 +1,13 @@
 en:
+  goodies:
+    index:
+      support_the_project: "Support this project"
+      pledge: "Pledge"
   campaigns:
     show:
       funding_goal: "Our funding goal is:"
       funding_amount_raised: "We have reached:"
       funding_supporters: "Number of supporters:"
       support_the_project: "Support the project"
-      description: Description
-      goodies: Goodies
+      description: "Description"
+      goodies: "Goodies"
