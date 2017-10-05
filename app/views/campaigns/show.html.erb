@@ -23,16 +23,16 @@
     </div>
     <div class="col-lg-6 campaign-statistics">
       <p>
-        <b>Our funding goal is:</b>
+        <b><%= t '.funding_goal' %></b>
         <%= @campaign.goal %>
         CHF
       </p>
       <p>
-        <b>We have reached:</b>
+        <b><%= t '.funding_amount_raised' %></b>
         <%= @campaign.amount_raised %>
         CHF
       <p>
-        <b>Number of supporters:</b>
+        <b><%= t '.funding_supporters' %></b>
         <%= Supporter.count %>
       </p>
       <p>
@@ -48,22 +48,21 @@
         <%= @campaign.end_date %>
       </p>
       <p class="btn btn-secondary btn-lg" href="#" role="button">
-        <%= link_to "Support the project", campaign_goodies_path(@campaign), class: "qa-support-project" %>
+        <%= link_to t('.support_the_project'), campaign_goodies_path(@campaign), class: "qa-support-project" %>
       </p>
     </div>
   </div>
 </div>
 
 <div class="container description">
-  <h1>Description</h1>
+  <h1><%= t '.description' %></h1>
   <%= raw @campaign.description_html %>
 </div>
 
 <div class="container">
-  <h1>Goodies</h1>
+  <h1><%= t '.goodies' %></h1>
   <div class="row">
     <% @campaign.goodies.each do |goody| %>
-
 
       <div class="card mt-5" style="width: 20rem;">
         <img class="card-img-top" src="<%= image_url(goody) %>">
@@ -80,9 +79,6 @@
           </div>
         </div>
       </div>
-
-
-
     <% end %>
   </div>
 </div>
