@@ -10,6 +10,9 @@ en:
       i_hereby_acknowledge: "I hereby acknowledge that I want to pay <b>%{price} %{currency}</b> for it."
       credit_card: "Credit or debit card"
       i_agree: "I agree and want to support this project"
+    show:
+      success: "Success"
+      bought_package: "You have bought the package "
   campaigns:
     show:
       funding_goal: "Our funding goal is:"
