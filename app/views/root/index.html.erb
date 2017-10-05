@@ -1,9 +1,9 @@
- <h1 class="cover-heading">Glarner Crowdfunding</h1>
+ <h1 class="cover-heading"><%= t('.title') %></h1>
  <p class="lead">Featuring the best projects!</p>
 
  <div class="row campaign center-block mt-5">
    <%- if !@campaigns %>
-     There are no campaigns currently featured.
+     <%= t('.no_campaigns') %>
    <%- end %>
    <% @campaigns.each do |campaign| %>
      <div>
