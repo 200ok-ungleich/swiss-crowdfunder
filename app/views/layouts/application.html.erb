@@ -31,10 +31,12 @@
               <%= link_to image_tag("fridolin.png", width: 39, height: 46), root_path %>
             </h3>
             <nav class="nav nav-masthead">
-              <%= link_to "Home",
+              <%= link_to t('.home'),
               root_path,
               class: "nav-link #{current_page?(root_path) ? 'active' : ''}" %>
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#">
+                <%= t(".contact") %>
+              </a>
             </nav>
           </div>
         </div>
@@ -51,7 +53,7 @@
 
   <footer class="footer">
     <div class="container">
-      <span class="muted">© 200ok LLC & Ungleich LLC 2017</span>
+      <span class="muted">© 200ok GmbH & Ungleich GmbH 2017</span>
     </div>
   </footer>
 </html>

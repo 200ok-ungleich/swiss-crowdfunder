@@ -1,4 +1,8 @@
 en:
+  layouts:
+    application:
+      home: "Home"
+      contact: "Contact"
   root:
     index:
       title: "Glarner Crowdfunding"
