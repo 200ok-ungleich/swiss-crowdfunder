@@ -72,10 +72,12 @@
           </h4>
           <div class="card-text">
             <p><%= goody.description %></p>
-            <p>Price: <%= goody.price %></p>
+            <p><%= t(".price", price: goody.price) %></p>
             <!-- TODO: Show only remaining quantity -->
-            <p>Quantity: <%= goody.quantity %></p>
-            <%= link_to "Pledge", new_campaign_goody_order_path(@campaign, goody), class: "btn btn-secondary" %>
+            <p><%= t(".quantity", quantity: goody.quantity) %></p>
+            <%= link_to t(".pledge"),
+            new_campaign_goody_order_path(@campaign, goody),
+            class: "btn btn-secondary" %>
           </div>
         </div>
       </div>

@@ -29,3 +29,6 @@ en:
       support_the_project: "Support the project"
       description: "Description"
       goodies: "Goodies"
+      pledge: "Pledge"
+      price: "Price: %{price}"
+      quantity: "Quantity: %{quantity}"
