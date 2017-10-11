@@ -209,6 +209,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-i18n (5.0.4)
+      i18n (~> 0.7)
+      railties (~> 5.0)
     railties (5.1.4)
       actionpack (= 5.1.4)
       activesupport (= 5.1.4)
@@ -328,6 +331,7 @@ DEPENDENCIES
   pg
   rack-livereload
   rails (~> 5.1.4)
+  rails-i18n (~> 5.0.0)
   redcarpet
   rspec-rails (~> 3.6)
   sass-rails (~> 5.0)
