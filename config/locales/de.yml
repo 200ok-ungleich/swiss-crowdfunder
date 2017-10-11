@@ -1,0 +1,36 @@
+de:
+  layouts:
+    application:
+      home: "Home"
+      contact: "Kontakt"
+  root:
+    index:
+      title: "Glarner kraʊdˌfʌnd.ɪŋ"
+      no_campaigns: "Im Moment gibt es keine Projekte."
+      claim: "Mit den besten lokalen Projekten!"
+  goodies:
+    index:
+      support_the_project: "Unterstützen Sie dieses Projekt"
+      pledge: "Weiter"
+  orders:
+    new:
+      confirmation: "Bestätigung"
+      selected_package: "Sie haben folgendes Paket gewählt: "
+      i_hereby_acknowledge: "Ich bestätige hiermit <b>%{price} für %{currency}</b> zu bezahlen."
+      credit_card: "Kreditkarte"
+      i_agree: "Ich bestätige hiermit dieses Projekt unterstützen zu möchten"
+      create_order: "Unterstützen"
+    show:
+      success: "Erfolg"
+      bought_package: "Sie haben folgendes Paket erstanden:"
+  campaigns:
+    show:
+      funding_goal: "Unser Finanzierungs-Ziel sind:"
+      funding_amount_raised: "Bereits erreicht:"
+      funding_supporters: "Anzahl an Unterstützern:"
+      support_the_project: "Unterstützen Sie dieses Projekt"
+      description: "Beschreibung"
+      goodies: "Belohnung"
+      pledge: "Weiter"
+      price: "Betrag: %{price}"
+      quantity: "Anzahl: %{quantity}"

@@ -30,14 +30,14 @@ describe "campaigns" do
     scenario "confirmation page" do
       visit campaign_goodies_path([@campaign, @goody])
       find(".qa-pledge").click
-      expect(page).to have_content "Confirmation"
+      expect(page).to have_content I18n.t("orders.new.confirmation")
     end
 
     scenario "not without a agreement" do
       visit campaign_goodies_path([@campaign, @goody])
       find(".qa-pledge").click
       find(".qa-submit").click
-      expect(page).to have_content "can't be blank"
+      expect(page).to have_content I18n.t('errors.messages.blank')
     end
 
     scenario "not without a agreement" do
@@ -46,7 +46,7 @@ describe "campaigns" do
         find(".qa-pledge").click
         find(".qa-agreement").click
         find(".qa-submit").click
-        expect(page).to_not have_content "can't be blank"
+        expect(page).to_not have_content I18n.t('errors.messages.blank')
       end.to change{Order.count}.from(0).to(1)
     end
   end

@@ -7,6 +7,7 @@ en:
     index:
       title: "Glarner Crowdfunding"
       no_campaigns: "There are no campaigns currently featured."
+      claim: "Featuring the best projects!"
   goodies:
     index:
       support_the_project: "Support this project"
@@ -31,5 +32,5 @@ en:
       description: "Description"
       goodies: "Goodies"
       pledge: "Pledge"
-      price: "Price: %{price}"
+      price: "Betrag: %{price}"
       quantity: "Quantity: %{quantity}"
