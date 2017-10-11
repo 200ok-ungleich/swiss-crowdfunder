@@ -41,11 +41,11 @@
       </p>
       <p>
         <b>Start:</b>
-        <%= @campaign.start_date %>
+        <%= I18n.l @campaign.start_date %>
       </p>
       <p>
         <b>End:</b>
-        <%= @campaign.end_date %>
+        <%= I18n.l @campaign.end_date %>
       </p>
       <p class="btn btn-secondary btn-lg" href="#" role="button">
         <%= link_to t('.support_the_project'), campaign_goodies_path(@campaign), class: "qa-support-project" %>
