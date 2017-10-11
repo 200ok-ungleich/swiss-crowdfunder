@@ -3,6 +3,7 @@ de:
     application:
       home: "Home"
       contact: "Kontakt"
+      language: "Sprachauswahl"
   root:
     index:
       title: "Glarner kraʊdˌfʌnd.ɪŋ"

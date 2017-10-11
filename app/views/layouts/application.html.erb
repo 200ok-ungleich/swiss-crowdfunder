@@ -20,8 +20,8 @@
        gtag('config', 'UA-107377421-1');
       </script>
     <% end %>
-
   </head>
+
   <body class="<%= [controller_name, action_name] * '-' %>">
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
@@ -30,26 +30,43 @@
             <h3 class="masthead-brand">
               <%= link_to image_tag("fridolin.png", width: 39, height: 46), root_path %>
             </h3>
-            <nav class="nav nav-masthead">
-              <%= link_to t('.home'),
-              root_path,
-              class: "nav-link #{current_page?(root_path) ? 'active' : ''}" %>
-              <a class="nav-link" href="#">
-                <%= t(".contact") %>
-              </a>
+            <nav class="nav nav-masthead navbar-expand">
+              <ul class="navbar-nav">
+                <li>
+                  <%= link_to t('.home'),
+                  root_path,
+                  class: "nav-link #{current_page?(root_path) ? 'active' : ''}" %>
+                </li>
+                <li class="ml-2">
+                  <a class="nav-link" href="#">
+                    <%= t(".contact") %>
+                  </a>
+                </li>
+                <div class="collapse navbar-collapse ml-2" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%= t('.language') %>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <%= link_to "Deutsch", request.params.merge(locale: :de) %>
+                        <%= link_to "English", request.params.merge(locale: :en) %>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
             </nav>
           </div>
         </div>
 
         <div class="inner cover">
-          <main class="container" >
+          <main class="container">
             <%= yield %>
           </main>
         </div>
       </div>
     </div>
   </body>
-
 
   <footer class="footer">
     <div class="container">

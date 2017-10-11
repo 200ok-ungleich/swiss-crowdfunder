@@ -3,6 +3,7 @@ en:
     application:
       home: "Home"
       contact: "Contact"
+      language: "Language"
   root:
     index:
       title: "Glarner Crowdfunding"
