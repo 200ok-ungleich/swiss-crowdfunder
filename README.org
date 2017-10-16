@@ -76,14 +76,19 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
 
+**** TODO NF: Global Lock-Down
+     - [ ] Without authorization, no resource can be created
+     - [ ] Only new Orders can be created (if valid)
+     - [ ] New orders create Users implicitly
 
-**** TODO Global Lock-Down
+**** TODO As a user, when checking out a goodie, I want to give user-info: Name, E-Mail, Age
+- [ ] Validation
 
-**** TODO User-Info: Name, E-Mail, Age, Validierung
-
-**** TODO Back-Einzug
+**** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
-- Anstelle CC: Bank-Einzugs Info
+- Anstelle CC Form: Bank-Einzugs Info
+
+**** TODO NF: Eval - Users as Nested Attributes through Orders
 
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
 
