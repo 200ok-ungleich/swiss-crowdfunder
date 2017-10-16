@@ -4,13 +4,32 @@
 
 ** Setup
 
-#+BEGIN_SRC sh
+*** Install RBenv
 
-rake db:create db:migrate db:seed
+macOS: =brew install rbenv=
 
-rails s
+*** Install Ruby version 2.4.1
 
-#+END_SRC
+macOS: =rbenv install 2.4.1=
+
+*** Install bundler
+
+=gem install bundler=
+
+*** Clone the repository
+
+*** Install dependencies
+
+Within your local checkout run =bundle=.
+
+*** Migrate Database
+
+=rake db:create db:migrate db:seed=
+
+** Start Application
+
+=rails s=
+
 
 ** Run tests
 
