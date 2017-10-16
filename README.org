@@ -72,8 +72,20 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 ** TODOs
 
 *** PROJECT Ready for Ungleich Crowdfunding
+    SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
+
+
+**** TODO Global Lock-Down
+
+**** TODO User-Info: Name, E-Mail, Age, Validierung
+
+**** TODO Back-Einzug
+- Gleicher FLow wie jetzt
+- Anstelle CC: Bank-Einzugs Info
+
+**** TODO Wenn möglich: Neben Bankeinzug auch CC
 
 
 *** PROJECT Production Ready
