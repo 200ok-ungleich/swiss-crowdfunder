@@ -10,28 +10,14 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
  */
+
+// Changed the order of `require_self` and `require_tree` so that bootstrap and application wide
+// styles are loaded before controller specific styles.
+// However, try to keep the styles as less cascaded as possible, and order of included files wont matter.
 
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
-@import "root";
-
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #f5f5f5;
-    color: #111;
-}
-
-.center-block {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}

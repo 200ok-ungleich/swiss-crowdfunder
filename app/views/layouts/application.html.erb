@@ -2,33 +2,31 @@
 <html lang="<%= I18n.locale.to_s %>">
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-    <title>Crowdfunding</title>
+    <title>GlarnerCrowd</title>
+
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <% if Rails.env.development? %>
       <!-- Global Site Tag (gtag.js) - Google Analytics
       -->
       <script src="https://www.googletagmanager.com/gtag/js?id=UA-62285904-11"></script>
       <script>
-
         function gtag(){dataLayer.push(arguments)};
         gtag('js', new Date());
-
         gtag('config', 'UA-62285904-11');
       </script>
     <% end %>
-
   </head>
+
   <body class="<%= [controller_name, action_name] * '-' %>">
     <%= yield %>
+    <footer class="footer">
+      <div class="container">
+        © 200ok LLC &amp; Ungleich LLC 2017
+      </div>
+    </footer>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
-
-
-  <footer class="footer">
-    <div class="container">
-      <span class="muted">© 200ok LLC & Ungleich LLC 2017</span>
-    </div>
-  </footer>
 </html>
