@@ -22,3 +22,5 @@
 
 .byebug_history
 /app/assets/javascripts/.tern-port
+
+Gemfile.lock

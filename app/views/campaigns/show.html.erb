@@ -14,7 +14,7 @@
         <a class="nav-link" href="#">About Us</a>
       </li>
     </ul>
-    <form class="form-inline my-lg-0 topnav-search">
+    <form class="form-inline my-lg-0 topnav_search">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
@@ -23,13 +23,13 @@
 
 <div class="container">
   <h1><%= @campaign.title %></h1>
+  <p class="small mt-3 mb-4">
+    <strong><%= @campaign.claim %></strong>
+  </p>
 
-  <div class="row center-block">
-    <p><%= @campaign.claim %></p>
-  </div>
   <div class="row">
-    <div class="col-md-8">
-        <div class="embed-responsive embed-responsive-16by9">
+    <div class="col-md-7 col-lg-8">
+        <div class="embed-responsive embed-responsive-16by9 mb-5">
         <% unless @campaign.youtube_url.empty? %>
           <iframe class="embed-responsive-item" height="315" src="<%= @campaign.youtube_url %>" width="560"></iframe>
         <% else %>
@@ -37,34 +37,80 @@
         <% end %>
         </div>
     </div>
-    <div class="col">
-      <p>
-        <b>Our funding goal is:</b>
-        <%= @campaign.goal %>
-      </p>
-      <p>
-        <b>We have reached:</b>
-        <%= @campaign.amount_raised %>
-      </p>
-      <progress max="<%= @campaign.goal %>" value="<%= @campaign.amount_raised %>"></progress>
-      <p>
-        <b>Start:</b>
-        <%= @campaign.start_date %>
-      </p>
-      <p>
-        <b>End:</b>
-        <%= @campaign.end_date %>
-      </p>
-      <p class="btn btn-primary btn-lg" href="#" role="button">
-        <%= link_to "Support the project", campaign_goodies_path(@campaign) %>
-      </p>
+    <div class="col-md-5 col-lg-4">
+      <div class="progress mb-3">
+        <div class="progress-bar bg_theme progress_bar_thin" role="progressbar" style="width: 25%;"
+          aria-valuenow="<%= @campaign.amount_raised %>" aria-valuemin="0" aria-valuemax="<%= @campaign.goal %>">
+        </div>
+      </div>
+
+      <div class="text_loud">CHF <%= @campaign.amount_raised %></div>
+      <p class="text_loud_sub">pledged of CHF <%= @campaign.amount_raised %> goal</p>
+
+      <div class="text_loud">250</div>
+      <p class="text_loud_sub">backers</p>
+
+      <div class="text_loud">100</div>
+      <p class="text_loud_sub">days to go</p>
+
+      <div class="mb-3">
+        <%= link_to "Support this project", campaign_goodies_path(@campaign), class: "btn btn_theme btn-lg btn-block" %>
+      </div>
+
+      <div class="campaign_links">
+        <div class="row">
+          <div class="col col-lg-auto pr-0">
+            <a href="#" class="btn_card"><span class="fa fa-heart mr-2"></span>Remind me</a>
+          </div>
+          <div class="col pl-2">
+            <ul>
+              <li><a class="link_block" href="#"><span class="fa fa-facebook"></span></a></li>
+              <li><a class="link_block" href="#"><span class="fa fa-twitter"></span></a></li>
+              <li><a class="link_block" href="#"><span class="fa fa-envelope"></span></a></li>
+              <li><a class="link_block" href="#"><span class="fa fa-code"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <nav class="nav nav-pills nav_underlines" id="campaignTab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-campaign-tab" data-toggle="tab" href="#nav-campaign" role="tab"
+      aria-controls="nav-campaign" aria-expanded="true">Campaign</a>
+    <a class="nav-item nav-link" id="nav-faq-tab" data-toggle="tab" href="#nav-faq" role="tab"
+      aria-controls="nav-faq">FAQ</a>
+    <a class="nav-item nav-link" id="nav-updates-tab" data-toggle="tab" href="#nav-updates" role="tab"
+      aria-controls="nav-updates">Updates</a>
+    <a class="nav-item nav-link" id="nav-backers-tab" data-toggle="tab" href="#nav-backers" role="tab"
+      aria-controls="nav-backers">Backers</a>
+  </nav>
 </div>
 
+<hr class="mt-0 mb-5">
+
 <div class="container">
-  <h2>Description</h2>
-  <%= raw @campaign.description_html %>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-campaign" role="tabpanel" aria-labelledby="nav-campaign-tab">
+      <div class="row">
+        <div class="col-md-7 col-lg-8">
+          <h2>About this project</h2>
+          <article>
+            <h3>A new datacenter for canton Glarus</h3>
+            <section>
+              <%= raw @campaign.description_html %>
+            </section>
+          </article>
+        </div>
+        <div class="col-md-5 col-lg-4">
+
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">...</div>
+    <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">...</div>
+    <div class="tab-pane fade" id="nav-backers" role="tabpanel" aria-labelledby="nav-backers-tab">...</div>
+  </div>
 </div>
 
 <div class="container">
