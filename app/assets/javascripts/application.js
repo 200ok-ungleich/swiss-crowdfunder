@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= stub orders
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets

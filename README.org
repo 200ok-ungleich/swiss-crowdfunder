@@ -4,13 +4,32 @@
 
 ** Setup
 
-#+BEGIN_SRC sh
+*** Install RBenv
 
-rake db:create db:migrate db:seed
+macOS: =brew install rbenv=
 
-rails s
+*** Install Ruby version 2.4.1
 
-#+END_SRC
+macOS: =rbenv install 2.4.1=
+
+*** Install bundler
+
+=gem install bundler=
+
+*** Clone the repository
+
+*** Install dependencies
+
+Within your local checkout run =bundle=.
+
+*** Migrate Database
+
+=rake db:create db:migrate db:seed=
+
+** Start Application
+
+=rails s=
+
 
 ** Run tests
 
@@ -41,18 +60,49 @@ SECRET_KEY_BASE=f8ff44b8554e86dbc136671a17e5dfff6530cd34f6ae35631d7a421d136ef968
 
 #+RESULTS:
 
+*** Delete DB in Production
+
+#+BEGIN_SRC
+
+unicorn_wrapper stop
+DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
+
+#+END_SRC
+
 ** TODOs
 
-*** DONE Scope styling to Controller
+*** PROJECT Ready for Ungleich Crowdfunding
+    SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
-*** TODO Implement Stripe
+**** TODO Camgains#show/Goodies#index: Show original and remaining quantity
 
-*** TODO Implement Bank Transfer
+**** TODO NF: Global Lock-Down
+     - [ ] Without authorization, no resource can be created
+     - [ ] Only new Orders can be created (if valid)
+     - [ ] New orders create Users implicitly
 
-*** TODO i18n all the strings
+**** TODO As a user, when checking out a goodie, I want to give user-info: Name, E-Mail, Age
+- [ ] Validation
 
-*** PROJECT Secret Keys
+**** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
+- Gleicher FLow wie jetzt
+- Anstelle CC Form: Bank-Einzugs Info
+
+**** TODO NF: Eval - Users as Nested Attributes through Orders
+
+**** TODO Wenn möglich: Neben Bankeinzug auch CC
+
+
+*** PROJECT Production Ready
+
+**** TODO Implement Stripe
+**** TODO Implement Bank Transfer
+**** TODO i18n all the strings
+**** PROJECT Secret Keys
 
 - [ ]  More secret creation of Admin User than through =db/seeds.rb=
 - [ ]  More secret devise keys than in =config/devise.rb=
 - [ ] Do not expose =SECRET_KEY_BASE= in this README
+
+**** TODO Add CanCanCan and lock down the /whole/ application
+**** DONE Reconfigure GA link to the proper URL

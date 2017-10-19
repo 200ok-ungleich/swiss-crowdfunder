@@ -1,33 +1,37 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      home: "Home"
+      contact: "Contact"
+      language: "Language"
+  root:
+    index:
+      title: "Glarner Crowdfunding"
+      no_campaigns: "There are no campaigns currently featured."
+      claim: "Featuring the best projects!"
+  goodies:
+    index:
+      support_the_project: "Support this project"
+      pledge: "Pledge"
+  orders:
+    new:
+      confirmation: "Confirmation"
+      selected_package: "You have selected the package"
+      i_hereby_acknowledge: "I hereby acknowledge that I want to pay <b>%{price} %{currency}</b> for it."
+      credit_card: "Credit or debit card"
+      i_agree: "I agree and want to support this project"
+      create_order: "Create order"
+    show:
+      success: "Success"
+      bought_package: "You have bought the package "
+  campaigns:
+    show:
+      funding_goal: "Our funding goal is:"
+      funding_amount_raised: "We have reached:"
+      funding_supporters: "Number of supporters:"
+      support_the_project: "Support the project"
+      description: "Description"
+      goodies: "Goodies"
+      pledge: "Pledge"
+      price: "Betrag: %{price}"
+      quantity: "Quantity: %{quantity}"

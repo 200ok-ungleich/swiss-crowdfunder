@@ -1,7 +1,16 @@
 image: ruby:2.4
 
+services:
+  - postgres:latest
+
+variables:
+  POSTGRES_DB: crowdfunding_test
+  POSTGRES_USER: runner
+  POSTGRES_PASSWORD: ""
+  RAILS_ENV: test
+
 before_script:
-  - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev nodejs
+  - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev nodejs postgresql
   - ruby -v
   - which ruby
   - gem install bundler --no-ri --no-rdoc
@@ -15,5 +24,4 @@ cache:
 rspec:
   script:
     - bundle exec rails db:migrate
-    - bundle exec rails db:seed
     - bundle exec rspec

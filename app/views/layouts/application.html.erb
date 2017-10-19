@@ -11,14 +11,15 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <% if Rails.env.development? %>
-      <!-- Global Site Tag (gtag.js) - Google Analytics
-      -->
-      <script src="https://www.googletagmanager.com/gtag/js?id=UA-62285904-11"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <% unless Rails.env.development? %>
+      <!-- Global Site Tag (gtag.js) - Google Analytics -->
+      <script src="https://www.googletagmanager.com/gtag/js?id=UA-107377421-1"></script>
       <script>
         function gtag(){dataLayer.push(arguments)};
         gtag('js', new Date());
-        gtag('config', 'UA-62285904-11');
+        gtag('config', 'UA-107377421-1');
       </script>
     <% end %>
   </head>
@@ -62,7 +63,8 @@
                 English
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">German</a>
+                <%= link_to "Deutsch", request.params.merge(locale: :de), class: "dropdown-item" %>
+                <%= link_to "English", request.params.merge(locale: :en), class: "dropdown-item" %>
               </div>
             </div>
           </div>

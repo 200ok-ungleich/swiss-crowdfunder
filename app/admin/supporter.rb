@@ -1,9 +1,8 @@
-ActiveAdmin.register Goodie do
+ActiveAdmin.register Supporter do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :title, :description, :image, :price, :quantity, :campaign_id
-
+permit_params :order_id, :email
 #
 # or
 #

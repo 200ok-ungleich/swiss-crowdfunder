@@ -1,8 +1,9 @@
-ActiveAdmin.register Order do
+ActiveAdmin.register Goody do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :quantity, :amount, :payment_type, :paid, :goody_id
+  permit_params :title, :description, :image, :price, :quantity, :campaign_id
+
 #
 # or
 #

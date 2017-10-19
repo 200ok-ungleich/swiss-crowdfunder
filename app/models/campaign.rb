@@ -1,5 +1,5 @@
 class Campaign < ApplicationRecord
-  has_many :goodies
+  has_many :goodies, dependent: :destroy
 
   validates_presence_of :description
 

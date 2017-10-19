@@ -16,7 +16,7 @@
 </div>
 
 
-<h1>Support this project</h1>
+<h1><%= t('.support_the_project') %></h1>
 
 <!-- <div class="card mt-5" style="width: 20rem;">
      <div class="card-block">
@@ -27,19 +27,22 @@
      </div>
      </div> -->
 
-<% @goodies.each do |goodie| %>
+<% @goodies.each do |goody| %>
 
   <div class="card mt-5" style="width: 20rem;">
-    <img class="card-img-top" src="<%= image_url(goodie) %>">
+    <img class="card-img-top" src="<%= image_url(goody) %>">
     <div class="card-block">
       <h4 class="card-title">
-        <%= goodie.title %>
+        <%= goody.title %>
       </h4>
-      <p class="card-text"><%= goodie.description %></p>
-      <p>Price: <%= goodie.price %></p>
-      <!-- TODO: Show only remaining quantity -->
-      <p>Quantity: <%= goodie.quantity %></p>
-      <a href="#" class="btn btn-primary">Pledge</a>
+      <div class="card-text">
+        <p><%= goody.description %></p>
+        <p>Price: <%= goody.price %></p>
+        <p>Quantity: <%= goody.quantity %></p>
+        <%= link_to t('.pledge'),
+        new_campaign_goody_order_path(@campaign, goody),
+        class: "btn btn-secondary qa-pledge" %>
+      </div>
     </div>
   </div>
 

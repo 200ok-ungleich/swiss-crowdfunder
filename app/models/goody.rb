@@ -1,4 +1,4 @@
-class Goodie < ApplicationRecord
+class Goody < ApplicationRecord
   belongs_to :campaign
   has_many :orders
 

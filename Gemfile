@@ -11,11 +11,11 @@ gem 'rails', '~> 5.1.4'
 gem 'sqlite3'
 
 # Unicorn as app
-# gem 'unicorn'
+gem 'unicorn'
 
 
 # Use SCSS for stylesheets
-gem 'sassc-rails'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -27,6 +27,8 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'devise'
 gem 'activeadmin'
 gem 'redcarpet'
+gem 'simple_form'
+gem 'rails-i18n', '~> 5.0.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -47,7 +49,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
+  gem 'capybara'
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6'
   gem 'guard-rspec', require: false
@@ -62,6 +64,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry'
+  gem 'pry-doc'
 end
 
 group :production do

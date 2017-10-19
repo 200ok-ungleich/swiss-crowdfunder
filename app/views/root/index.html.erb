@@ -1,45 +1,66 @@
 <div class="site-wrapper">
   <div class="site-wrapper-inner">
-    <div class="cover-container">
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">
-            <%= image_tag "fridolin.png", size: 46 %>
-          </h3>
-          <nav class="nav nav-masthead">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="nav-link" href="#">Contact</a>
-          </nav>
-        </div>
+    <div class="masthead clearfix">
+      <div class="inner">
+        <h3 class="masthead-brand">
+          <%= link_to image_tag("fridolin.png", width: 39, height: 46), root_path %>
+        </h3>
+        <nav class="nav nav-masthead navbar-expand">
+          <ul class="navbar-nav">
+            <li>
+              <%= link_to t('.home'),
+              root_path,
+              class: "nav-link #{current_page?(root_path) ? 'active' : ''}" %>
+            </li>
+            <li class="ml-2">
+              <a class="nav-link" href="#">
+                <%= t(".contact") %>
+              </a>
+            </li>
+            <div class="collapse navbar-collapse ml-2" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <%= t('.language') %>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <%= link_to "Deutsch", request.params.merge(locale: :de) %>
+                    <%= link_to "English", request.params.merge(locale: :en) %>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </nav>
       </div>
+    </div>
 
-      <div class="inner cover">
-
-        <h1 class="cover-heading">Glarner Crowdfunding</h1>
-        <p class="lead">Featuring the best projects!</p>
+    <div class="inner cover">
+      <main class="container">
+        <h1 class="cover-heading"><%= t('.title') %></h1>
+        <p class="lead"><%= t(".claim") %></p>
 
         <div class="row campaign center-block mt-5">
           <%- if !@campaigns %>
-            There are no campaigns currently featured.
+            <%= t('.no_campaigns') %>
           <%- end %>
           <% @campaigns.each do |campaign| %>
             <div>
               <h2>
                 <%= campaign.title %>
               </h2>
-              <p>
-                <%= campaign.description %>
-                </p>
-                <p class="lead">
-                  <a href="<%= campaign_path(campaign)%>"
-                     class="btn btn-lg btn-secondary">
-                    Learn more
-                  </a>
-                </p>
+              <h4>
+                <%= campaign.claim %>
+              </h4>
+              <p class="lead">
+                <a href="<%= campaign_path(campaign)%>"
+                   class="btn btn-lg btn-secondary">
+                  Learn more
+                </a>
+              </p>
             </div>
           <% end %>
         </div>
-      </div>
+      </main>
     </div>
   </div>
 </div>
