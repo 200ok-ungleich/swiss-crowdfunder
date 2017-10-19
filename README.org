@@ -94,8 +94,9 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
 
 **** TODO Campaign Model: Introduce optional FB and Twitter Links
-**** TODO Introduce "About Us" Page without content
-**** TODO Introduce "TOS" Page without content
+
+**** DONE Introduce "About Us" Page without content
+**** DONE Introduce "TOS" Page without content
 
 *** PROJECT Production Ready
 
