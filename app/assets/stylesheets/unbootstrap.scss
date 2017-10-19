@@ -24,6 +24,11 @@ h1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
+
+  @media (min-width: 576px) {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
 }
 
 .navbar-collapse {

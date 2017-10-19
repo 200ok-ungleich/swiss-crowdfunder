@@ -25,8 +25,12 @@
 }
 
 .topnav_search {
-  .btn {
-    display: none;
+  .input-group-addon, .form-control {
+    border: 0;
+    background-color: transparent;
+  }
+  .form-control:focus, .form-control:active {
+    border-bottom-color: #80bdff;
   }
 }
 
@@ -61,6 +65,18 @@
   }
 }
 
+.btn_faded {
+  background-color: #c8cad3;
+  border: 2px solid #c8cad3;
+  color: #fff;
+
+  &:hover, &:focus {
+    transition: all linear 0.2s;
+    background-color: transparent;
+    color: #c8cad3;
+  }
+}
+
 .btn_card {
   padding: 1.25em 2em;
   box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.45);
@@ -87,12 +103,53 @@
 .side_card {
   background-color: #f8f9fd;
   border-color: #e0e3fc;
+  color: #807f9f;
   border-radius: 0;
   margin-bottom: 1.5em;
+
+  .card-body {
+    padding: 1.75rem 1.25rem;
+  }
 
   .btn_bottom {
     border-radius: 0;
     display: block;
+    font-size: 1.4em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+
+  .card-title {
+    color: #4073c9;
+    font-size: 1.25em;
+    margin-bottom: 1.25em;
+
+    &.strong {
+      font-weight: bold;
+      margin-bottom: 1.5em;
+    }
+  }
+
+  h5 {
+    font-size: 1.1em;
+    margin-bottom: 0.6em;
+    color: #5b5a5a;
+  }
+
+  .card-text {
+    margin-bottom: 1.75em;
+  }
+
+  .card_point {
+    font-size: 70%;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  time {
+    color: #1b1a1a;
+    display: block;
+    margin-bottom: 1.5em;
   }
 }
 
@@ -101,12 +158,21 @@
 .footer {
   background-color: #020522;
   color: #ccc;
-  padding: 2.5em;
+  padding: 1.5em;
+
+  @media (min-width: 576px) {
+    padding: 2.5em;
+  }
 }
 
 .footer_list {
   list-style: none;
   padding: 0;
+
+  & > li {
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+  }
 
   .list_head {
     font-size: 1.1rem;
@@ -120,7 +186,14 @@
 }
 
 .footer_brand {
-  text-align: right;
+
+  @media (min-width: 576px) {
+    text-align: right;
+  }
+
+  .list-inline {
+    display: inline-block;;
+  }
 
   .list-inline-item {
     padding: 0.2em;
@@ -131,10 +204,15 @@
     }
   }
 
+  .dropdown {
+    display: inline-block;
+  }
+
   .dropdown-toggle {
     margin-left: 1.5em;
     color: #fff;
     padding: 0.75em;
+    border-radius: 0.4em;
 
     &:after {
       margin-left: 0.35em;
@@ -161,4 +239,26 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+
+.input_iconed {
+  position: relative;
+
+  .input_icon {
+    position: absolute;
+    left: 1em;
+    top: 0.5rem;
+    line-height: 1.33;
+    font-size: 0.75em;
+    display: block;
+    background: #efeff3;
+    padding: 0.2em;
+    width: 1.25rem;
+    text-align: center;
+    border-radius: 0.2rem;
+  }
+
+  .form-control {
+    padding-left: 2.35em;
+  }
 }

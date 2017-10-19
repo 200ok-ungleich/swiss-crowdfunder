@@ -15,8 +15,10 @@
       </li>
     </ul>
     <form class="form-inline my-lg-0 topnav_search">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <div class="input-group">
+        <label for="topSearch" class="input-group-addon"><span class="fa fa-search"></span></label>
+        <input type="text" id="topSearch" aria-label="Search" class="form-control">
+      </div>
     </form>
   </div>
 </nav>
@@ -75,7 +77,7 @@
     </div>
   </div>
 
-  <nav class="nav nav-pills nav_underlines" id="campaignTab" role="tablist">
+  <nav class="nav nav-pills nav_underlines mt-5 mt-md-0" id="campaignTab" role="tablist">
     <a class="nav-item nav-link active" id="nav-campaign-tab" data-toggle="tab" href="#nav-campaign" role="tab"
       aria-controls="nav-campaign" aria-expanded="true">Campaign</a>
     <a class="nav-item nav-link" id="nav-faq-tab" data-toggle="tab" href="#nav-faq" role="tab"
@@ -89,78 +91,97 @@
 
 <hr class="mt-0 mb-5">
 
-<div class="container campaign_body">
-  <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-campaign" role="tabpanel" aria-labelledby="nav-campaign-tab">
-      <div class="row">
-        <div class="col-md-7 col-lg-8">
-          <h2>About this project</h2>
-          <article>
-            <h3>A new datacenter for canton Glarus</h3>
-            <section>
-              <%= raw @campaign.description_html %>
+<div class="container">
+  <div class="campaign_body">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-campaign" role="tabpanel" aria-labelledby="nav-campaign-tab">
+        <div class="row">
+          <div class="col-md-7 col-lg-8">
+            <h2>About this project</h2>
+            <article>
+              <h3>A new datacenter for canton Glarus</h3>
+              <section>
+                <%= raw @campaign.description_html %>
+              </section>
+            </article>
+          </div>
+          <div class="col-md-5 col-lg-4">
+            <h2>Support this project</h2>
+            <section class="card side_card">
+              <div class="card-body">
+                <h4 class="card-title">Pledge CHF 15 or more</h4>
+                <div class="input_iconed">
+                  <span class="input_icon">$</span>
+                  <input type="text" class="form-control" placeholder="amount" aria-label="amount" aria-describedby="pledge-input" value="10">
+                </div>
+              </div>
             </section>
-          </article>
+            <section class="card side_card">
+              <div class="card-body">
+                <h4 class="card-title strong">Pledge CHF 15 or more</h4>
+                <h5>CHF 15 Reward</h5>
+                <p class="card-text">
+                  Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
+                </p>
+
+                <div class="card_point">ESTIMATED DELIVERY</div>
+                <time>Sep 2017</time>
+
+                <p class="card_point">200 Backers</p>
+              </div>
+              <button class="btn btn_theme btn_bottom">Select</button>
+            </section>
+            <section class="card side_card">
+              <div class="card-body">
+                <h4 class="card-title strong">Pledge CHF 1500 or more</h4>
+                <h5>CHF 1500 Reward</h5>
+                <p class="card-text">
+                  Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
+                </p>
+
+                <div class="card_point">ESTIMATED DELIVERY</div>
+                <time>Sep 2017</time>
+
+                <p class="card_point">200 Backers</p>
+              </div>
+              <button class="btn btn_faded btn_bottom">Select</button>
+            </section>
+          </div>
         </div>
-        <div class="col-md-5 col-lg-4">
-          <h2>Support this project</h2>
-          <section class="card side_card">
-            <div class="card-body">
-              <h4 class="card-title">Pledge CHF 15 or more</h4>
-              <div class="input-group">
-                <span class="input-group-addon" id="pledge-input">$</span>
-                <input type="text" class="form-control" placeholder="amount" aria-label="amount" aria-describedby="pledge-input" value="10">
-              </div>
-            </div>
-          </section>
-          <section class="card side_card">
-            <div class="card-body">
-              <h4 class="card-title">Pledge CHF 15 or more</h4>
-              <h5>CHF 15 Reward</h5>
-              <p class="card-text">
-                Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
-              </p>
-
-              <div class="estimated_delivery">
-                <div>ESTIMATED DELIVERY</div>
-                <div>Sep 2017</div>
-              </div>
-
-              <div>200 Backers</div>
-            </div>
-            <button class="btn btn_theme btn_bottom">Select</button>
-          </section>
+      </div>
+      <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">
+        <div class="jumbotron">
+          <h1 class="display-3">FAQ, ungleich!</h1>
+          <p class="lead">This is a place for some FAQ.</p>
+          <hr class="my-4">
+          <p>Content content content.</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Action</a>
+          </p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
+        <div class="jumbotron">
+          <h1 class="display-3">Update, ungleich!</h1>
+          <p class="lead">This is a place for some updates.</p>
+          <hr class="my-4">
+          <p>Content content content.</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Action</a>
+          </p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-backers" role="tabpanel" aria-labelledby="nav-backers-tab">
+        <div class="jumbotron">
+          <h1 class="display-3">Backers, ungleich!</h1>
+          <p class="lead">This is a place for some backers.</p>
+          <hr class="my-4">
+          <p>Content content content.</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Action</a>
+          </p>
         </div>
       </div>
     </div>
-    <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">...</div>
-    <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">...</div>
-    <div class="tab-pane fade" id="nav-backers" role="tabpanel" aria-labelledby="nav-backers-tab">...</div>
-  </div>
-</div>
-
-<div class="container">
-  <hr/>
-  <h1>Goodies</h1>
-  <div class="row">
-    <% @campaign.goodies.each do |goodie| %>
-      <div class="col-md-4">
-        <h2>
-          <%= goodie.title %>
-        </h2>
-        <p>
-          <%= goodie.description %>
-        </p>
-        <p>
-          <%= goodie.image %>
-        </p>
-        <p>
-          <%= goodie.price %>
-        </p>
-        <p>
-          <%= goodie.quantity %>
-        </p>
-      </div>
-    <% end %>
   </div>
 </div>
