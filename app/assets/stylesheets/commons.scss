@@ -1,4 +1,27 @@
+/* utility classes */
+.text_loud {
+  font-weight: bold;
+  font-size: 1.75em;
+  line-height: 1.3;
+  color: #1B1A1A;
+}
+
+.text_loud_sub {
+  color: #5B5A5A;
+}
+
+.bg_theme {
+  background-color: #DB0808;
+}
+
+.progress_bar_thin {
+  height: 5px;
+}
+
+
+/* underlined style of nav, as on campaign page */
 .nav_underlines {
+
   .nav-link {
     font-weight: bold;
     color: #717579;
@@ -24,35 +47,22 @@
   }
 }
 
+
+/* search bar on topnav */
 .topnav_search {
+
   .input-group-addon, .form-control {
     border: 0;
     background-color: transparent;
   }
+
   .form-control:focus, .form-control:active {
     border-bottom-color: #80bdff;
   }
 }
 
-.progress_bar_thin {
-  height: 5px;
-}
 
-.text_loud {
-  font-weight: bold;
-  font-size: 1.75em;
-  line-height: 1.3;
-  color: #1B1A1A;
-}
-
-.text_loud_sub {
-  color: #5B5A5A;
-}
-
-.bg_theme {
-  background-color: #DB0808;
-}
-
+/* custom btn styles */
 .btn_theme {
   background-color: #DB0808;
   border: 2px solid #DB0808;
@@ -100,6 +110,7 @@
   }
 }
 
+/* styles for cards on side, as in capmaign page */
 .side_card {
   background-color: #f8f9fd;
   border-color: #e0e3fc;
@@ -153,8 +164,7 @@
   }
 }
 
-
-
+/* footer styles */
 .footer {
   background-color: #020522;
   color: #ccc;
@@ -221,6 +231,7 @@
 
   .dropdown-menu {
     border: 0;
+
     a {
       color: #020522;
     }
@@ -235,12 +246,7 @@
   margin-top: 0.75em;
 }
 
-.center-block {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
+/* input with a icon on left */
 .input_iconed {
   position: relative;
 

@@ -14,10 +14,12 @@
  *= require_tree .
  */
 
-// Changed the order of `require_self` and `require_tree` so that bootstrap and application wide
-// styles are loaded before controller specific styles.
-// However, try to keep the styles as less cascaded as possible, and order of included files wont matter.
+/*
+ * Changed the order of `require_self` and `require_tree` so that bootstrap and application wide
+ * styles are loaded before controller specific styles.
+ * However, try to keep the styles as less cascaded as possible, and order of included files wont matter.
+ */
 
 
-// Custom bootstrap variables must be set or imported *before* bootstrap.
+/* Custom bootstrap variables must be set or imported *before* bootstrap */
 @import "bootstrap";
