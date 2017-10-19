@@ -25,8 +25,49 @@
   <body class="<%= [controller_name, action_name] * '-' %>">
     <%= yield %>
     <footer class="footer">
-      <div class="container">
-        © 200ok LLC &amp; Ungleich LLC 2017
+      <div class="row">
+        <div class="col-6 col-sm-3">
+          <ul class="footer_list">
+            <li class="list_head">About us</li>
+            <li><a href="">What is Glarnercrowd?</a></li>
+            <li><a href="">Who we are</a></li>
+            <li><a href="">Press</a></li>
+            <li><a href="">Newsletters</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-sm-3">
+          <ul class="footer_list">
+            <li class="list_head">Help</li>
+            <li><a href="">Trust &amp; Safety</a></li>
+            <li><a href="">Support</a></li>
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <div class="footer_brand">
+            <div class="footer_brand_title">GlarnerCrowd</div>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href=""><span class="fa fa-twitter"></span></a></li>
+              <li class="list-inline-item"><a href=""><span class="fa fa-facebook-official"></span></a></li>
+              <li class="list-inline-item"><a href=""><span class="fa fa-tumblr"></span></a></li>
+              <li class="list-inline-item"><a href=""><span class="fa fa-instagram"></span></a></li>
+              <li class="list-inline-item"><a href=""><span class="fa fa-pinterest"></span></a></li>
+              <li class="list-inline-item"><a href=""><span class="fa fa-youtube-play"></span></a></li>
+              <li class="list-inline-item">
+                <div class="dropdown">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    English
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">German</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
