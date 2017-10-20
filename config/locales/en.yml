@@ -4,6 +4,8 @@ en:
       home: "Home"
       contact: "Contact"
       language: "Language"
+      terms-of-service: "Terms of Service"
+      about-us: "About us"
   root:
     index:
       title: "Glarner Crowdfunding"

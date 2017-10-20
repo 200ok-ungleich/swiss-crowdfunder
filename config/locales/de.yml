@@ -4,6 +4,9 @@ de:
       home: "Home"
       contact: "Kontakt"
       language: "Sprachauswahl"
+      language: "Sprachauswahl"
+      terms-of-service: "Nutzungsbedingungen"
+      about-us: "Über uns"
   root:
     index:
       title: "Glarner kraʊdˌfʌnd.ɪŋ"

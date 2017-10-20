@@ -73,7 +73,8 @@
       <div class="row">
         <div class="col-6 col-sm-4 col-md-3">
           <ul class="footer_list">
-            <li class="list_head">About us</li>
+            <!-- <li class="list_head">About Us</li> -->
+            <li><span class="qa-about-us"><%= link_to t(".about-us"), static_about_us_path %></span></li>
             <!-- <li><a href="">What is Glarnercrowd?</a></li>
             <li><a href="">Who we are</a></li>
             <li><a href="">Press</a></li>
@@ -81,13 +82,14 @@
           </ul>
         </div>
         <div class="col-6 col-sm-3">
-          <!-- <ul class="footer_list">
-            <li class="list_head">Help</li>
-            <li><a href="">Trust &amp; Safety</a></li>
+          <ul class="footer_list">
+            <!-- <li class="list_head">Help</li> -->
+            <li><span class="qa-terms-of-service"><%= link_to t(".terms-of-service"), static_terms_of_service_path %></span></li>
+            <!-- <li><a href="">Trust &amp; Safety</a></li>
             <li><a href="">Support</a></li>
             <li><a href="">Terms of Use</a></li>
-            <li><a href="">Privacy Policy</a></li>
-          </ul> -->
+            <li><a href="">Privacy Policy</a></li> -->
+          </ul>
         </div>
         <div class="col-sm-5 col-md-6">
           <div class="footer_brand">

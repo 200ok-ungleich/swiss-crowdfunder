@@ -68,7 +68,7 @@ group :development do
   gem 'pry-doc'
 end
 
-group :production do
+group :production, :test do
   # Postgres
   gem 'pg'
 end

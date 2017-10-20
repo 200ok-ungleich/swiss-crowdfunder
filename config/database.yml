@@ -24,8 +24,8 @@ test:
   encoding: unicode
   pool: 5
   timeout: 5000
-  host: postgres
-  username: runner
+  host: <%= ENV['CI'].blank? ? "" : "postgres" %>
+  username: <%= ENV['CI'].blank? ? "" : "runner" %>
   password:
   database: crowdfunding_test
 

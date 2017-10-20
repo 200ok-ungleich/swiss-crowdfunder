@@ -45,7 +45,9 @@ automatically color your status bar either green on success or red on error.
 ** Live Reload
 
 Using the Gems =guard-livereload= and =rack-livereload=, development
-and saving of =*.erb= files will reload your browser.
+and saving of =*.erb= files will reload your browser. Developing
+=*.scss= files will also hot-load the respective CSS within the
+browser.
 
 ** Deployment
 
@@ -74,6 +76,7 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 *** PROJECT Ready for Ungleich Crowdfunding
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
+
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
 
 **** TODO NF: Global Lock-Down
@@ -92,6 +95,12 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
 
+**** TODO Campaign Model: Introduce optional FB and Twitter Links
+
+**** TODO NF: Introduce capistrano for deployment by everyone
+
+**** DONE Introduce "About Us" Page without content
+**** DONE Introduce "TOS" Page without content
 
 *** PROJECT Production Ready
 
