@@ -16,25 +16,28 @@
     </div>
     <div class="col-md-5 col-lg-4">
       <div class="progress mb-3">
-        <div class="progress-bar bg_theme progress_bar_thin" role="progressbar" style="width: 25%;"
+        <div class="progress-bar bg_theme progress_bar_thin" role="progressbar"
+          style="width: <%= number_to_percentage(100*(@campaign.amount_raised.to_f / @campaign.goal), precision: 1) %>;"
           aria-valuenow="<%= @campaign.amount_raised %>" aria-valuemin="0" aria-valuemax="<%= @campaign.goal %>">
         </div>
       </div>
 
       <div class="text_loud">CHF <%= @campaign.amount_raised %></div>
-      <p class="text_loud_sub">pledged of CHF <%= @campaign.amount_raised %> goal</p>
+      <p class="text_loud_sub">
+        <%= raw t('.funding_amount_pledged', amount: @campaign.amount_raised, currency: "CHF") %>
+      </p>
 
       <div class="text_loud"><%= Supporter.count %></div>
-      <p class="text_loud_sub">backers</p>
+      <p class="text_loud_sub"><%= t '.backers' %></p>
 
       <div class="text_loud">100</div>
-      <p class="text_loud_sub">days to go</p>
+      <p class="text_loud_sub"><%= t '.days_to_go' %></p>
 
       <div class="mb-3">
         <%= link_to "Support this project", campaign_goodies_path(@campaign), class: "btn btn_theme btn-lg btn-block" %>
       </div>
 
-      <div class="campaign_links">
+      <!-- <div class="campaign_links">
         <div class="row">
           <div class="col col-lg-auto pr-0">
             <a href="#" class="btn_card"><span class="fa fa-heart mr-2"></span>Remind me</a>
@@ -48,11 +51,11 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
-  <nav class="nav nav-pills nav_underlines mt-5 mt-md-0" id="campaignTab" role="tablist">
+  <!-- <nav class="nav nav-pills nav_underlines mt-5 mt-md-0" id="campaignTab" role="tablist">
     <a class="nav-item nav-link active" id="nav-campaign-tab" data-toggle="tab" href="#nav-campaign" role="tab"
       aria-controls="nav-campaign" aria-expanded="true">Campaign</a>
     <a class="nav-item nav-link" id="nav-faq-tab" data-toggle="tab" href="#nav-faq" role="tab"
@@ -61,102 +64,69 @@
       aria-controls="nav-updates">Updates</a>
     <a class="nav-item nav-link" id="nav-backers-tab" data-toggle="tab" href="#nav-backers" role="tab"
       aria-controls="nav-backers">Backers</a>
-  </nav>
+  </nav> -->
 </div>
 
 <hr class="mt-0 mb-5">
 
 <div class="container">
   <div class="campaign_body">
-    <div class="tab-content" id="nav-tabContent">
+    <!-- <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-campaign" role="tabpanel" aria-labelledby="nav-campaign-tab">
-        <div class="row">
-          <div class="col-md-7 col-lg-8">
-            <h2>About this project</h2>
-            <article>
-              <h3>A new datacenter for canton Glarus</h3>
-              <section>
-                <%= raw @campaign.description_html %>
-              </section>
-            </article>
+      </div>
+    </div> -->
+    <div class="row">
+      <div class="col-md-7 col-lg-8">
+        <h2>About this project</h2>
+        <article>
+          <h3>A new datacenter for canton Glarus</h3>
+          <section>
+            <%= raw @campaign.description_html %>
+          </section>
+        </article>
+      </div>
+      <aside class="col-md-5 col-lg-4">
+        <!-- <h2>Support this project</h2>
+        <section class="card side_card">
+          <div class="card-body">
+            <h4 class="card-title">Pledge CHF 15 or more</h4>
+            <div class="input_iconed">
+              <span class="input_icon">$</span>
+              <input type="text" class="form-control" placeholder="amount" aria-label="amount" aria-describedby="pledge-input" value="10">
+            </div>
           </div>
-          <div class="col-md-5 col-lg-4">
-            <h2>Support this project</h2>
-            <section class="card side_card">
-              <div class="card-body">
-                <h4 class="card-title">Pledge CHF 15 or more</h4>
-                <div class="input_iconed">
-                  <span class="input_icon">$</span>
-                  <input type="text" class="form-control" placeholder="amount" aria-label="amount" aria-describedby="pledge-input" value="10">
-                </div>
-              </div>
-            </section>
-            <section class="card side_card">
-              <div class="card-body">
-                <h4 class="card-title strong">Pledge CHF 15 or more</h4>
-                <h5>CHF 15 Reward</h5>
-                <p class="card-text">
-                  Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
-                </p>
+        </section>
+        <section class="card side_card">
+          <div class="card-body">
+            <h4 class="card-title strong">Pledge CHF 15 or more</h4>
+            <h5>CHF 15 Reward</h5>
+            <p class="card-text">
+              Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
+            </p>
 
-                <div class="card_point">ESTIMATED DELIVERY</div>
-                <time>Sep 2017</time>
+            <div class="card_point">ESTIMATED DELIVERY</div>
+            <time>Sep 2017</time>
 
-                <p class="card_point">200 Backers</p>
-              </div>
-              <button class="btn btn_theme btn_bottom">Select</button>
-            </section>
-            <section class="card side_card">
-              <div class="card-body">
-                <h4 class="card-title strong">Pledge CHF 1500 or more</h4>
-                <h5>CHF 1500 Reward</h5>
-                <p class="card-text">
-                  Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
-                </p>
-
-                <div class="card_point">ESTIMATED DELIVERY</div>
-                <time>Sep 2017</time>
-
-                <p class="card_point">200 Backers</p>
-              </div>
-              <button class="btn btn_faded btn_bottom">Select</button>
-            </section>
+            <p class="card_point">200 Backers</p>
           </div>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">
-        <div class="jumbotron">
-          <h1 class="display-3">FAQ, ungleich!</h1>
-          <p class="lead">This is a place for some FAQ.</p>
-          <hr class="my-4">
-          <p>Content content content.</p>
-          <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Action</a>
-          </p>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
-        <div class="jumbotron">
-          <h1 class="display-3">Update, ungleich!</h1>
-          <p class="lead">This is a place for some updates.</p>
-          <hr class="my-4">
-          <p>Content content content.</p>
-          <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Action</a>
-          </p>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="nav-backers" role="tabpanel" aria-labelledby="nav-backers-tab">
-        <div class="jumbotron">
-          <h1 class="display-3">Backers, ungleich!</h1>
-          <p class="lead">This is a place for some backers.</p>
-          <hr class="my-4">
-          <p>Content content content.</p>
-          <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Action</a>
-          </p>
-        </div>
-      </div>
+          <button class="btn btn_theme btn_bottom">Select</button>
+        </section>
+        <section class="card side_card">
+          <div class="card-body">
+            <h4 class="card-title strong">Pledge CHF 1500 or more</h4>
+            <h5>CHF 1500 Reward</h5>
+            <p class="card-text">
+              Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
+            </p>
+
+            <div class="card_point">ESTIMATED DELIVERY</div>
+            <time>Sep 2017</time>
+
+            <p class="card_point">200 Backers</p>
+          </div>
+          <button class="btn btn_faded btn_bottom">Select</button>
+        </section> -->
+      </aside>
     </div>
   </div>
 </div>

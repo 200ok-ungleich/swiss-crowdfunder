@@ -1,6 +1,19 @@
 /* default element styles */
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   cursor: pointer;
+}
+
+.main_content {
+  flex: 1;
 }
 
 /* utility classes */
