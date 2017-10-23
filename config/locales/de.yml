@@ -1,4 +1,8 @@
 de:
+  percentage:
+    format:
+      delimiter: ''
+      separator: '.'
   layouts:
     application:
       home: "Home"

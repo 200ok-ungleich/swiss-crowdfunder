@@ -31,12 +31,14 @@
 }
 
 .campaign_body {
+  padding-left: 0.2em;
 
   h2 {
-    font-size: 1.42rem;
+    font-size: 1.75rem;
     color: #5B5A5A;
     margin-bottom: 2em;
     margin-top: 0.5em;
+    font-weight: 300;
   }
 
   h3 {
@@ -44,4 +46,33 @@
     font-size: 1.4rem;
     margin-bottom: 0.75em;
   }
+
+  aside h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.funding_goal {
+  color: #5B5A5A;
+  font-size: 1.4em;
+  color: #999;
+}
+
+
+.campaign_stat {
+  font-size: 1.25em;
+
+  & > .number {
+    flex: 1;
+    text-align: right;
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: bold;
+  }
+}
+
+.campaign_date {
+  font-size: 1.05em;
+  color: #777;
 }

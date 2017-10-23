@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%= @campaign.title %></h1>
   <p class="small mt-3 mb-4">
-    <strong><%= @campaign.claim %></strong>
+    <strong class="text_loud_sub"><%= @campaign.claim %></strong>
   </p>
 
   <div class="row">
@@ -15,23 +15,42 @@
         </div>
     </div>
     <div class="col-md-5 col-lg-4">
-      <div class="progress mb-3">
-        <div class="progress-bar bg_theme progress_bar_thin" role="progressbar"
-          style="width: <%= number_to_percentage(100*(@campaign.amount_raised.to_f / @campaign.goal), precision: 1) %>;"
+      <div class="progress progress_thin mb-1">
+        <div class="progress-bar bg_theme" role="progressbar"
+          style="width: <%= number_to_percentage(100*(@campaign.amount_raised.to_f / @campaign.goal), precision: 1, separator: '.') %>;"
           aria-valuenow="<%= @campaign.amount_raised %>" aria-valuemin="0" aria-valuemax="<%= @campaign.goal %>">
         </div>
       </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="text_loud text_theme"><%= number_to_percentage(100*(@campaign.amount_raised.to_f / @campaign.goal), precision: 1, separator: '.') %></div>
+        </div>
+        <div class="col-6 text-right funding_goal">
+          <div class="small mt-1"><%= t '.funding_goal' %></div>
+          <strong><%= @campaign.goal %> CHF</strong>
+        </div>
+      </div>
+      <hr/>
 
-      <div class="text_loud">CHF <%= @campaign.amount_raised %></div>
-      <p class="text_loud_sub">
-        <%= raw t('.funding_amount_pledged', amount: @campaign.amount_raised, currency: "CHF") %>
-      </p>
+      <div class="d-flex align-items-end flex-wrap campaign_stat mb-2">
+        <div><%= t '.we_have_reached' %></div>
+        <div class="text-right number"><%= @campaign.amount_raised %> CHF</div>
+      </div>
+      <div class="d-flex align-items-end flex-wrap campaign_stat mb-4">
+        <div><%= t '.funding_supporters' %></div>
+        <div class="text-right number"><%= Supporter.count %></div>
+      </div>
 
-      <div class="text_loud"><%= Supporter.count %></div>
-      <p class="text_loud_sub"><%= t '.backers' %></p>
-
-      <div class="text_loud">100</div>
-      <p class="text_loud_sub"><%= t '.days_to_go' %></p>
+      <div class="campaign_date mb-4">
+        <div class="row mb-2">
+          <div class="col-3"><strong><%= t '.start' %></strong></div>
+          <div class="col"><%= I18n.l @campaign.start_date %></div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-3"><strong><%= t '.end' %></strong></div>
+          <div class="col"><%= I18n.l @campaign.end_date %></div>
+        </div>
+      </div>
 
       <div class="mb-3">
         <%= link_to "Support this project", campaign_goodies_path(@campaign), class: "btn btn_theme btn-lg btn-block qa-support-project" %>
@@ -67,7 +86,7 @@
   </nav> -->
 </div>
 
-<hr class="mt-0 mb-5">
+<hr class="mt-0 mb-4">
 
 <div class="container">
   <div class="campaign_body">
@@ -86,17 +105,25 @@
         </article>
       </div>
       <aside class="col-md-5 col-lg-4">
-        <!-- <h2>Support this project</h2>
-        <section class="card side_card">
-          <div class="card-body">
-            <h4 class="card-title">Pledge CHF 15 or more</h4>
-            <div class="input_iconed">
-              <span class="input_icon">$</span>
-              <input type="text" class="form-control" placeholder="amount" aria-label="amount" aria-describedby="pledge-input" value="10">
+        <h2>Goodies</h2>
+        <% @campaign.goodies.each do |goody| %>
+          <section class="card side_card">
+            <div class="card-body">
+              <h4 class="card-title"><%= goody.title %></h4>
+              <p class="card-text"><%= goody.description %></p>
+              <p class="card-text"><%= t(".quantity", quantity: goody.quantity) %></p>
+              <hr>
+              <div class="d-flex justify-content-between align-items-center">
+                <div><%= t(".price") %> <strong> CHF <%= goody.price %></strong></div>
+                <div class="text-right">
+                  <%= link_to t(".pledge"), new_campaign_goody_order_path(@campaign, goody),
+                  class:"btn btn_faded btn_bottom" %>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
-        <section class="card side_card">
+          </section>
+        <% end %>
+        <!-- <section class="card side_card">
           <div class="card-body">
             <h4 class="card-title strong">Pledge CHF 15 or more</h4>
             <h5>CHF 15 Reward</h5>
@@ -109,21 +136,11 @@
 
             <p class="card_point">200 Backers</p>
           </div>
-          <button class="btn btn_theme btn_bottom">Select</button>
-        </section>
-        <section class="card side_card">
-          <div class="card-body">
-            <h4 class="card-title strong">Pledge CHF 1500 or more</h4>
-            <h5>CHF 1500 Reward</h5>
-            <p class="card-text">
-              Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
-            </p>
-
-            <div class="card_point">ESTIMATED DELIVERY</div>
-            <time>Sep 2017</time>
-
-            <p class="card_point">200 Backers</p>
+          <div class="input_iconed">
+            <span class="input_icon">$</span>
+            <input type="text" class="form-control" placeholder="amount" aria-label="amount" aria-describedby="pledge-input" value="10">
           </div>
+          <button class="btn btn_theme btn_bottom">Select</button>
           <button class="btn btn_faded btn_bottom">Select</button>
         </section> -->
       </aside>

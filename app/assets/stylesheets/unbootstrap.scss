@@ -5,7 +5,8 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.25em;
+  font-weight: 300;
 }
 
 .btn {
@@ -39,6 +40,11 @@ h1 {
   .navbar-expand-md .navbar-nav .nav-link {
     padding-left: 1em;
     padding-right: 1em;
+    color: rgba(0,0,0,.75);
+
+    &:focus, &:hover, &:active {
+      color: rgba(0,0,0,.9);
+    }
   }
 }
 
