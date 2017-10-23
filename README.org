@@ -77,8 +77,8 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
 
+**** TODO Remove icons from Goodies
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
-
 **** TODO NF: Global Lock-Down
      - [ ] Without authorization, no resource can be created
      - [ ] Only new Orders can be created (if valid)
@@ -92,11 +92,8 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 - Anstelle CC Form: Bank-Einzugs Info
 
 **** TODO NF: Eval - Users as Nested Attributes through Orders
-
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
-
 **** TODO Campaign Model: Introduce optional FB and Twitter Links
-
 **** TODO NF: Introduce capistrano for deployment by everyone
 
 **** DONE Introduce "About Us" Page without content
