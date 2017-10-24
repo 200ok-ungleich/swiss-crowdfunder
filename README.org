@@ -26,12 +26,12 @@ Within your local checkout run =bundle=.
 
 =rake db:create db:migrate db:seed=
 
-** Start Application
+** Development
+*** Start Application
 
 =rails s=
 
-
-** Run tests
+*** Run tests
 
 Automatically run tests while development
 
@@ -42,7 +42,7 @@ guard
 For Emacs Users: When using `enh-ruby-mode`, this will also
 automatically color your status bar either green on success or red on error.
 
-** Live Reload
+*** Live Reload
 
 Using the Gems =guard-livereload= and =rack-livereload=, development
 and saving of =*.erb= files will reload your browser. Developing
@@ -79,14 +79,30 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 
 #+END_SRC
 
+** Documentation
+
+*** Security
+
+For the initial version of the application, there is only one route
+that can create entities, none that can update or destroy any.
+Creation of the resource only works on a valid model and has only the
+potential side effect of generating more money for the campaign. Apart
+from a brute force attempt of creating bogus data, there's little
+security risk involved.
+
+Also, there's no concept of a logged-in user, yet. Therefore, there is
+no global lock-down needed/possible. The =cancancan= and =device= gems
+are in place, though, for authorization and authentication as soon as
+supporters get the ability to create/modify/destroy any other data or
+have the ability to log in.
+
 ** TODOs
 
 *** PROJECT Ready for Ungleich Crowdfunding
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
-
 **** DONE Remove icons from Goodies
-**** TODO NF: Global Lock-Down
+**** DONE NF: Global Lock-Down
      - [ ] Without authorization, no resource can be created
      - [ ] Only new Orders can be created (if valid)
      - [ ] New orders create Users implicitly
@@ -99,7 +115,6 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 - Anstelle CC Form: Bank-Einzugs Info
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
 **** TODO Campaign Model: Introduce optional FB and Twitter Links
-
 **** TODO NF: Eval - Users as Nested Attributes through Orders
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
 **** TODO NF: Capistrano Bug - Migrations run on every deploy
@@ -112,11 +127,13 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 **** TODO Implement Stripe
 **** TODO Implement Bank Transfer
 **** TODO i18n all the strings
+**** TODO As soon as users can create/modify/delete resources or login: Implement global lock-down
+- See [[Security]] for more information
 **** PROJECT Secret Keys
 
 - [ ]  More secret creation of Admin User than through =db/seeds.rb=
 - [ ]  More secret devise keys than in =config/devise.rb=
-- [ ] Do not expose =SECRET_KEY_BASE= in this README
+- [X] Do not expose =SECRET_KEY_BASE= in this README
 
 **** TODO Add CanCanCan and lock down the /whole/ application
 **** DONE Reconfigure GA link to the proper URL
