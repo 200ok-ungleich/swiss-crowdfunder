@@ -107,9 +107,9 @@ have the ability to log in.
 - Anstelle CC Form: Bank-Einzugs Info
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
 **** TODO Campaign Model: Introduce optional FB and Twitter Links
-**** TODO NF: Eval - Users as Nested Attributes through Orders
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
 **** TODO NF: Capistrano Bug - Migrations run on every deploy
+**** DONE NF: Eval - Users as Nested Attributes through Orders
 **** DONE [100%] NF: Integrate FactoryGirl
 - [X] spec/features/admin_spec.rb
 - [X] spec/features/campaigns_spec.rb
