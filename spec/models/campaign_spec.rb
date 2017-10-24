@@ -12,7 +12,7 @@ RSpec.describe Campaign, type: :model do
     it "works for one goody/one order" do
       campaign = FactoryBot.create :campaign
       goody = FactoryBot.create :goody, campaign: campaign
-      supporter = Supporter.new first_name: "John", last_name: "Doe", date_of_birth: 18.years.ago
+      supporter = FactoryBot.build :supporter
       goody.orders.create! payment_type: "stripe",
         quantity: 1,
         amount: 123,

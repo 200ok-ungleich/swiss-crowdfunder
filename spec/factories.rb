@@ -18,6 +18,7 @@ FactoryBot.define do
   factory :supporter do
     sequence(:first_name) { |n| "John, the #{n}" }
     last_name  "Doe"
+    sequence(:email) { |n| "supporter#{n}@example.com" }
     date_of_birth { 18.years.ago }
   end
 

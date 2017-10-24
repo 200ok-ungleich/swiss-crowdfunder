@@ -15,7 +15,7 @@ RSpec.describe OrdersController, type: :controller do
      goody: @goody,
      payment_type: "stripe",
      agreement: true,
-     supporter_attributes: { first_name: "John", last_name: "Doe", date_of_birth: 18.years.ago }
+     supporter_attributes: FactoryBot.attributes_for(:supporter)
     }
 
   }
