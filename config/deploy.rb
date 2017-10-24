@@ -27,10 +27,6 @@ set :deploy_to, "/home/app/app"
 # Default value for :linked_files is []
 append :linked_files, "config/secrets.yml"
 
-# Defaults to false
-# Skip migration if files in db/migrate were not modified
-set :conditionally_migrate, true
-
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
