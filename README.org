@@ -102,7 +102,16 @@ have the ability to log in.
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
 
-**** TODO NF: Integrate FactoryGirl
+**** TODO [12%] NF: Integrate FactoryGirl
+- [ ] spec/features/admin_spec.rb
+- [ ] spec/features/campaigns_spec.rb
+- [ ] spec/features/application_spec.rb
+- [ ] spec/features/root_spec.rb
+- [ ] spec/models/supporter_spec.rb
+- [X] spec/models/campaign_spec.rb
+- [ ] spec/controllers/orders_controller_spec.rb
+- [ ] spec/controllers/root_controller_spec.rb
+
 **** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info
