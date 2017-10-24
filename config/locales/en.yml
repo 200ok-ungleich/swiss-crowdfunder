@@ -15,6 +15,8 @@ en:
     index:
       support_the_project: "Support this project"
       pledge: "Pledge"
+      price: "Price :"
+      quantity: "Quantity : %{quantity}"
   orders:
     new:
       confirmation: "Confirmation"
@@ -28,16 +30,14 @@ en:
       bought_package: "You have bought the package "
   campaigns:
     show:
-      funding_goal: "Our funding goal is:"
-      funding_amount_raised: "We have reached:"
-      funding_goal: "funding goal"
-      we_have_reached: "We've reached"
+      funding_goal: "Funding goal"
+      funding_amount_raised: "We've reached"
       funding_supporters: "Number of supporters"
       support_the_project: "Support the project"
       description: "Description"
       goodies: "Goodies"
       pledge: "Pledge"
-      price: "Betrag:"
-      quantity: "Quantity: %{quantity}"
+      price: "Price :"
+      quantity: "Quantity : %{quantity}"
       start: "Start"
       end: "End"

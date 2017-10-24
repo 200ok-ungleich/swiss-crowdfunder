@@ -20,6 +20,8 @@ de:
     index:
       support_the_project: "Unterstützen Sie dieses Projekt"
       pledge: "Weiter"
+      price: "Betrag :"
+      quantity: "Anzahl : %{quantity}"
   orders:
     new:
       confirmation: "Bestätigung"
@@ -33,12 +35,14 @@ de:
       bought_package: "Sie haben folgendes Paket erstanden:"
   campaigns:
     show:
-      funding_goal: "Unser Finanzierungs-Ziel sind:"
+      funding_goal: "Finanzierungsziel"
       funding_amount_raised: "Bereits erreicht:"
-      funding_supporters: "Anzahl an Unterstützern:"
+      funding_supporters: "Anzahl an Unterstützern"
       support_the_project: "Unterstützen Sie dieses Projekt"
       description: "Beschreibung"
       goodies: "Belohnung"
       pledge: "Weiter"
-      price: "Betrag: %{price}"
-      quantity: "Anzahl: %{quantity}"
+      price: "Betrag :"
+      quantity: "Anzahl : %{quantity}"
+      start: "Begin"
+      end: "Ziel"
