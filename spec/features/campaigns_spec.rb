@@ -40,10 +40,21 @@ describe 'campaigns' do
       expect(page).to have_content I18n.t('errors.messages.blank')
     end
 
-    scenario 'not without a agreement' do
+    scenario 'not without nested supporter info' do
+      visit campaign_goodies_path([@campaign, @goody])
+      find('.qa-pledge').click
+      find('.qa-agreement').click
+      find('.qa-submit').click
+      expect(page).to have_content I18n.t('errors.messages.blank')
+    end
+
+    scenario 'with agreement and all fields filled out' do
       expect do
         visit campaign_goodies_path([@campaign, @goody])
         find('.qa-pledge').click
+
+        fill_in "First name", with: "John"
+        fill_in "Last name", with: "Doe"
         find('.qa-agreement').click
         find('.qa-submit').click
         expect(page).to_not have_content I18n.t('errors.messages.blank')

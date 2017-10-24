@@ -16,6 +16,15 @@
   </div>
 
   <%= simple_form_for [@goody.campaign, @goody, @order] do |f| %>
+
+    <%= f.simple_fields_for :supporter do |s| %>
+
+      <%= s.input :first_name %>
+      <%= s.input :last_name %>
+      <%= s.input :date_of_birth, as: :date %>
+
+    <% end %>
+
     <div class="form-row">
       <label for="card-element">
        <%= t('.credit_card') %>

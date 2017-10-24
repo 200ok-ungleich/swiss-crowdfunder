@@ -101,7 +101,7 @@ have the ability to log in.
 *** PROJECT Ready for Ungleich Crowdfunding
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
-**** TODO As a user, when checking out a goodie, I want to give user-info: Name, E-Mail, Age
+**** TODO As a user, when checking out a goodie, I want to give user-info: Name, E-Mail, Date of Birth (>=18)
 - [ ] Validation
 
 **** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
