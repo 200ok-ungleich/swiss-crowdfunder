@@ -102,11 +102,14 @@ have the ability to log in.
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
 
+
+**** TODO campaigns#show: I18n supporters
 **** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
+**** DONE As a user, when ordering, I need to give my email address
 **** DONE NF: Capistrano Bug - Migrations run on every deploy
 **** DONE Campaign Model: Introduce optional FB and Twitter Links
 **** DONE NF: Eval - Users as Nested Attributes through Orders

@@ -35,7 +35,7 @@ class OrdersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def order_params
-    params.require(:order).permit(:agreement, supporter_attributes: [:first_name, :last_name, :date_of_birth])
+    params.require(:order).permit(:agreement, supporter_attributes: [:first_name, :last_name, :email, :date_of_birth])
   end
 
 end

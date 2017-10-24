@@ -2,6 +2,8 @@ class Supporter < ApplicationRecord
   belongs_to :order
   validates_presence_of :first_name, :last_name
 
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
+
   validate :date_of_birth, :is_old_enough?
 
   def is_old_enough?
