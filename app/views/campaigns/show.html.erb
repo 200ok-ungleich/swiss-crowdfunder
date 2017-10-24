@@ -50,6 +50,14 @@
       <p class="btn btn-secondary btn-lg" href="#" role="button">
         <%= link_to t('.support_the_project'), campaign_goodies_path(@campaign), class: "qa-support-project" %>
       </p>
+
+      <%- unless @campaign.twitter_url.blank? %>
+        <%= link_to "Twitter", @campaign.twitter_url, target: "_blank" %>
+      <% end %>
+
+      <%- unless @campaign.facebook_url.blank? %>
+        <%= link_to "Facebook", @campaign.facebook_url, target: "_blank" %>
+      <% end %>
     </div>
   </div>
 </div>
