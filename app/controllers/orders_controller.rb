@@ -28,13 +28,14 @@ class OrdersController < ApplicationController
   def new
     @goody = Goody.find(params[:goody_id])
     @order = Order.new goody: @goody
+    @order.build_supporter
   end
 
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def order_params
-    params.require(:order).permit(:agreement)
+    params.require(:order).permit(:agreement, supporter_attributes: [:first_name, :last_name, :date_of_birth])
   end
 
 end
