@@ -29,7 +29,7 @@ gem 'activeadmin'
 gem 'redcarpet'
 gem 'simple_form'
 gem 'rails-i18n', '~> 5.0.0'
-gem 'cancancan', '~> 2.0'
+#gem 'cancancan', '~> 2.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
