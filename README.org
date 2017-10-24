@@ -103,9 +103,6 @@ have the ability to log in.
 
 
 **** TODO NF: Integrate FactoryGirl
-**** TODO As a user, when checking out a goodie, I want to give user-info: Name, E-Mail, Date of Birth (>=18)
-- [ ] Validation
-
 **** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info
@@ -114,6 +111,8 @@ have the ability to log in.
 **** TODO NF: Eval - Users as Nested Attributes through Orders
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
 **** TODO NF: Capistrano Bug - Migrations run on every deploy
+**** DONE As a user, when checking out a goodie, I want to give user-info: Name, E-Mail, Date of Birth (>=18)
+- [ ] Validation
 
 **** DONE NF: Global Lock-Down
 **** DONE Remove icons from Goodies
