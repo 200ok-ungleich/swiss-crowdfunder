@@ -29,6 +29,8 @@ gem 'activeadmin'
 gem 'redcarpet'
 gem 'simple_form'
 gem 'rails-i18n', '~> 5.0.0'
+gem "factory_bot_rails", "~> 4.0"
+
 #gem 'cancancan', '~> 2.0'
 
 # Use CoffeeScript for .coffee assets and views

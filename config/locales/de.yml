@@ -30,6 +30,9 @@ de:
       credit_card: "Kreditkarte"
       i_agree: "Ich bestätige hiermit dieses Projekt unterstützen zu möchten"
       create_order: "Unterstützen"
+      first_name: "Vorname"
+      last_name: "Nachname"
+      email: "Email"
     show:
       success: "Erfolg"
       bought_package: "Sie haben folgendes Paket erstanden:"
@@ -46,3 +49,7 @@ de:
       quantity: "Anzahl : %{quantity}"
       start: "Begin"
       end: "Ziel"
+  supporter:
+    validation:
+      not_old_enough: "Minimal Alter ist 18 Jahre"
+      is_not_a_date: "Geburtsdatum muss ein Datum sein"

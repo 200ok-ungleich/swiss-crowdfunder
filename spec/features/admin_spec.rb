@@ -29,51 +29,27 @@ describe "admin dashboard", :type => :feature do
     end
 
     it "shows all Campaigns" do
-      Campaign.create! title: 'Data Center Light',
-        claim: 'The best hosting in the world',
-        description: "It's the best",
-        start_date: 10.days.from_now,
-        end_date: 40.days.from_now,
-        youtube_url: 'https://www.youtube.com/watch?v=ZUgjm-XqKuc',
-        goal: 1000
+      FactoryBot.create :campaign
 
       click_on "Campaigns"
-      expect(page).to have_content "Data Center Light"
+      expect(page).to have_content "Spec Campaign"
     end
 
     it "shows all Goodies" do
-      campaign = Campaign.create! title: 'Data Center Light',
-        claim: 'The best hosting in the world',
-        description: "It's the best",
-        start_date: 10.days.from_now,
-        end_date: 40.days.from_now,
-        youtube_url: 'https://www.youtube.com/watch?v=ZUgjm-XqKuc',
-        goal: 1000
-      Goody.create campaign: campaign,
-        title: 'Super Stickers'
+      FactoryBot.create :goody, title: "Spec Goodie"
 
       click_on "Goodies"
-      expect(page).to have_content "Super Stickers"
+      expect(page).to have_content "Spec Goodie"
     end
 
-    it "shows all Goodies" do
-      campaign = Campaign.create! title: 'Data Center Light',
-        claim: 'The best hosting in the world',
-        description: "It's the best",
-        start_date: 10.days.from_now,
-        end_date: 40.days.from_now,
-        youtube_url: 'https://www.youtube.com/watch?v=ZUgjm-XqKuc',
-        goal: 1000
-      goody = Goody.create campaign: campaign,
-        title: 'Super Stickers'
-      supporter = Supporter.new first_name: "John", last_name: "Doe", date_of_birth: 1.day.ago
+    it "shows all Orders" do
+      goody = FactoryBot.create :goody
+      supporter = FactoryBot.build :supporter
       Order.create! goody: goody, payment_type: "stripe", agreement: true, supporter: supporter
 
       click_on "Orders"
-      expect(page).to have_content "Super Stickers"
+      expect(page).to have_content "stripe"
     end
-
   end
-
 
 end
