@@ -108,6 +108,13 @@ have the ability to log in.
 - Anstelle CC Form: Bank-Einzugs Info
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
+**** TODO NF: Nico should confirm
+
+- [ ] Test itinerary
+- [ ] cdist run
+- [ ] SSL
+
+
 **** DONE campaigns#show: I18n supporters
 **** DONE As a user, when ordering, I need to give my email address
 **** DONE NF: Capistrano Bug - Migrations run on every deploy
