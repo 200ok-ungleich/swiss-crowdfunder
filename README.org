@@ -51,6 +51,16 @@ browser.
 
 ** Deployment
 
+*** Premise
+
+- You need to have the ssh-agent running, for example under Debian =eval
+`ssh-agent -s`=.
+
+- Your ssh identities need to be added to the ssh-agent: =ssh-add=
+
+
+*** Deploy
+
 We are using =capistrano= to deploy the newest version, roll back,
 compile assets and restart the app container.
 
@@ -76,7 +86,6 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 
 
 **** DONE Remove icons from Goodies
-**** TODO Camgains#show/Goodies#index: Show original and remaining quantity
 **** TODO NF: Global Lock-Down
      - [ ] Without authorization, no resource can be created
      - [ ] Only new Orders can be created (if valid)
@@ -88,10 +97,11 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 **** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info
+**** TODO Camgains#show/Goodies#index: Show original and remaining quantity
+**** TODO Campaign Model: Introduce optional FB and Twitter Links
 
 **** TODO NF: Eval - Users as Nested Attributes through Orders
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
-**** TODO Campaign Model: Introduce optional FB and Twitter Links
 **** TODO NF: Capistrano Bug - Migrations run on every deploy
 **** DONE NF: Introduce capistrano for deployment by everyone
 **** DONE Introduce "About Us" Page without content
