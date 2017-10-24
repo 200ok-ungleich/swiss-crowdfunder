@@ -1,3 +1,5 @@
+require 'json'
+
 # config valid only for current version of Capistrano
 lock "3.9.1"
 
@@ -43,18 +45,18 @@ set :rails_env, 'production'
 
 namespace :deploy do
 
-  #task :slack_started do
-  #  slack "#{fetch(:me)} STARTED a deployment of "+
-  #        "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
-  #end
-  #after :started, :slack_started
+  task :mattermost_started do
+    mattermost "#{fetch(:me)} STARTED a deployment of "+
+          "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
+  end
+  after :started, :mattermost_started
 
 
-  #task :slack_finished do
-  #  slack "#{fetch(:me)} FINISHED a deployment of "+
-  #        "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
-  #end
-  #after :finished, :slack_finished
+  task :mattermost_finished do
+    mattermost "#{fetch(:me)} FINISHED a deployment of "+
+          "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
+  end
+  after :finished, :mattermost_finished
 
 
   desc 'Restart application'
@@ -77,18 +79,12 @@ namespace :deploy do
 
 end
 
-
-
-#def slack(message)
-#  url = "https://voicerepublic.slack.com/services/hooks/incoming-webhook"+
-#        "?token=VtybT1KujQ6EKstsIEjfZ4AX"
-#  payload = {
-#    channel: '#voicerepublic_tech',
-#    username: 'capistrano',
-#    text: message,
-#    icon_emoji: ':floppy_disk:'
-#  }
-#  json = JSON.unparse(payload)
-#  cmd = "curl -X POST --data-urlencode 'payload=#{json}' '#{url}' 2>&1"
-#  %x[ #{cmd} ]
-#end
+def mattermost(message)
+  url = "https://brandnewchat.ungleich.ch/hooks/q568tnt5jtywtftoz3ghfgicyw"
+  payload = {
+    text: message,
+  }
+  json = JSON.unparse(payload)
+  cmd = "curl -X POST --data-urlencode 'payload=#{json}' '#{url}' 2>&1"
+  %x[ #{cmd} ]
+end
