@@ -3,26 +3,19 @@ require 'rails_helper'
 describe 'campaigns' do
 
   before :each do
-    @campaign = Campaign.create! title: 'Data Center Light',
-      claim: 'The best hosting in the world',
-                                 description: "It's the best",
-                                 start_date: 10.days.from_now,
-                                 end_date: 40.days.from_now,
-                                 youtube_url: 'https://www.youtube.com/watch?v=ZUgjm-XqKuc',
-                                 goal: 1000
-    @goody = Goody.create campaign: @campaign,
-                          title: 'Super Stickers'
+    @campaign = FactoryBot.create :campaign, title: 'Spec Campaign'
+    @goody = FactoryBot.create :goody, title: 'Spec Goody', campaign: @campaign
   end
 
   scenario 'campaigns#show' do
     visit campaign_path(@campaign)
-    expect(page).to have_content "It's the best"
+    expect(page).to have_content 'Spec Campaign'
   end
 
   scenario 'navigation to the goodies' do
     visit campaign_path(@campaign)
     find('.qa-support-project').click
-    expect(page).to have_content 'Super Stickers'
+    expect(page).to have_content 'Spec Goody'
   end
 
   feature 'buying goodies' do

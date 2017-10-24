@@ -102,9 +102,9 @@ have the ability to log in.
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
 
-**** TODO [25%] NF: Integrate FactoryGirl
+**** TODO [37%] NF: Integrate FactoryGirl
 - [X] spec/features/admin_spec.rb
-- [ ] spec/features/campaigns_spec.rb
+- [X] spec/features/campaigns_spec.rb
 - [ ] spec/features/application_spec.rb
 - [ ] spec/features/root_spec.rb
 - [ ] spec/models/supporter_spec.rb
