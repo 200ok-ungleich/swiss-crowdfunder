@@ -65,6 +65,7 @@ group :development do
   gem 'pry-doc'
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rails', '~> 1.3'
+  gem 'capistrano-rbenv', '~> 2.1'
 end
 
 group :production, :test do
