@@ -83,7 +83,7 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 
 *** Security
 
-For the initial version of the application, there is only one route
+    For the initial version of the application, there is only one route
 that can create entities, none that can update or destroy any.
 Creation of the resource only works on a valid model and has only the
 potential side effect of generating more money for the campaign. Apart
@@ -101,6 +101,8 @@ have the ability to log in.
 *** PROJECT Ready for Ungleich Crowdfunding
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
+
+**** TODO NF: Integrate FactoryGirl
 **** TODO As a user, when checking out a goodie, I want to give user-info: Name, E-Mail, Date of Birth (>=18)
 - [ ] Validation
 

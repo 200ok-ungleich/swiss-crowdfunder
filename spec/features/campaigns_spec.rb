@@ -55,6 +55,7 @@ describe 'campaigns' do
 
         fill_in "First name", with: "John"
         fill_in "Last name", with: "Doe"
+        select "1950", from: "order_supporter_attributes_date_of_birth_1i"
         find('.qa-agreement').click
         find('.qa-submit').click
         expect(page).to_not have_content I18n.t('errors.messages.blank')

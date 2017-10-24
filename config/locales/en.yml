@@ -37,3 +37,6 @@ en:
       pledge: "Pledge"
       price: "Betrag: %{price}"
       quantity: "Quantity: %{quantity}"
+  supporter:
+    validation:
+      not_old_enough: "Minimum age is 18"

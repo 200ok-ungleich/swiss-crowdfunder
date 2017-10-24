@@ -66,7 +66,7 @@ describe "admin dashboard", :type => :feature do
         goal: 1000
       goody = Goody.create campaign: campaign,
         title: 'Super Stickers'
-      supporter = Supporter.new first_name: "John", last_name: "Doe", date_of_birth: 1.day.ago
+      supporter = Supporter.new first_name: "John", last_name: "Doe", date_of_birth: 18.years.ago
       Order.create! goody: goody, payment_type: "stripe", agreement: true, supporter: supporter
 
       click_on "Orders"

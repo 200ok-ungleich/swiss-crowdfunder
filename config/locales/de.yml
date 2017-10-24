@@ -38,3 +38,6 @@ de:
       pledge: "Weiter"
       price: "Betrag: %{price}"
       quantity: "Anzahl: %{quantity}"
+  supporter:
+    validation:
+      not_old_enough: "Minimal Alter ist 18 Jahre"
