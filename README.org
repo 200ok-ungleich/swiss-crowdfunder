@@ -102,16 +102,6 @@ have the ability to log in.
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
 
-**** TODO [37%] NF: Integrate FactoryGirl
-- [X] spec/features/admin_spec.rb
-- [X] spec/features/campaigns_spec.rb
-- [ ] spec/features/application_spec.rb
-- [ ] spec/features/root_spec.rb
-- [ ] spec/models/supporter_spec.rb
-- [X] spec/models/campaign_spec.rb
-- [ ] spec/controllers/orders_controller_spec.rb
-- [ ] spec/controllers/root_controller_spec.rb
-
 **** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info
@@ -120,6 +110,16 @@ have the ability to log in.
 **** TODO NF: Eval - Users as Nested Attributes through Orders
 **** TODO Wenn möglich: Neben Bankeinzug auch CC
 **** TODO NF: Capistrano Bug - Migrations run on every deploy
+**** DONE [100%] NF: Integrate FactoryGirl
+- [X] spec/features/admin_spec.rb
+- [X] spec/features/campaigns_spec.rb
+- [X] spec/features/application_spec.rb
+- [X] spec/features/root_spec.rb
+- [X] spec/models/supporter_spec.rb
+- [X] spec/models/campaign_spec.rb
+- [X] spec/controllers/orders_controller_spec.rb
+- [X] spec/controllers/root_controller_spec.rb
+
 **** DONE As a user, when checking out a goodie, I want to give user-info: Name, E-Mail, Date of Birth (>=18)
 - [ ] Validation
 

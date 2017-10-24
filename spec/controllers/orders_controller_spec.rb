@@ -3,15 +3,8 @@ require 'rails_helper'
 RSpec.describe OrdersController, type: :controller do
 
   before :each do
-    @campaign = Campaign.create! title: 'Data Center Light',
-      claim: 'The best hosting in the world',
-                                 description: "It's the best",
-                                 start_date: 10.days.from_now,
-                                 end_date: 40.days.from_now,
-                                 youtube_url: 'https://www.youtube.com/watch?v=ZUgjm-XqKuc',
-                                 goal: 1000
-    @goody = Goody.create campaign: @campaign,
-                          title: 'Super Stickers'
+    @campaign = FactoryBot.create :campaign
+    @goody = FactoryBot.create :goody, campaign: @campaign
   end
 
   # This should return the minimal set of attributes required to create a valid

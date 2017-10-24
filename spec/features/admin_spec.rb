@@ -48,7 +48,7 @@ describe "admin dashboard", :type => :feature do
       Order.create! goody: goody, payment_type: "stripe", agreement: true, supporter: supporter
 
       click_on "Orders"
-      expect(page).to have_content "Goody 1"
+      expect(page).to have_content "stripe"
     end
   end
 
