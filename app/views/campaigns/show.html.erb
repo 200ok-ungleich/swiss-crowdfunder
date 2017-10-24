@@ -56,12 +56,12 @@
         <%= link_to "Support this project", campaign_goodies_path(@campaign), class: "btn btn_theme btn-lg btn-block qa-support-project" %>
       </div>
 
-      <div class="campaign_links">
+      <div class="campaign_links mb-4"><!--
           <div class="col col-lg-auto pr-0">
             <a href="#" class="btn_card"><span class="fa fa-heart mr-2"></span>Remind me</a>
-          </div>
+          </div> -->
         <div class="row">
-          <div class="col pl-2">
+          <div class="col">
             <ul>
               <%- unless @campaign.twitter_url.blank? %>
                 <li><%= link_to raw('<span class="fa fa-twitter"></span>'), @campaign.twitter_url, target: "_blank", class: "link " %></li>
