@@ -36,3 +36,57 @@ set :deploy_to, "/home/app/app"
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+set :rails_env, 'production'
+
+namespace :deploy do
+
+  #task :slack_started do
+  #  slack "#{fetch(:me)} STARTED a deployment of "+
+  #        "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
+  #end
+  #after :started, :slack_started
+
+
+  #task :slack_finished do
+  #  slack "#{fetch(:me)} FINISHED a deployment of "+
+  #        "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
+  #end
+  #after :finished, :slack_finished
+
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute "RAILS_ENV=#{fetch(:rails_env)} $HOME/bin/unicorn_wrapper restart"
+    end
+  end
+
+  after :publishing, :restart
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
+
+end
+
+
+
+#def slack(message)
+#  url = "https://voicerepublic.slack.com/services/hooks/incoming-webhook"+
+#        "?token=VtybT1KujQ6EKstsIEjfZ4AX"
+#  payload = {
+#    channel: '#voicerepublic_tech',
+#    username: 'capistrano',
+#    text: message,
+#    icon_emoji: ':floppy_disk:'
+#  }
+#  json = JSON.unparse(payload)
+#  cmd = "curl -X POST --data-urlencode 'payload=#{json}' '#{url}' 2>&1"
+#  %x[ #{cmd} ]
+#end

@@ -8,7 +8,7 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 server 'swiss-crowdfunding.net', user: 'app', roles: %w{web app db}
-set :branch, ENV['REVISION'] || 'integration'
+set :branch, ENV['REVISION'] || 'master'
 
 
 # role-based syntax
