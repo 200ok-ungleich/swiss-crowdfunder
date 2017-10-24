@@ -43,27 +43,4 @@ RSpec.describe OrdersController, type: :controller do
     end
   end
 
-
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new Order" do
-        expect {
-          post :create, params: {order: valid_attributes.merge(campaign_id: @campaign.id, goody_id: @goody.id)}
-        }.to change(Order, :count).by(1)
-      end
-
-      #it "redirects to the created order" do
-      #  post :create, params: {order: valid_attributes}, session: valid_session
-      #  expect(response).to redirect_to(Order.last)
-      #end
-    end
-
-    #context "with invalid params" do
-    #  it "returns a success response (i.e. to display the 'new' template)" do
-    #    post :create, params: {order: invalid_attributes}, session: valid_session
-    #    expect(response).to be_success
-    #  end
-    #end
-  end
-
 end
