@@ -41,3 +41,4 @@ de:
   supporter:
     validation:
       not_old_enough: "Minimal Alter ist 18 Jahre"
+      is_not_a_date: "Geburtsdatum muss ein Datum sein"

@@ -40,3 +40,4 @@ en:
   supporter:
     validation:
       not_old_enough: "Minimum age is 18"
+      is_not_a_date: "Date of birth is not a date"
