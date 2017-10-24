@@ -46,8 +46,9 @@ describe 'campaigns' do
         visit campaign_goodies_path([@campaign, @goody])
         find('.qa-pledge').click
 
-        fill_in "First name", with: "John"
-        fill_in "Last name", with: "Doe"
+        fill_in I18n.t('orders.new.first_name'), with: "John"
+        fill_in I18n.t('orders.new.last_name'), with: "Doe"
+        fill_in I18n.t('orders.new.email'), with: "supporter@example.com"
         select "1950", from: "order_supporter_attributes_date_of_birth_1i"
         find('.qa-agreement').click
         find('.qa-submit').click

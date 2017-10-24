@@ -23,6 +23,9 @@ en:
       credit_card: "Credit or debit card"
       i_agree: "I agree and want to support this project"
       create_order: "Create order"
+      first_name: "First name"
+      last_name: "Last name"
+      email: "Email"
     show:
       success: "Success"
       bought_package: "You have bought the package "

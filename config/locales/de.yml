@@ -24,6 +24,9 @@ de:
       credit_card: "Kreditkarte"
       i_agree: "Ich bestätige hiermit dieses Projekt unterstützen zu möchten"
       create_order: "Unterstützen"
+      first_name: "Vorname"
+      last_name: "Nachname"
+      email: "Email"
     show:
       success: "Erfolg"
       bought_package: "Sie haben folgendes Paket erstanden:"
