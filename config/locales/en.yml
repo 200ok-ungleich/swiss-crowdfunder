@@ -21,7 +21,7 @@ en:
     new:
       confirmation: "Confirmation"
       selected_package: "You have selected the package"
-      i_hereby_acknowledge: "I hereby acknowledge that I want to pay <b>%{price} %{currency}</b> for it."
+      i_hereby_acknowledge: "I hereby acknowledge that I want to pay <strong>%{price} %{currency}</strong> for it."
       credit_card: "Credit or debit card"
       i_agree: "I agree and want to support this project"
       create_order: "Create order"

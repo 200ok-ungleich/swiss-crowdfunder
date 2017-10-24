@@ -3,29 +3,33 @@
 
     <div class="inner cover">
       <main class="container">
-        <h1 class="cover-heading"><%= t('.title') %></h1>
-        <p class="lead"><%= t(".claim") %></p>
+        <div class="text-center">
+          <h1 class="cover-heading"><%= t('.title') %></h1>
+          <p class="lead"><%= t(".claim") %></p>
+        </div>
 
-        <div class="campaign center-block mt-5">
+        <div style="margin-top: 5rem;">
           <%- if !@campaigns %>
             <%= t('.no_campaigns') %>
           <%- end %>
-          <% @campaigns.each do |campaign| %>
-            <div>
-              <h2>
-                <%= campaign.title %>
-              </h2>
-              <h4>
-                <%= campaign.claim %>
-              </h4>
-              <p class="lead">
-                <a href="<%= campaign_path(campaign)%>"
-                   class="btn btn-lg btn-secondary">
-                  Learn more
-                </a>
-              </p>
-            </div>
-          <% end %>
+          <div class="row">
+            <% @campaigns.each do |campaign| %>
+              <div class="col-sm-6 mb-5 text-center">
+                <h2>
+                  <%= campaign.title %>
+                </h2>
+                <h5 class="mb-4">
+                  <%= campaign.claim %>
+                </h5>
+                <p class="lead">
+                  <a href="<%= campaign_path(campaign)%>"
+                     class="btn btn-lg btn-secondary">
+                    Learn more
+                  </a>
+                </p>
+              </div>
+            <% end %>
+          </div>
         </div>
       </main>
     </div>

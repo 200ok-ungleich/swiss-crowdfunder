@@ -3,6 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.orders-new, .orders-create {
+  .main_content {
+    margin-top: -1.5rem;
+    background-color: #f6f7f8;
+  }
+}
+
 #card-element {
   width: 100% !important;
   max-width: 800px;
@@ -14,10 +21,6 @@ label[for=card-element] {
   display: block;
   width: 100%;
 }
-
-.confirmation {
-  margin-bottom: 3em;
-  }
 
 .StripeElement {
   background-color: white;

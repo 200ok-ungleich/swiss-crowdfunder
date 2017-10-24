@@ -23,7 +23,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <div class="text_loud text_theme"><%= number_to_percentage(100*(@campaign.amount_raised.to_f / @campaign.goal), precision: 1, separator: '.') %></div>
+          <div class="text_loud text_theme"><%= number_to_percentage(100*(@campaign.amount_raised.to_f / @campaign.goal), precision: 1, separator: '.', format: "%n %") %></div>
         </div>
         <div class="col-6 text-right funding_goal">
           <div class="small mt-1"><%= t '.funding_goal' %></div>
@@ -43,11 +43,11 @@
 
       <div class="campaign_date mb-4">
         <div class="row mb-2">
-          <div class="col-3"><strong><%= t '.start' %></strong></div>
+          <div class="col-2"><strong><%= t '.start' %></strong></div>
           <div class="col"><%= I18n.l @campaign.start_date %></div>
         </div>
         <div class="row mb-2">
-          <div class="col-3"><strong><%= t '.end' %></strong></div>
+          <div class="col-2"><strong><%= t '.end' %></strong></div>
           <div class="col"><%= I18n.l @campaign.end_date %></div>
         </div>
       </div>

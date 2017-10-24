@@ -1,47 +1,47 @@
 <%= javascript_include_tag( 'orders' ) %>
 
 <div class="container">
-
-  <div class="confirmation">
-    <h2><%= t('.confirmation') %></h2>
-
-    <p>
-      <%= t('.selected_package') %>
-      <b> <%= @goody.title %> </b>.
-    </p>
-
-    <p>
-      <%= raw t('.i_hereby_acknowledge', price: @goody.price, currency: "CHF") %>
-    </p>
-  </div>
-
-  <%= simple_form_for [@goody.campaign, @goody, @order] do |f| %>
-
-    <%= f.simple_fields_for :supporter do |s| %>
-
-      <%= s.input :first_name %>
-      <%= s.input :last_name %>
-      <%= s.input :date_of_birth, as: :date %>
-
-    <% end %>
-
-    <div class="form-row">
-      <label for="card-element">
-       <%= t('.credit_card') %>
-      </label>
-      <div id="card-element">
-        <!-- a Stripe Element will be inserted here. -->
-      </div>
-      <!-- Used to display form errors -->
-      <div id="card-errors" role="alert"></div>
+  <div class="mid_box">
+    <div class="top_section mb-4">
+      <h1><%= t('.confirmation') %></h1>
+      <p>
+        <%= t('.selected_package') %> <strong><%= @goody.title %></strong>.
+      </p>
+      <p>
+        <%= raw t('.i_hereby_acknowledge', price: @goody.price, currency: "CHF") %>
+      </p>
     </div>
-    <br/>
-    <%= f.input :agreement,
-                required: true,
-                label: t('.i_agree'),
-                input_html: { class: "qa-agreement" } %>
-    <%= f.submit t(".create_order"),
-                 class: "qa-submit btn btn-secondary" %>
-  <% end %>
 
+    <%= simple_form_for [@goody.campaign, @goody, @order] do |f| %>
+      <%= f.simple_fields_for :supporter do |s| %>
+        <div class="row">
+          <div class="col-sm-6">
+            <%= s.input :first_name %>
+          </div>
+          <div class="col-sm-6">
+            <%= s.input :last_name %>
+          </div>
+        </div>
+        <%= s.input :date_of_birth, as: :date %>
+      <% end %>
+
+
+      <!-- <div class="form-group">
+        <label for="card-element">
+         <%= t('.credit_card') %>
+        </label>
+        <div id="card-element">
+          a Stripe Element will be inserted here.
+        </div>
+        Used to display form errors
+        <div id="card-errors" role="alert"></div>
+      </div> -->
+      <div class="text-right mb-4">
+        <%= f.input :agreement, required: true, label: t('.i_agree'), input_html: { class: "qa-agreement" } %>
+      </div>
+      <div class="text-center">
+        <%= f.submit t(".create_order"), class: "qa-submit btn btn_theme btn_wide" %>
+      </div>
+    <% end %>
+  </div>
 </div>
