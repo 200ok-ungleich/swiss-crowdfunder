@@ -16,7 +16,7 @@ before_script:
   - gem install bundler --no-ri --no-rdoc
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
   - cp config/database.yml.gitlab config/database.yml
-  - bundle exec rails db:drop db:create db:migrate
+  - bundle exec rails db:test:prepare
 
 # Cache gems in between builds
 cache:
