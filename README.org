@@ -101,21 +101,14 @@ have the ability to log in.
 *** PROJECT Ready for Ungleich Crowdfunding
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
-
-**** TODO Handle 404s
 **** TODO Text Feld auf Order: Bank Einzug
 **** TODO Address: Street, #, ZIP, City, Country
 **** TODO Campaign Model: E-Mail
 **** TODO Send Email on Order#create
 **** TODO On create order/user: Send Mail
 **** TODO On create order/user: Send Notification to Mattermost
-**** TODO GA Integration
 **** TODO NF: SEO friendly URLs for Campaigns
 **** TODO Add ExceptionNotification E-Mails
-**** TODO [50%] Redirect root to Nicos campaign
-     - [X] Actual redirect
-     - [ ] Feature Specs
-
 **** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info
@@ -125,7 +118,10 @@ have the ability to log in.
 - [ ] Test itinerary
 - [X] cdist run
 - [X] SSL
-
+**** DONE [100%] Redirect root to Nicos campaign
+     - [X] Actual redirect
+     - [X] Feature Specs
+**** DONE Handle 404s
 **** DONE campaigns#show: I18n supporters
 **** DONE Regression: Progress bar doesn't work
 **** DONE As a user, when ordering, I need to give my email address
@@ -152,8 +148,9 @@ have the ability to log in.
 **** DONE Introduce "TOS" Page without content
 
 
-*** PROJECT Production Ready
+*** PROJECT Ready beyond ungleich
 
+**** TODO Handle 500 with separate page (analogous to 404)
 **** TODO Implement Stripe
 **** TODO Integrate Favicon
 **** TODO Replace application.html.erb fonts and font-awesome CDN with local variant

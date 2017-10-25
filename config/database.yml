@@ -8,14 +8,8 @@ development:
   database: db/development.sqlite3
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  timeout: 5000
-  host: postgres
-  username: runner
-  password:
-  database: test_db
+  <<: *default
+  database: db/test.sqlite3
 
 production:
   <<: *default
