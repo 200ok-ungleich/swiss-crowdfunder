@@ -153,7 +153,7 @@ have the ability to log in.
 *** PROJECT Production Ready
 
 **** TODO Implement Stripe
-
+**** TODO Integrate Favicon
 **** TODO Replace application.html.erb fonts and font-awesome CDN with local variant
 **** TODO i18n all the strings
 **** TODO As soon as users can create/modify/delete resources or login: Implement global lock-down
