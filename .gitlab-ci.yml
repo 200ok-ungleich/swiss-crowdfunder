@@ -15,7 +15,7 @@ before_script:
   - which ruby
   - gem install bundler --no-ri --no-rdoc
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
-  - bundle exec rails db:migrate
+  - bundle exec rails db:test:prepare
 
 # Cache gems in between builds
 cache:
