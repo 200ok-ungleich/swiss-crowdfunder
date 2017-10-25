@@ -29,7 +29,7 @@ describe "admin dashboard", :type => :feature do
     end
 
     it "shows all Campaigns" do
-      FactoryBot.create :campaign
+      FactoryBot.create :campaign, title: "Spec Campaign"
 
       click_on "Campaigns"
       expect(page).to have_content "Spec Campaign"

@@ -12,8 +12,6 @@ class OrdersController < ApplicationController
     @order.paid = false
 
     if @order.save
-      @order.update_attribute :paid, true
-
       redirect_to [@goody.campaign, @goody, @order]
     else
       render action: 'new'

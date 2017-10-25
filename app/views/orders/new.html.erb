@@ -26,6 +26,12 @@
         <%= s.input :date_of_birth, as: :date, start_year: Date.today.year - 100, end_year: Date.today.year - 10  %>
       <% end %>
 
+      <%- unless @goody.campaign.order_description.blank? %>
+        <div class="row jumbotron" id="campaign_order_description" >
+          <%= raw @goody.campaign.order_description_html %>
+        </div>
+      <% end %>
+
 
       <!-- <div class="form-group">
         <label for="card-element">

@@ -1,16 +1,19 @@
 ActiveAdmin.register Campaign do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
   permit_params :goal, :start_date, :end_date, :title, :youtube_url,
-    :description, :claim, :twitter_url, :facebook_url
-# or
+    :description, :claim, :twitter_url, :facebook_url, :order_description
+
+  index do
+    selectable_column
+    column :title
+    column :start_date
+    column :end_date
+    column :claim
+    column :created_at
+    column :updated_at
+    actions
+  end
 #
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
 
   form do |f|
     inputs do
@@ -23,6 +26,7 @@ ActiveAdmin.register Campaign do
       input :facebook_url
       input :twitter_url
       input :description, label: "Description(Markdown)"
+      input :order_description, label: "Order Description(Markdown)"
     end
     actions
   end

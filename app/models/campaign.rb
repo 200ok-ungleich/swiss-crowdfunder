@@ -5,7 +5,7 @@ class Campaign < ApplicationRecord
 
   before_save :use_youtube_embedd_url
 
-  before_save :convert_description
+  before_save :convert_descriptions
 
   def amount_raised
     goodies.inject(0) do |sum, g|
@@ -22,9 +22,10 @@ class Campaign < ApplicationRecord
     end
   end
 
-  def convert_description
+  def convert_descriptions
     renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new,
                                        fenced_code_blocks: true)
-    self.description_html = renderer.render(description)
+    self.description_html = renderer.render(description) if description
+    self.order_description_html = renderer.render(order_description) if order_description
   end
 end

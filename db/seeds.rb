@@ -16,6 +16,15 @@ seed Campaign, { title: "Ungleich Glarus AG" },
   - Coworking
 
   Mit dem Funding für diese Kampagne starten wir einen neuen Coworking-Space in Braunwald.""",
+
+   order_description: """## Bezahlung
+
+   Bitte bezahlen Sie per Überweisung auf das folgende Konto:
+
+   IBAN: CH93 0076 2011 6238 5295 7
+
+   BIC: POFICHBEXXX""",
+
    start_date: 2.days.before,
    end_date: 40.days.from_now,
    youtube_url: "https://www.youtube.com/watch?v=ZUgjm-XqKuc",
