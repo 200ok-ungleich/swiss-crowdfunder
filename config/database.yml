@@ -12,10 +12,10 @@ test:
   encoding: unicode
   pool: 5
   timeout: 5000
-  host: <%= ENV['CI'].blank? ? "localhost" : "postgres" %>
-  username: <%= ENV['CI'].blank? ? "postgres" : "runner" %>
+  host: postgres
+  username: runner
   password:
-  database: crowdfunding_test
+  database: test_db
 
 production:
   <<: *default
