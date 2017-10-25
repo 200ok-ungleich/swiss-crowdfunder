@@ -115,7 +115,6 @@ We are using Gitlab CI as a testing service.
 *** PROJECT Ready for Ungleich Crowdfunding
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
-**** TODO Address: Street, #, ZIP, City, Country
 **** TODO Campaign Model: E-Mail
 **** TODO Send Email on Order#create
 **** TODO On create order/user: Send Mail
@@ -123,7 +122,7 @@ We are using Gitlab CI as a testing service.
 **** TODO NF: SEO friendly URLs for Campaigns
 **** TODO Add ExceptionNotification E-Mails
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
-
+**** DONE Address: Street, #, ZIP, City, Country
 **** DONE As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info

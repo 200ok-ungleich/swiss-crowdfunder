@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025151914) do
+ActiveRecord::Schema.define(version: 20171025183112) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -91,6 +94,11 @@ ActiveRecord::Schema.define(version: 20171025151914) do
     t.string "first_name"
     t.string "last_name"
     t.date "date_of_birth"
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "postal_code"
+    t.string "country"
     t.index ["order_id"], name: "index_supporters_on_order_id"
   end
 

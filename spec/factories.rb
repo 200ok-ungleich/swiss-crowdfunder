@@ -21,6 +21,11 @@ FactoryBot.define do
     last_name  "Doe"
     sequence(:email) { |n| "supporter#{n}@example.com" }
     date_of_birth { 18.years.ago }
+    street "Spec Street"
+    postal_code "12345"
+    country "Switzerland"
+    city "Glarus"
+    state "GL"
   end
 
   factory :admin_user do
