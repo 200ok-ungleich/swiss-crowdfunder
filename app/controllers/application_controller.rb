@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
+  rescue_from ActiveRecord::RecordNotFound, with: :render_404
+
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
@@ -9,4 +11,10 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { locale: I18n.locale }
   end
+
+  private
+  def render_404
+    render "errors/not_found"
+  end
+
 end
