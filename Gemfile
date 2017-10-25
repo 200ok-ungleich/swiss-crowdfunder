@@ -72,10 +72,15 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.1'
 end
 
-group :production do
+group :production, :test do
   # Postgres
   gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Alain uses PG also for dev and testing to mimic the live server
+if `hostname` == "debzen"
+  gem 'pg'
+end
