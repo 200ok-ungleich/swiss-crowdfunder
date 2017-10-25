@@ -164,6 +164,7 @@ We are using Gitlab CI as a testing service.
 
 *** PROJECT Ready beyond ungleich
 
+**** TODO campaigns#show: Add update ticker
 **** TODO Handle 500 with separate page (analogous to 404)
 **** TODO Implement Stripe
 **** TODO Integrate Favicon
