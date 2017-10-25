@@ -40,7 +40,7 @@ de:
   campaigns:
     show:
       funding_goal: "Finanzierungsziel"
-      funding_amount_raised: "Bereits erreicht:"
+      funding_amount_raised: "Bereits erreicht"
       funding_supporters: "Anzahl an Unterstützern"
       support_the_project: "Unterstützen Sie dieses Projekt"
       description: "Beschreibung"
@@ -53,5 +53,5 @@ de:
       about: "Über diese Kampagne"
   supporter:
     validation:
-      not_old_enough: "Minimal Alter ist 18 Jahre"
+      not_old_enough: "Mindestalter ist 18 Jahre"
       is_not_a_date: "Geburtsdatum muss ein Datum sein"
