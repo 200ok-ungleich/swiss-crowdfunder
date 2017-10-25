@@ -107,7 +107,12 @@ have the ability to log in.
 
 
 **** TODO Handle 404s
-**** DONE Redirect root to Nicos campaign
+**** TODO Regression: Progress bar doesn't work in DE, but it works in EN
+**** TODO NF: SEO friendly URLs for Campaigns
+**** TODO [50%] Redirect root to Nicos campaign
+     - [X] Actual redirect
+     - [ ] Feature Specs
+
 **** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info
