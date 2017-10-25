@@ -1,5 +1,7 @@
 <%= javascript_include_tag( 'orders' ) %>
 
+<% content_for :main_content_class do %>bg_grey<% end %>
+
 <div class="container">
   <div class="mid_box">
     <div class="top_section mb-4">
@@ -27,7 +29,7 @@
       <% end %>
 
       <%- unless @goody.campaign.order_description.blank? %>
-        <div class="row jumbotron" id="campaign_order_description" >
+        <div class="jumbotron mt-4" id="campaign_order_description">
           <%= raw @goody.campaign.order_description_html %>
         </div>
       <% end %>
