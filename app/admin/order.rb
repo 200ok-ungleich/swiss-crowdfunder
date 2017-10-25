@@ -1,15 +1,34 @@
 ActiveAdmin.register Order do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 permit_params :quantity, :amount, :payment_type, :paid, :goody_id
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+
+index do
+  selectable_column
+  column :amount
+  column :quantity
+  column :payment_type
+  column :paid
+  column :goody
+  column :supporter
+  column :agreement
+  column :created_at
+  column :updated_at
+  actions
+end
+
+show do
+  attributes_table do
+    row :quantity
+    row :amount
+    row :payment_type
+    row :paid
+    row :goody
+    row :supporter
+    row :agreement
+    row :created_at
+    row :updated_at
+  end
+  active_admin_comments
+end
 
 end

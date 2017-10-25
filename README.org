@@ -24,7 +24,7 @@ Within your local checkout run =bundle=.
 
 *** Configure Database
 
-=ln -s config/database.yml.example config/database.yml=
+=cd config; ln -s database.yml.example database.yml; cd -=
 
 *** Migrate Database
 
