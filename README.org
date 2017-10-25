@@ -22,6 +22,16 @@ macOS: =rbenv install 2.4.1=
 
 Within your local checkout run =bundle=.
 
+*** Configure Database
+
+Every host that runs this application can have a different database
+configuration. There is an example configuration that runs on sqlite,
+however that you can easily use by:
+
+=ln -s config/database.yml.example config/database.yml=
+
+Alternatively you can configure PG, MySQL or others.
+
 *** Migrate Database
 
 =rake db:create db:migrate db:seed=
@@ -99,9 +109,6 @@ have the ability to log in.
 *** Testing on CI
 
 We are using Gitlab CI as a testing service.
-
-Due to regressions on using PG as test database on Gitlab CI, we have
-reverted to using sqlite on CI.
 
 ** TODOs
 
