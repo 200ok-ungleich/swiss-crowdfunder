@@ -11,6 +11,7 @@ en:
       title: "Glarner Crowdfunding"
       no_campaigns: "There are no campaigns currently featured."
       claim: "Featuring the best projects!"
+      learn_more: "Learn more"
   goodies:
     index:
       support_the_project: "Support this project"
@@ -44,6 +45,7 @@ en:
       end: "End"
       price: "Betrag: %{price}"
       quantity: "Quantity: %{quantity}"
+      about: "About this campaign"
   supporter:
     validation:
       not_old_enough: "Minimum age is 18"

@@ -98,16 +98,15 @@
     </div> -->
     <div class="row">
       <div class="col-md-7 col-lg-8">
-        <h2>About this project</h2>
+        <h2><%= t('.about') %></h2>
         <article>
-          <h3>A new datacenter for canton Glarus</h3>
           <section>
             <%= raw @campaign.description_html %>
           </section>
         </article>
       </div>
       <aside class="col-md-5 col-lg-4">
-        <h2>Goodies</h2>
+        <h2><%= t('.goodies') %></h2>
         <% @campaign.goodies.each do |goody| %>
           <section class="card side_card">
             <div class="card-body">

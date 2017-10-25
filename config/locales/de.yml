@@ -16,6 +16,7 @@ de:
       title: "Glarner kraʊdˌfʌnd.ɪŋ"
       no_campaigns: "Im Moment gibt es keine Projekte."
       claim: "Mit den besten lokalen Projekten!"
+      learn_more: "Mehr erfahren"
   goodies:
     index:
       support_the_project: "Unterstützen Sie dieses Projekt"
@@ -49,6 +50,7 @@ de:
       quantity: "Anzahl : %{quantity}"
       start: "Begin"
       end: "Ziel"
+      about: "Über diese Kampagne"
   supporter:
     validation:
       not_old_enough: "Minimal Alter ist 18 Jahre"

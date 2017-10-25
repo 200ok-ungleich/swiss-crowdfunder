@@ -5,8 +5,11 @@ seed AdminUser, { email: 'info@ungleich.ch' },
 
 seed Campaign, { title: "Ungleich Glarus AG" },
    claim: "Wir digitalisieren Glarus",
-   description: """Wir machen Crowdfunding, damit wir unser erfolgreiches Geschäft weiter ausbauen können.
-   Wir bauen digitale Businesses in Glarus auf:
+   description: """### Ein neues Datacenter für den Kanton Glarus
+
+   Wir machen Crowdfunding, damit wir unser erfolgreiches Geschäft
+   weiter ausbauen können. Wir bauen digitale Businesses in Glarus
+   auf:
 
   - Symmetrisches Internet
   - Data Center Light
