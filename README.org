@@ -22,6 +22,10 @@ macOS: =rbenv install 2.4.1=
 
 Within your local checkout run =bundle=.
 
+*** Configure Database
+
+=ln -s config/database.yml.example config/database.yml=
+
 *** Migrate Database
 
 =rake db:create db:migrate db:seed=
@@ -102,7 +106,8 @@ have the ability to log in.
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
 
-
+**** TODO Handle 404s
+**** DONE Redirect root to Nicos campaign
 **** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info

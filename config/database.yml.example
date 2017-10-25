@@ -8,14 +8,8 @@ development:
   database: db/development.sqlite3
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  timeout: 5000
-  host: <%= ENV['CI'].blank? ? "localhost" : "postgres" %>
-  username: <%= ENV['CI'].blank? ? "postgres" : "runner" %>
-  password:
-  database: crowdfunding_test
+  <<: *default
+  database: db/test.sqlite3
 
 production:
   <<: *default
