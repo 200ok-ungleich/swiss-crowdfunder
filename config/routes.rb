@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   if Campaign.first
-    root to: redirect("/campaigns/#{Campaign.first.id}", status: 302)
+    root to: redirect("/campaigns/#{Campaign.first.to_param}", status: 302)
   else
     root to: "root#index"
   end
