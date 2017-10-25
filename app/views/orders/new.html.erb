@@ -16,10 +16,10 @@
       <%= f.simple_fields_for :supporter do |s| %>
         <div class="row">
           <div class="col-sm-6">
-            <%= s.input :first_name %>
+            <%= s.input :first_name, label: t('.first_name') %>
           </div>
           <div class="col-sm-6">
-            <%= s.input :last_name %>
+            <%= s.input :last_name, label: t('.last_name') %>
           </div>
         </div>
         <%= s.input :email, label: t('.email') %>
