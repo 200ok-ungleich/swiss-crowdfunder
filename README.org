@@ -28,7 +28,7 @@ Every host that runs this application can have a different database
 configuration. There is an example configuration that runs on sqlite,
 however that you can easily use by:
 
-=ln -s config/database.yml.example config/database.yml=
+=cd config; ln -s database.yml.example database.yml; cd -=
 
 Alternatively you can configure PG, MySQL or others.
 
