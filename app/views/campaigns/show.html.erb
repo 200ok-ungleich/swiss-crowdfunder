@@ -17,7 +17,7 @@
     <div class="col-md-5 col-lg-4">
       <div class="progress progress_thin mb-1">
         <div class="progress-bar bg_theme" role="progressbar"
-          style="width: <%= number_to_percentage(100*(@campaign.amount_raised.to_f / @campaign.goal), precision: 1, separator: '.') %>;"
+          style="width: <%= campaign_percentage(@campaign) %>;"
           aria-valuenow="<%= @campaign.amount_raised %>" aria-valuemin="0" aria-valuemax="<%= @campaign.goal %>">
         </div>
       </div>

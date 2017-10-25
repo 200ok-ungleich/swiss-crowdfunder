@@ -103,7 +103,6 @@ have the ability to log in.
 
 
 **** TODO Handle 404s
-**** TODO Regression: Progress bar doesn't work in DE, but it works in EN
 **** TODO NF: SEO friendly URLs for Campaigns
 **** TODO [50%] Redirect root to Nicos campaign
      - [X] Actual redirect
@@ -120,8 +119,8 @@ have the ability to log in.
 - [ ] cdist run
 - [ ] SSL
 
-
 **** DONE campaigns#show: I18n supporters
+**** DONE Regression: Progress bar doesn't work
 **** DONE As a user, when ordering, I need to give my email address
 **** DONE NF: Capistrano Bug - Migrations run on every deploy
 **** DONE Campaign Model: Introduce optional FB and Twitter Links
