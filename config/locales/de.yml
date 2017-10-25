@@ -39,6 +39,11 @@ de:
       first_name: "Vorname"
       last_name: "Nachname"
       email: "Email"
+      street: "Strasse"
+      postal_code: "Postleitzahl"
+      city: "Ort"
+      state: "Bundesstaat"
+      country: "Land"
     show:
       success: "Erfolg"
       bought_package: "Sie haben folgendes Paket erstanden:"

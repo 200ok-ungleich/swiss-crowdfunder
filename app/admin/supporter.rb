@@ -1,8 +1,7 @@
 ActiveAdmin.register Supporter do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-permit_params :order_id, :email, :first_name, :last_name, :date_of_birth, :email
+
+permit_params :order_id, :email, :first_name, :last_name,
+  :date_of_birth, :email, :street, :postal_code, :country, :city, :state
 
 
   form do |f|
@@ -17,13 +16,5 @@ permit_params :order_id, :email, :first_name, :last_name, :date_of_birth, :email
     end
     actions
   end
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted:attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
 
 end
