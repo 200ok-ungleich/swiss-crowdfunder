@@ -103,7 +103,15 @@ have the ability to log in.
 
 
 **** TODO Handle 404s
+**** TODO Text Feld auf Order: Bank Einzug
+**** TODO Address: Street, #, ZIP, City, Country
+**** TODO Campaign Model: E-Mail
+**** TODO Send Email on Order#create
+**** TODO On create order/user: Send Mail
+**** TODO On create order/user: Send Notification to Mattermost
+**** TODO GA Integration
 **** TODO NF: SEO friendly URLs for Campaigns
+**** TODO Add ExceptionNotification E-Mails
 **** TODO [50%] Redirect root to Nicos campaign
      - [X] Actual redirect
      - [ ] Feature Specs
@@ -112,7 +120,6 @@ have the ability to log in.
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info
 **** TODO Camgains#show/Goodies#index: Show original and remaining quantity
-**** TODO Wenn möglich: Neben Bankeinzug auch CC
 **** WAITING [66%] NF: Nico should confirm
 
 - [ ] Test itinerary

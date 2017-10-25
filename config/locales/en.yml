@@ -1,4 +1,9 @@
 en:
+  errors:
+    not_found:
+      page_not_found_1: "Page not found"
+      page_not_found_2: "Something must have gone wrong!"
+      page_not_found_3: 'You can contact us at <a href="mailto:info@swiss-crowdfunding.com">info@swiss-crowdfunding.com</a>'
   layouts:
     application:
       home: "Home"

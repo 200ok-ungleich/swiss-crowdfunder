@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get "*any", via: :all, to: "errors#not_found"
+
   if Campaign.first
     root to: redirect("/campaigns/#{Campaign.first.to_param}", status: 302)
   else
