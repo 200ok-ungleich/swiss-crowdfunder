@@ -10,7 +10,6 @@ variables:
   RAILS_ENV: test
 
 before_script:
-  - cp config/database.yml.gitlab config/database.yml
   - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev nodejs postgresql
   - ruby -v
   - which ruby

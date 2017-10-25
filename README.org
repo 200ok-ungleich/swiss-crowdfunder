@@ -22,10 +22,6 @@ macOS: =rbenv install 2.4.1=
 
 Within your local checkout run =bundle=.
 
-*** Configure Database
-
-=cd config; ln -s database.yml.example database.yml; cd -=
-
 *** Migrate Database
 
 =rake db:create db:migrate db:seed=
