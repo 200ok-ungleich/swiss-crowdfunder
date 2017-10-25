@@ -72,7 +72,7 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.1'
 end
 
-group :production, :test do
+group :production do
   # Postgres
   gem 'pg'
 end

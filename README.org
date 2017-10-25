@@ -96,6 +96,13 @@ are in place, though, for authorization and authentication as soon as
 supporters get the ability to create/modify/destroy any other data or
 have the ability to log in.
 
+*** Testing on CI
+
+We are using Gitlab CI as a testing service.
+
+Due to regressions on using PG as test database on Gitlab CI, we have
+reverted to using sqlite on CI.
+
 ** TODOs
 
 *** PROJECT Ready for Ungleich Crowdfunding
