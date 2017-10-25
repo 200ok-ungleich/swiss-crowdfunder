@@ -3,6 +3,7 @@ FactoryBot.define do
   factory :campaign do
     sequence(:title) { |n| "Campaign #{n}" }
     description "Spec Campaign"
+    order_description "How to buy"
     claim 'Spec Claim'
     start_date 10.days.before
     end_date 40.days.from_now

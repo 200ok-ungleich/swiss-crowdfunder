@@ -23,6 +23,8 @@ describe 'campaigns' do
     scenario 'confirmation page' do
       visit campaign_goodies_path([@campaign, @goody])
       find('.qa-pledge').click
+      # Text from @campaign.order_description
+      expect(page).to have_content("How to buy")
       expect(page).to have_content I18n.t('orders.new.confirmation')
     end
 
