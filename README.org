@@ -108,7 +108,6 @@ reverted to using sqlite on CI.
 *** PROJECT Ready for Ungleich Crowdfunding
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
-**** TODO Text Feld auf Order: Bank Einzug
 **** TODO Address: Street, #, ZIP, City, Country
 **** TODO Campaign Model: E-Mail
 **** TODO Send Email on Order#create
@@ -116,15 +115,17 @@ reverted to using sqlite on CI.
 **** TODO On create order/user: Send Notification to Mattermost
 **** TODO NF: SEO friendly URLs for Campaigns
 **** TODO Add ExceptionNotification E-Mails
-**** TODO As a user, when checking out a goodie, I want to be able to pay with my bank account
+**** TODO Camgains#show/Goodies#index: Show original and remaining quantity
+
+**** DONE As a user, when checking out a goodie, I want to be able to pay with my bank account
 - Gleicher FLow wie jetzt
 - Anstelle CC Form: Bank-Einzugs Info
-**** TODO Camgains#show/Goodies#index: Show original and remaining quantity
-**** WAITING [66%] NF: Nico should confirm
+**** [100%] NF: Nico should confirm
 
-- [ ] Test itinerary
+- [X] Test itinerary
 - [X] cdist run
 - [X] SSL
+**** DONE Text Feld auf Order: Bank Einzug
 **** DONE [100%] Redirect root to Nicos campaign
      - [X] Actual redirect
      - [X] Feature Specs
