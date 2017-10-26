@@ -8,12 +8,4 @@ class Order < ApplicationRecord
   validates :agreement, presence: true
   validates :supporter, presence: true
 
-  #after_create :create_supporter
-
-  #private
-
-  #def create_supporter
-  #  Supporter.create order_id: self.id
-  #end
-
 end

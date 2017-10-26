@@ -55,12 +55,15 @@ de:
       support_the_project: "Unterstützen Sie dieses Projekt"
       description: "Beschreibung"
       goodies: "Belohnung"
-      pledge: "Weiter"
-      price: "Betrag :"
-      quantity: "Anzahl : %{quantity}"
       start: "Begin"
       end: "Ziel"
       about: "Über diese Kampagne"
+  shared:
+    goody:
+      pledge: "Weiter"
+      price: "Betrag :"
+      quantity: "Anzahl : %{quantity}"
+      backers: "Unterstützer : %{quantity}"
   supporter:
     validation:
       not_old_enough: "Mindestalter ist 18 Jahre"

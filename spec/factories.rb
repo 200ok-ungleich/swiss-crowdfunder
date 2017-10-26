@@ -13,6 +13,7 @@ FactoryBot.define do
 
   factory :goody do
     sequence(:title) { |n| "Goody #{n}" }
+    price 100
     campaign
   end
 
@@ -26,6 +27,13 @@ FactoryBot.define do
     country "Switzerland"
     city "Glarus"
     state "GL"
+  end
+
+  factory :order do
+    payment_type "stripe"
+    agreement true
+    goody
+    association :supporter, strategy: :build
   end
 
   factory :admin_user do

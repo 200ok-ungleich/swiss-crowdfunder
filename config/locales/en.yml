@@ -50,12 +50,15 @@ en:
       support_the_project: "Support the project"
       description: "Description"
       goodies: "Goodies"
-      pledge: "Pledge"
-      price: "Price :"
-      quantity: "Quantity : %{quantity}"
       start: "Start"
       end: "End"
       about: "About this campaign"
+  shared:
+    goody:
+      pledge: "Pledge"
+      price: "Price :"
+      quantity: "Quantity : %{quantity}"
+      backers: "Backers : %{quantity}"
   supporter:
     validation:
       not_old_enough: "Minimum age is 18"
@@ -65,4 +68,3 @@ en:
       terms_of_service: "Terms of Service"
     about_us:
       about_us: "About Us"
-
