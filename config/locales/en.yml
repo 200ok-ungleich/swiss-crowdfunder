@@ -42,8 +42,8 @@ en:
       country: "Country"
     show:
       success: "Order successful"
-      text: "You've made a great choice"
-      bought_package: "You have bought the package "
+      text: "You've made a great choice!"
+      bought_package: "You have successfully bought the package "
   campaigns:
     show:
       funding_goal: "Funding goal"

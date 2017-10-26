@@ -47,7 +47,7 @@ de:
       country: "Land"
     show:
       success: "Bestellung erfolgreich"
-      bought_package: "Sie haben folgendes Paket erstanden:"
+      bought_package: "Sie haben folgendes Paket erstanden: "
       text: "Sie haben eine grossartige Wahl getroffen!"
   campaigns:
     show:
