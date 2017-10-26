@@ -125,7 +125,7 @@ We are using Gitlab CI as a testing service.
 **** TODO On create order/user: Send Mail
 **** TODO On create order/user: Send Notification to Mattermost
 **** TODO Add ExceptionNotification E-Mails
-**** TODO Camgains#show/Goodies#index: Show original and remaining quantity
+**** DONE Camgains#show/Goodies#index: Show original and remaining quantity
 **** DONE NF: SEO friendly URLs for Campaigns
 **** DONE Address: Street, #, ZIP, City, Country
 **** DONE As a user, when checking out a goodie, I want to be able to pay with my bank account
