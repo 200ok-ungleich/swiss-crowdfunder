@@ -1,4 +1,7 @@
 class Campaign < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   has_many :goodies, dependent: :destroy
 
   validates_presence_of :description
@@ -12,6 +15,7 @@ class Campaign < ApplicationRecord
       sum += g.orders ? g.orders.sum(&:amount) : sum
     end
   end
+
 
   private
 
@@ -28,4 +32,5 @@ class Campaign < ApplicationRecord
     self.description_html = renderer.render(description) if description
     self.order_description_html = renderer.render(order_description) if order_description
   end
+
 end

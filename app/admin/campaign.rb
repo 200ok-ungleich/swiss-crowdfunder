@@ -3,6 +3,13 @@ ActiveAdmin.register Campaign do
   permit_params :goal, :start_date, :end_date, :title, :youtube_url,
     :description, :claim, :twitter_url, :facebook_url, :order_description
 
+  # friendly_id resource lookup
+  controller do
+    def find_resource
+      scoped_collection.friendly.find(params[:id])
+    end
+  end
+
   index do
     selectable_column
     column :title

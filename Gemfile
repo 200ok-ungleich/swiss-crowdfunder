@@ -30,7 +30,8 @@ gem 'redcarpet'
 gem 'simple_form'
 gem 'country_select'
 gem 'rails-i18n', '~> 5.0.0'
-gem "factory_bot_rails", "~> 4.0"
+gem 'factory_bot_rails', '~> 4.0'
+gem 'friendly_id'
 
 #gem 'cancancan', '~> 2.0'
 

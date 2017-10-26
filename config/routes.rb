@@ -12,8 +12,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get "*any", via: :all, to: "errors#not_found"
+  get '*any', via: :all, to: 'errors#not_found'
 
   # root to: "root#index"
-  root to: redirect("/campaigns/1")
+  root to: redirect('/campaigns/ungleich-glarus-ag')
 end

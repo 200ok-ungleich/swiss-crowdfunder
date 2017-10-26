@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025183112) do
+ActiveRecord::Schema.define(version: 20171026114359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20171025183112) do
     t.string "namespace"
     t.text "body"
     t.string "resource_type"
-    t.integer "resource_id"
+    t.bigint "resource_id"
     t.string "author_type"
-    t.integer "author_id"
+    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
@@ -61,6 +61,20 @@ ActiveRecord::Schema.define(version: 20171025183112) do
     t.string "twitter_url"
     t.text "order_description"
     t.text "order_description_html"
+    t.string "slug"
+    t.index ["slug"], name: "index_campaigns_on_slug", unique: true
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
   create_table "goodies", force: :cascade do |t|
@@ -68,7 +82,7 @@ ActiveRecord::Schema.define(version: 20171025183112) do
     t.text "description"
     t.integer "price"
     t.integer "quantity"
-    t.integer "campaign_id"
+    t.bigint "campaign_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["campaign_id"], name: "index_goodies_on_campaign_id"
@@ -79,7 +93,7 @@ ActiveRecord::Schema.define(version: 20171025183112) do
     t.integer "amount"
     t.string "payment_type"
     t.boolean "paid"
-    t.integer "goody_id"
+    t.bigint "goody_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "agreement"
@@ -87,7 +101,7 @@ ActiveRecord::Schema.define(version: 20171025183112) do
   end
 
   create_table "supporters", force: :cascade do |t|
-    t.integer "order_id"
+    t.bigint "order_id"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -102,4 +116,7 @@ ActiveRecord::Schema.define(version: 20171025183112) do
     t.index ["order_id"], name: "index_supporters_on_order_id"
   end
 
+  add_foreign_key "goodies", "campaigns"
+  add_foreign_key "orders", "goodies"
+  add_foreign_key "supporters", "orders"
 end

@@ -1,5 +1,5 @@
 class CampaignsController < ApplicationController
-  before_action :set_campaign, only: [:show, :edit, :update, :destroy]
+  before_action :set_campaign, only: [:show]
 
   # GET /campaigns/1
   # GET /campaigns/1.json
@@ -9,7 +9,7 @@ class CampaignsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_campaign
-      @campaign = Campaign.find(params[:id])
+      @campaign = Campaign.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

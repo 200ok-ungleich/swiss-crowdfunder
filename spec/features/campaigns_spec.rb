@@ -7,9 +7,18 @@ describe 'campaigns' do
     @goody = FactoryBot.create :goody, title: 'Spec Goody', campaign: @campaign
   end
 
-  scenario 'campaigns#show' do
-    visit campaign_path(@campaign)
-    expect(page).to have_content 'Spec Campaign'
+  feature 'campaigns#show' do
+
+    scenario 'renders' do
+      visit campaign_path(@campaign)
+      expect(page).to have_content 'Spec Campaign'
+    end
+
+    scenario 'has a slugged url' do
+      visit campaign_path(@campaign)
+      expect(current_path).to include('spec-campaign')
+    end
+
   end
 
   scenario 'navigation to the goodies' do
@@ -21,7 +30,7 @@ describe 'campaigns' do
   feature 'buying goodies' do
 
     scenario 'confirmation page' do
-      visit campaign_goodies_path([@campaign, @goody])
+      visit campaign_goodies_path([@campaign])
       find('.qa-pledge').click
       # Text from @campaign.order_description
       expect(page).to have_content("How to buy")
@@ -29,14 +38,14 @@ describe 'campaigns' do
     end
 
     scenario 'not without a agreement' do
-      visit campaign_goodies_path([@campaign, @goody])
+      visit campaign_goodies_path([@campaign])
       find('.qa-pledge').click
       find('.qa-submit').click
       expect(page).to have_content I18n.t('errors.messages.blank')
     end
 
     scenario 'not without nested supporter info' do
-      visit campaign_goodies_path([@campaign, @goody])
+      visit campaign_goodies_path([@campaign])
       find('.qa-pledge').click
       find('.qa-agreement').click
       find('.qa-submit').click
@@ -45,7 +54,7 @@ describe 'campaigns' do
 
     scenario 'with agreement and all fields filled out' do
       expect do
-        visit campaign_goodies_path([@campaign, @goody])
+        visit campaign_goodies_path([@campaign])
         find('.qa-pledge').click
 
         fill_in I18n.t('orders.new.first_name'), with: "John"
@@ -62,4 +71,33 @@ describe 'campaigns' do
       end.to change{Order.count}.from(0).to(1)
     end
   end
+
+
+  describe "FriendlyId" do
+
+    it 'works on newly created resources' do
+      campaign = FactoryBot.create :campaign, title: 'spec title'
+      expect(campaign.slug).to eq('spec-title')
+      expect(campaign_path(campaign)).to include('spec-title')
+    end
+
+    it 'when changing the title, the old and new slugs work' do
+      campaign = FactoryBot.create :campaign, title: 'spec title'
+      expect(campaign.slug).to eq('spec-title')
+      expect(campaign_path(campaign)).to include('spec-title')
+
+      campaign.update_attribute :title, 'some new title'
+      expect(campaign.slug).to eq('spec-title')
+      expect(campaign_path(campaign)).to include('spec-title')
+
+      visit '/campaigns/spec-title'
+      expect(page.status_code).to be(200)
+      expect(current_path).to eq(campaign_path(campaign))
+
+      visit '/campaigns/some-new-title'
+      expect(page.status_code).to be(200)
+      expect(current_path).to eq('/campaigns/some-new-title')
+    end
+  end
+
 end

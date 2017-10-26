@@ -7,7 +7,7 @@ class GoodiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_goodies
-      @campaign = Campaign.find(params[:campaign_id])
+      @campaign = Campaign.friendly.find(params[:campaign_id])
       @goodies  = @campaign.goodies
     end
 end
