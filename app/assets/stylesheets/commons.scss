@@ -32,6 +32,10 @@ a {
   background-color: #DB0808;
 }
 
+.bg_grey {
+  background-color: #f6f7f8;
+}
+
 .text_theme {
   color: #DB0808;
   letter-spacing: .05em;
@@ -348,6 +352,25 @@ aside > h2 {
       font-size: 90%;
     }
   }
+
+  .top_section_v2 {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 0.1em;
+    }
+
+    .title_sub {
+      font-size: 90%;
+      font-weight: 300;
+      color: #999;
+    }
+
+    hr {
+      width: 33%;
+      background-color: #afc5eb;
+    }
+  }
 }
 
 .simple_form {
@@ -372,6 +395,61 @@ aside > h2 {
   .form-group.date {
     select {
       margin-right: 10px;
+    }
+  }
+
+  .has-error {
+
+    .form-control {
+      border-color: #ea5d5d;
+
+      & ~ .invalid-feedback {
+        color: #ea5d5d;
+        display: block;
+      }
+    }
+  }
+}
+
+.ol_nested {
+
+  ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+
+    & > li {
+      counter-increment: item;
+
+      &:before {
+        content: counters(item, ".") ". ";
+        padding-right: 0.4em;
+      }
+    }
+
+  }
+
+  li ol > li {
+    display: table;
+    font-size: 90%;
+
+    &:before {
+      content: counters(item, ".") " ";
+      display: table-cell;
+    }
+  }
+
+  .heading {
+    margin-bottom: 1em;
+
+    .heading_text {
+      display: inline-block;
+    }
+
+    &:before, .heading_text {
+      font-size: 1em;
+      font-weight: bold;
     }
   }
 }

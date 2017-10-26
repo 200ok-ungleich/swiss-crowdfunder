@@ -51,12 +51,18 @@ en:
       description: "Description"
       goodies: "Goodies"
       pledge: "Pledge"
+      price: "Price :"
+      quantity: "Quantity : %{quantity}"
       start: "Start"
       end: "End"
-      price: "Betrag: %{price}"
-      quantity: "Quantity: %{quantity}"
       about: "About this campaign"
   supporter:
     validation:
       not_old_enough: "Minimum age is 18"
       is_not_a_date: "Date of birth is not a date"
+  static:
+    terms_of_service:
+      terms_of_service: "Terms of Service"
+    about_us:
+      about_us: "About Us"
+

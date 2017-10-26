@@ -65,3 +65,8 @@ de:
     validation:
       not_old_enough: "Mindestalter ist 18 Jahre"
       is_not_a_date: "Geburtsdatum muss ein Datum sein"
+  static:
+    terms_of_service:
+      terms_of_service: "Nutzungsbedingungen"
+    about_us:
+      about_us: "Über uns"

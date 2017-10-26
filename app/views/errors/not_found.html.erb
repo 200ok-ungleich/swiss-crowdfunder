@@ -1,12 +1,14 @@
-<div id="not_found">
-  <div class="container jumbotron">
-  <h1>404</h1>
+<% content_for :main_content_class do %>bg_grey<% end %>
 
-  <h4><%= t('.page_not_found_1') %></h4>
-
-  <hr/>
-
-  <p><%= t('.page_not_found_2') %></p>
-  <p><%= raw t('.page_not_found_3') %></p>
-</div>
+<div class="container">
+  <div class="mid_box text-center">
+    <h1>404</h1>
+    <h2><%= t('.page_not_found_1') %></h2>
+    <hr>
+    <p>
+      <%= t('.page_not_found_2') %>
+      <br>
+      <%= raw t('.page_not_found_3') %>
+    </p>
+  </div>
 </div>

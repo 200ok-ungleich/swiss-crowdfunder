@@ -1,19 +1,26 @@
-#not_found {
-  text-align: center;
-  background-color: #ddd;
+.errors-not_found {
+
+  .main_content {
+
+    a {
+      color: #dc0d0d;
+    }
+
+    hr {
+      width: 30%;
+      margin: 1.5rem auto;
+    }
+  }
 
   h1 {
-    color: red;
-    font-size: 12em;
-    font-weight: bold;
+    color: #ea5d5d;
+    font-size: 8em;
+    font-weight: normal;
+    margin-bottom: 0;
   }
 
-  a {
-    color: red;
-  }
-
-  .jumbotron {
-    border: 2px solid black;
-    background-color: white;
+  h2 {
+    font-size: 2.5em;
+    font-weight: 300;
   }
 }

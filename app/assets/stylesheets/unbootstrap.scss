@@ -24,7 +24,6 @@ h1 {
   align-items: flex-end;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
 
   @media (min-width: 576px) {
     padding-left: 2.5em;
@@ -51,6 +50,10 @@ h1 {
 .navbar-light .navbar-brand {
   color: #DB0808;
   font-size: 1.5rem;
+}
+
+.main_content {
+  padding-top: 1.5em;
 }
 
 .dropdown-menu {
