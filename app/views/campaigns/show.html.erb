@@ -1,7 +1,7 @@
 <div class="container">
-  <h1><%= @campaign.title %></h1>
+  <h1 style="margin-left: -3px;"><%= @campaign.title %></h1>
   <p class="small mt-2 mb-4">
-    <strong class="text_loud_sub"><%= @campaign.claim %></strong>
+    <span class="text_loud_sub"><%= @campaign.claim %></span>
   </p>
 
   <div class="row">
@@ -22,10 +22,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-6">
+        <div class="col-auto">
           <div class="text_loud text_theme"><%= number_to_percentage(100*(@campaign.amount_raised.to_f / @campaign.goal), precision: 1, separator: '.', format: "%n %") %></div>
         </div>
-        <div class="col-6 text-right funding_goal">
+        <div class="col funding_goal">
           <div class="small mt-1"><%= t '.funding_goal' %></div>
           <strong><%= @campaign.goal %> CHF</strong>
         </div>
@@ -61,7 +61,7 @@
             <a href="#" class="btn_card"><span class="fa fa-heart mr-2"></span>Remind me</a>
           </div> -->
         <div class="row">
-          <div class="col">
+          <div class="col text-right">
             <ul>
               <%- unless @campaign.twitter_url.blank? %>
                 <li><%= link_to raw('<span class="fa fa-twitter"></span>'), @campaign.twitter_url, target: "_blank", class: "link " %></li>

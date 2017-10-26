@@ -11,14 +11,14 @@
 
   ul {
     display: flex;
-    margin: 0;
+    margin: 0.5em 0 0;
     padding: 0;
     list-style: none;
+    justify-content: flex-end;
+    font-size: 1.25em;
 
     li {
-      // flex: 1;
-      font-size: 1.05em;
-      margin-right: 1em;
+      margin-left: 1em;
     }
   }
 
@@ -63,7 +63,6 @@
 
 
 .campaign_stat {
-  font-size: 1.25em;
 
   & > .number {
     flex: 1;
@@ -75,6 +74,5 @@
 }
 
 .campaign_date {
-  font-size: 1.05em;
   color: #777;
 }
