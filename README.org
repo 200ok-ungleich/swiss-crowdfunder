@@ -91,6 +91,11 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 
 ** Documentation
 
+*** ERD
+There is an [[file:doc/erd.dot][ERD]] defined in dot-syntax which is also available as [[file:doc/erd.svg][SVG]].
+
+The command to compile the SVG is: =dot -Tsvg doc/erd.dot > doc/erd.svg=
+
 *** Security
 
     For the initial version of the application, there is only one route

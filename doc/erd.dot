@@ -1,0 +1,51 @@
+digraph G {
+
+// basic settings
+  fontname = "Bitstream Vera Sans"
+  fontsize = 8
+
+  edge [
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+  ]
+
+  node [
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+  ]
+
+  // models
+  node [
+    shape = "rectangle"
+  ]
+
+  Campaign
+  Goody
+  Order
+  Supporter
+  AdminUser
+
+  // relations 1..n
+  edge [
+    arrowtail = "none"
+    arrowhead = "none"
+    headlabel = "n"
+    taillabel = "1"
+  ]
+
+  Campaign -> Goody
+  Goody -> Order
+
+  // relations 1..1
+  edge [
+    arrowtail = "none"
+    arrowhead = "none"
+    headlabel = "1"
+    taillabel = "1"
+  ]
+
+
+  Order -> Supporter
+  AdminUser
+
+}
