@@ -162,11 +162,10 @@ a {
 
   .btn_bottom {
     display: block;
-    // font-size: 1.05em;
     padding-top: 0.15em;
     padding-bottom: 0.15em;
-    min-width: 120px;
     letter-spacing: 0.05em;
+    min-width: 120px;
   }
 
   .card-title {
@@ -203,6 +202,21 @@ a {
     color: #6780ab;
   }
 
+  .card_action {
+    color: #4b4e6b;
+
+    & > .wrap_top {
+      margin-top: 0.5rem;
+      padding-right: 1em;
+      flex-grow: 1;
+    }
+
+    & > .wrap_bottom {
+      flex: 1;
+      margin-top: 0.5rem;
+    }
+  }
+
   time {
     color: #1b1a1a;
     display: block;
@@ -211,10 +225,7 @@ a {
 
   hr {
     background-color: #afc5eb;
-  }
-
-  .price {
-    color: #4b4e6b;
+    margin-bottom: 0.5rem;
   }
 }
 
