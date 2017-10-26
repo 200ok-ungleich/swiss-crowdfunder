@@ -39,6 +39,7 @@ de:
       first_name: "Vorname"
       last_name: "Nachname"
       email: "Email"
+      date_of_birth: "Geburtsdatum"
       street: "Strasse"
       postal_code: "Postleitzahl"
       city: "Ort"

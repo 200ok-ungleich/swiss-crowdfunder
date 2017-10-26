@@ -3,7 +3,7 @@ seed AdminUser, { email: 'info@ungleich.ch' },
   password: 'thahph6AuhieLu6j',
   password_confirmation: 'thahph6AuhieLu6j'
 
-seed Campaign, { title: "Ungleich Glarus AG" },
+seed Campaign, { title: "ungleich glarus AG" },
    claim: "Wir digitalisieren Glarus",
    description: """### Ein neues Datacenter für den Kanton Glarus
 

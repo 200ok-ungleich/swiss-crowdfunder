@@ -34,6 +34,7 @@ en:
       first_name: "First name"
       last_name: "Last name"
       email: "Email"
+      date_of_birth: "Date of birth"
       street: "Street"
       postal_code: "Postal code"
       city: "City"

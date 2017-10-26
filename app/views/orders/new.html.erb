@@ -25,7 +25,7 @@
           </div>
         </div>
         <%= s.input :email, label: t('.email') %>
-        <%= s.input :date_of_birth, as: :date, start_year: Date.today.year - 100, end_year: Date.today.year - 10  %>
+        <%= s.input :date_of_birth, label: t('.date_of_birth'), as: :date, start_year: Date.today.year - 100, end_year: Date.today.year - 10  %>
         <%= s.input :street, label: t('.street') %>
         <div class="row">
           <div class="col-sm-4">
