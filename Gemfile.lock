@@ -108,6 +108,7 @@ GEM
       countries (~> 2.0)
       sort_alphabetical (~> 1.0)
     crass (1.0.2)
+    database_cleaner (1.5.3)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -376,6 +377,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.2)
   country_select
+  database_cleaner
   devise
   factory_bot_rails (~> 4.0)
   friendly_id
