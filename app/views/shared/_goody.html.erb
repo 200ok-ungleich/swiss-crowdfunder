@@ -1,12 +1,16 @@
+<section class="card side_card">
+  <div class="card-body">
     <h4 class="card-title"><%= goody.title %></h4>
     <p class="card-text"><%= goody.description %></p>
-    <p class="card-text"><%= t(".quantity", quantity: goody.remaining_quantity) %></p>
-    <p class="card-text"><%= t(".backers", quantity: goody.orders_count) %></p>
+    <p class="card_point"><%= t(".quantity", quantity: goody.remaining_quantity) %></p>
+    <p class="card_point"><%= t(".backers", quantity: goody.orders_count) %></p>
     <hr>
     <div class="d-flex justify-content-between align-items-center">
-      <div><%= t(".price") %> <strong> CHF <%= goody.price %></strong></div>
+      <div class="price"><%= t(".price") %> <strong> CHF <%= goody.price %></strong></div>
       <div class="text-right">
         <%= link_to t(".pledge"), new_campaign_goody_order_path(@campaign, goody),
         class:"btn btn_faded btn_bottom qa-pledge" %>
       </div>
     </div>
+  </div>
+</section>

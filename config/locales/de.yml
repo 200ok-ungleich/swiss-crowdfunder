@@ -39,6 +39,7 @@ de:
       first_name: "Vorname"
       last_name: "Nachname"
       email: "Email"
+      date_of_birth: "Geburtsdatum"
       street: "Strasse"
       postal_code: "Postleitzahl"
       city: "Ort"
@@ -46,7 +47,7 @@ de:
       country: "Land"
     show:
       success: "Bestellung erfolgreich"
-      bought_package: "Sie haben folgendes Paket erstanden:"
+      bought_package: "Sie haben folgendes Paket erstanden: "
       text: "Sie haben eine grossartige Wahl getroffen!"
   campaigns:
     show:
