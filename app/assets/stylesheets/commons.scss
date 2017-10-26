@@ -152,8 +152,8 @@ a {
 .side_card {
   background-color: #f6f7f8;
   border: 0;
-  box-shadow: 0 0 1px rgba(0,0,0,0.2);
-  color: #807f9f;
+  // box-shadow: 0 0 1px rgba(0,0,0,0.2);
+  color: #6d8292;
   border-radius: 0;
   margin-bottom: 1.5em;
 
@@ -172,8 +172,9 @@ a {
   .card-title {
     color: #5B5A5A;
     font-size: 1.25em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.4em;
     font-weight: bold;
+    letter-spacing: 0.03em;
 
     &.strong {
       font-weight: bold;
@@ -188,20 +189,32 @@ a {
   }
 
   .card-text {
-    margin-bottom: 0.3em;
-    font-size: 85%;
+    margin-bottom: 0.5em;
+    line-height: 1.4;
+    font-size: 90%;
   }
 
   .card_point {
-    font-size: 70%;
-    font-weight: bold;
-    letter-spacing: 0.1em;
+    margin-bottom: 0.4em;
+    font-size: 75%;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    line-height: 1.5;
+    color: #6780ab;
   }
 
   time {
     color: #1b1a1a;
     display: block;
     margin-bottom: 1.5em;
+  }
+
+  hr {
+    background-color: #afc5eb;
+  }
+
+  .price {
+    color: #4b4e6b;
   }
 }
 

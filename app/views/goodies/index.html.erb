@@ -10,13 +10,7 @@
   <div class="row">
     <% @goodies.each do |goody| %>
       <div class="col-sm-6 col-md-4">
-        <section class="card side_card">
-          <div class="card-body">
-
-            <%= render partial: 'shared/goody', locals: { goody: goody } %>
-
-          </div>
-        </section>
+        <%= render partial: 'shared/goody', locals: { goody: goody } %>
       </div>
     <% end %>
   </div>

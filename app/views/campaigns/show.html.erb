@@ -25,7 +25,7 @@
         <div class="col-auto">
           <div class="text_loud text_theme"><%= number_to_percentage(100*(@campaign.amount_raised.to_f / @campaign.goal), precision: 1, separator: '.', format: "%n %") %></div>
         </div>
-        <div class="col funding_goal">
+        <div class="col text-right funding_goal">
           <div class="small mt-1"><%= t '.funding_goal' %></div>
           <strong><%= @campaign.goal %> CHF</strong>
         </div>
@@ -61,7 +61,7 @@
             <a href="#" class="btn_card"><span class="fa fa-heart mr-2"></span>Remind me</a>
           </div> -->
         <div class="row">
-          <div class="col text-right">
+          <div class="col">
             <ul>
               <%- unless @campaign.twitter_url.blank? %>
                 <li><%= link_to raw('<span class="fa fa-twitter"></span>'), @campaign.twitter_url, target: "_blank", class: "link " %></li>
@@ -108,12 +108,7 @@
       <aside class="col-md-5 col-lg-4">
         <h2><%= t('.goodies') %></h2>
         <% @campaign.goodies.each do |goody| %>
-
-          <section class="card side_card">
-            <div class="card-body">
-              <%= render partial: 'shared/goody', locals: { goody: goody } %>
-            </div>
-          </section>
+          <%= render partial: 'shared/goody', locals: { goody: goody } %>
         <% end %>
         <!-- <section class="card side_card">
           <div class="card-body">
