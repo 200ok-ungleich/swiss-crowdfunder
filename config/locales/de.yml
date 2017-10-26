@@ -45,8 +45,9 @@ de:
       state: "Bundesstaat"
       country: "Land"
     show:
-      success: "Erfolg"
+      success: "Bestellung erfolgreich"
       bought_package: "Sie haben folgendes Paket erstanden:"
+      text: "Sie haben eine grossartige Wahl getroffen!"
   campaigns:
     show:
       funding_goal: "Finanzierungsziel"

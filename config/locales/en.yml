@@ -40,7 +40,8 @@ en:
       state: "State"
       country: "Country"
     show:
-      success: "Success"
+      success: "Order successful"
+      text: "You've made a great choice"
       bought_package: "You have bought the package "
   campaigns:
     show:

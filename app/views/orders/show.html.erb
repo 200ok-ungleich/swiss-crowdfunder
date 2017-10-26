@@ -1,12 +1,23 @@
 <% content_for :main_content_class do %>bg_grey<% end %>
 
+
 <div class="container">
+  <div class="mid_box text-center">
 
-  <h2><%= t('.success') %></h2>
+    <i class="fa fa-check" aria-hidden="true"></i>
 
-  <p>
-    <%= t('.bought_package') %>
-    <b> <%= @goody.title %> </b>.
-  </p>
+    <h1><%= t('.success') %></h1>
 
+    <hr />
+
+    <p class="encouragement">
+      <%= t('.text') %>
+    </p>
+
+    <p>
+      <%= t('.bought_package') %>
+      <b> <%= @goody.title %> </b>.
+    </p>
+
+  </div>
 </div>
