@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.goody = @goody
     @order.amount = @goody.price
-    @order.payment_type = "stripe"
+    @order.payment_type = "bank"
     @order.quantity = 1
     @order.paid = false
 
