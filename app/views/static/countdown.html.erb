@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SwissCrowdfunding</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700|Open+Sans+Condensed:300,400,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css" rel="stylesheet">
 
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <script src="https://js.stripe.com/v3/"></script>
+    <%= stylesheet_link_tag 'singles/countdown', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <% unless Rails.env.development? %>
       <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -23,17 +21,16 @@
       </script>
     <% end %>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#ffffff">
+    <%= render partial: 'shared/favicon' %>
 
   </head>
 
   <body class="<%= [controller_name, action_name] * '-' %>">
+    <!-- 'data-date' below in format YYYY/MM/DD to decide the countdown date -->
+    <div class="your-clock" data-date="2017/11/12"></div>
 
-
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', 'data-turbolinks-eval': false %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+    <%= javascript_include_tag 'singles/countdown', 'data-turbolinks-track': 'reload', 'data-turbolinks-eval': false %>
   </body>
 </html>
