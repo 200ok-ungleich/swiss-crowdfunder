@@ -1,5 +1,4 @@
 // This is the manifest file for /static/countdown
-//= require jquery.countdown
 
 var dateNow = new Date();
 var dateRelease = Date.parse($('.your-clock').data('date'));
