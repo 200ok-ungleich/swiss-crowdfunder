@@ -24,3 +24,4 @@ config/database.yml
 .byebug_history
 /app/assets/javascripts/.tern-port
 .sourceme
+.tern-port
