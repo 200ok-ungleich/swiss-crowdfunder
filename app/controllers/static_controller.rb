@@ -4,4 +4,8 @@ class StaticController < ApplicationController
 
   def terms_of_service
   end
+
+  def countdown
+    render :layout => "blank.html.erb"
+  end
 end
