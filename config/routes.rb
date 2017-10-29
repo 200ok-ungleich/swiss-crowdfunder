@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get '*any', via: :all, to: 'errors#not_found'
 
   # root to: "root#index"
-  root to: redirect('/campaigns/ungleich-glarus-ag')
+  # root to: redirect('/campaigns/ungleich-glarus-ag')
+  root to: redirect('/static/countdown')
 end
