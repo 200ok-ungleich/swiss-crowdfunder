@@ -168,7 +168,16 @@ We are using Gitlab CI as a testing service.
 
 *** PROJECT Ready beyond ungleich
 
+
 **** TODO campaigns#show: Add update ticker
+- [ ] Add tabs to campaigns#show
+- [ ] Add CampaignUpdate Model (markdown)
+- [ ] Let every CampaignUpdate have it's unique URL nested under Campaign
+- [ ] When going to a specific CampaignUpdate URL, go to the tab and
+  scroll to the specific update.
+- [ ] Alternatively let only have CampaignUpdates have a unique URL
+  for the tab as a start
+
 **** TODO Handle 500 with separate page (analogous to 404)
 **** TODO Implement Stripe
 **** TODO Integrate Favicon
