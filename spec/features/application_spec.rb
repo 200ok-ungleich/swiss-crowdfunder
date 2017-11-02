@@ -2,7 +2,9 @@ require 'rails_helper'
 
 describe "layout application", :type => :feature do
   # TMP Fix, as long as there's no root layout
-  before :each { @campaign = FactoryBot.create :campaign }
+  before :each do
+    @campaign = FactoryBot.create :campaign
+  end
 
   it "shows the about page" do
     #visit root_path
