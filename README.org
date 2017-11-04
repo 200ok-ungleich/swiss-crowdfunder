@@ -22,6 +22,8 @@ macOS: =rbenv install 2.4.1=
 
 Within your local checkout run =bundle=.
 
+For testing, install =chromedriver= > v59.
+
 *** Configure Database
 
 Every host that runs this application can have a different database
