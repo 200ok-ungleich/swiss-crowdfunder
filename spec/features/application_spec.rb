@@ -22,4 +22,10 @@ describe "layout application", :type => :feature do
     expect(current_path).to eq(static_terms_of_service_path)
   end
 
+  it 'has an endpoint dedicated to testing failure' do
+    expect do
+      visit static_exception_test_path
+    end.to raise_error
+  end
+
 end

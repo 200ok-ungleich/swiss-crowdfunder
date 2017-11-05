@@ -8,4 +8,9 @@ class StaticController < ApplicationController
   def countdown
     render :layout => "blank.html.erb"
   end
+
+  def exception_test
+    raise "This endpoint is designed to fail!"
+  end
+
 end

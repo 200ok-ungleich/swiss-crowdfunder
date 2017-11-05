@@ -88,4 +88,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.middleware.use ExceptionNotification::Rack,
+    email: {
+               deliver_with: :deliver,
+               email_prefix: "[ERROR] ",
+               sender_address: %{"swiss crowdfunder exception" <rails@swiss-crowdfunder.net>},
+               exception_recipients: %w{alain@200ok.ch}
+               #exception_recipients: %w{alain@200ok.ch sre@ungleich.ch}
+              }#,
+  #mattermost: {
+  #             webhook_url: 'https://brandnewchat.ungleich.ch/hooks/91ijru7fitdc7mqpyhz9zgra3o',
+  #             channel: 'crowdfunding-live'
+  #            }
+
 end

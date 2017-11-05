@@ -32,6 +32,8 @@ gem 'country_select'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'factory_bot_rails', '~> 4.0'
 gem 'friendly_id'
+gem 'exception_notification'
+gem 'httparty'
 
 #gem 'cancancan', '~> 2.0'
 
@@ -72,6 +74,7 @@ group :development do
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rails', '~> 1.3'
   gem 'capistrano-rbenv', '~> 2.1'
+  gem 'letter_opener'
 end
 
 group :production, :test do
