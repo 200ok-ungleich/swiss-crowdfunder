@@ -61,6 +61,20 @@ and saving of =*.erb= files will reload your browser. Developing
 =*.scss= files will also hot-load the respective CSS within the
 browser.
 
+***
+
+We have good quality assurance and an established workflow. This is it:
+
+1. New Story in this README, section TODOs
+  - In the form of a User Story (As =<persona>=, [When I =<state>=], I
+    want =<something>=, so that =<measurable achievement>=
+1. New Branch in Git
+  - Naming: (feature|bugfix|chore)/short-description
+1. Develop / Test Locally until tests pass on CI
+1. Create Merge Request on Gitlab to Master. Assign someone to review.
+1. Finish Story
+1. Assigned person: Merge to Master, deploy and accept the story on Pivotal
+
 ** Deployment
 
 *** Premise
