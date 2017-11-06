@@ -1,4 +1,8 @@
 en:
+  number:
+    currency:
+      format:
+        unit: "CHF"
   errors:
     not_found:
       page_not_found_1: "Page not found"
