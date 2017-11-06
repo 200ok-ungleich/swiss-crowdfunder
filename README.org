@@ -126,6 +126,7 @@ We are using Gitlab CI as a testing service.
 **** TODO On create order/user: Send Notification to Mattermost
 **** TODO Create a proper 500 page
 - Right now, there's a redirect to the 404 page, so that kinda works!
+**** TODO Re-Add SRE team and Mattermost notifications
 **** DONE Add ExceptionNotification E-Mails
 - [X] Nico: Setup server side mail delivery
 - [X] Test mail delivery
