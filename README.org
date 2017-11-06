@@ -66,8 +66,8 @@ browser.
 We have good quality assurance and an established workflow. This is it:
 
 1. New Story in this README, section TODOs
-  - In the form of a User Story (As =<persona>=, [When I =<state>=], I
-    want =<something>=, so that =<measurable achievement>=
+  - In the form of a User Story (As =<persona>=, [When I =<state>= ],
+    I want =<something>=, so that =<measurable achievement>=
 1. New Branch in Git
   - Naming: (feature|bugfix|chore)/short-description
 1. Develop / Test Locally until tests pass on CI
