@@ -96,6 +96,7 @@ Rails.application.configure do
   config.action_mailer.default_options = {from: 'rails@swiss-crowdfunder.net'}
 
   config.middleware.use ExceptionNotification::Rack,
+    # Ignore requests for random resources (that have probably never existed)
     ignore_exceptions: ['ActionView::MissingTemplate'] + ExceptionNotifier.ignored_exceptions,
     email: {
                deliver_with: :deliver,

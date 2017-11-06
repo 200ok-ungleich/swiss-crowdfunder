@@ -91,6 +91,32 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 
 #+END_SRC
 
+** SRE / Maintenance
+
+There is exception notification:
+
+- via email to sre@ungleich.ch
+- via mattermost to #crowdfunding-live
+
+** Exception handling process
+
+If I see the email and I am going to work on it, I immediately send a reply
+containing "ACK" to let people know that somebody is taking care of it. I
+do not say "ACK" if I am not going to work on it. (If it is urgent and
+needs to be handled now, I have to work on it right now, otherwise I don't
+send an ACK; if it is not urgent, I can send an ACK now and work on it
+later if I want to.)
+
+Sending an ACK means that I take ownership of the problem: other people do
+not need to worry about it if they see an ACK (unless I ask them for help,
+of course).
+
+When investigating, I can, but don't have to send updates.
+
+I must send a short explanation of the problem and the steps I took to
+resolve it when I solve it. I should also follow up with steps that have
+been taken to prevent this issue in the future.
+
 ** Documentation
 
 *** ERD
