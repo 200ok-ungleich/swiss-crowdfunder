@@ -61,7 +61,7 @@ and saving of =*.erb= files will reload your browser. Developing
 =*.scss= files will also hot-load the respective CSS within the
 browser.
 
-***
+*** Development collaboration
 
 We have good quality assurance and an established workflow. This is it:
 
