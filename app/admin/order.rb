@@ -31,4 +31,10 @@ show do
   active_admin_comments
 end
 
+controller do
+  def action_methods
+    super - ['new', 'create']
+  end
+end
+
 end
