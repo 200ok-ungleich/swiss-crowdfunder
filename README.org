@@ -201,7 +201,12 @@ We are using Gitlab CI as a testing service.
 
 *** PROJECT Ready beyond ungleich
 
+**** TODO Discuss deleting parent resources logic with Nico
 
+When destroying a Goodie which has Orders, what should happen?
+
+- Delete the goodie and nullify foreign_keys in Orders?
+- Show a warning and don't delete anything?
 **** TODO campaigns#show: Add update ticker
 - [ ] Add tabs to campaigns#show
 - [ ] Add CampaignUpdate Model (markdown)
