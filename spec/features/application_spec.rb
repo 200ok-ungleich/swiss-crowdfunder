@@ -23,6 +23,7 @@ describe "layout application", :type => :feature do
   end
 
   it 'has an endpoint dedicated to testing failure' do
+    basic_auth('letme', 'in')
     expect do
       visit static_exception_test_path
     end.to raise_error
