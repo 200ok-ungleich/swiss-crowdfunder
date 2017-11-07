@@ -49,8 +49,6 @@ de:
       city: "Ort"
       state: "Bundesstaat"
       country: "Land"
-      payment: "Bezahlung"
-      payment_detail: "Bitte bezahlen Sie per Überweisung auf das folgende Konto:"
     show:
       success: "Bestellung erfolgreich"
       bought_package: "Sie haben folgendes Paket erstanden: "
