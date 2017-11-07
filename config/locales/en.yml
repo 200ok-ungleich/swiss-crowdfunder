@@ -12,7 +12,7 @@ en:
     application:
       home: "Home"
       contact: "Contact"
-      language: "Language"
+      language: "Sprachauswahl"
       terms-of-service: "Terms of Service"
       about-us: "About us"
   root:

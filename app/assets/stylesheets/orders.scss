@@ -24,6 +24,16 @@
 #campaign_order_description {
   display: block;
   text-align: center;
+  font-weight: 300;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 #card-element {

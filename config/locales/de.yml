@@ -17,8 +17,7 @@ de:
     application:
       home: "Home"
       contact: "Kontakt"
-      language: "Sprachauswahl"
-      language: "Sprachauswahl"
+      language: "Language"
       terms-of-service: "Nutzungsbedingungen"
       about-us: "Über uns"
   root:
