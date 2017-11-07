@@ -1,4 +1,9 @@
 de:
+  number:
+    currency:
+      format:
+        delimiter: "'"
+        unit: "CHF"
   percentage:
     format:
       delimiter: ''
