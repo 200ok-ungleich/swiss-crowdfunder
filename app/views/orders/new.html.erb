@@ -45,6 +45,8 @@
 
       <%- unless @goody.campaign.order_description.blank? %>
         <div class="jumbotron mt-4" id="campaign_order_description">
+          <h2><%= t('.payment') %></h2>
+          <p><%= t('.payment_detail') %></p>
           <%= raw @goody.campaign.order_description_html %>
         </div>
       <% end %>

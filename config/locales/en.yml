@@ -40,6 +40,8 @@ en:
       city: "City"
       state: "State"
       country: "Country"
+      payment: "Payment"
+      payment_details: "Please pay by bank transfer to the following account:"
     show:
       success: "Order successful"
       text: "You've made a great choice!"
