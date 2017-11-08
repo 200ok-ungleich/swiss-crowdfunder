@@ -50,6 +50,7 @@ en:
       bought_package: "You have successfully bought the package "
   campaigns:
     show:
+      time_until_start: "%{time} until start!"
       funding_goal: "Funding goal"
       funding_amount_raised: "We've reached"
       funding_supporters: "Number of supporters"

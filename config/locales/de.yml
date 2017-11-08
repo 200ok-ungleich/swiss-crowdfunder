@@ -56,6 +56,7 @@ de:
       text: "Sie haben eine grossartige Wahl getroffen!"
   campaigns:
     show:
+      time_until_start: "Noch %{time} bis zum Start!"
       funding_goal: "Finanzierungsziel"
       funding_amount_raised: "Bereits erreicht"
       funding_supporters: "Anzahl an Unterstützern"

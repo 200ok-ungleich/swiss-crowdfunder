@@ -3,7 +3,11 @@ require 'rails_helper'
 describe 'campaigns' do
 
   before :each do
-    @campaign = FactoryBot.create :campaign, title: 'Spec Campaign'
+    @campaign = FactoryBot.create :campaign,
+      title: 'Spec Campaign',
+      start_date: 100.days.from_now,
+      end_date: 200.days.from_now
+
     @goody = FactoryBot.create :goody, title: 'Spec Goody', campaign: @campaign
   end
 
@@ -20,6 +24,24 @@ describe 'campaigns' do
     end
 
   end
+
+  feature 'date based logic' do
+
+    scenario 'before the campaign starts' do
+      visit campaign_path(@campaign)
+      expect(page).to have_content "Noch 3 Monate bis zum Start!"
+      expect(page).to have_css ".qa-time_until_start"
+    end
+
+    scenario 'while the campaign runs' do
+      Timecop.freeze(Date.today + 100) do
+        visit campaign_path(@campaign)
+        expect(page).to_not have_css ".qa-time_until_start"
+      end
+    end
+
+  end
+
 
   scenario 'navigation to the goodies' do
     visit campaign_path(@campaign)

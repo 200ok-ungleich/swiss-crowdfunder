@@ -43,11 +43,13 @@
 
       <div class="campaign_date mb-4">
         <div class="row mb-2">
-          <div class="col">
-          <%- if @campaign.start_date < Date.today %>
-            <span>Noch <%= (Date.today - @campaign.start_date).to_i %> Tage bis zum Start!</span>
+
+          <%- if @campaign.start_date > Date.today %>
+            <div class="col qa-time_until_start">
+              <span><%= t '.time_until_start', time: distance_of_time_in_words(@campaign.start_date, Date.today) %>
+            </div>
           <% end %>
-          </div>
+
         </div>
 
         <div class="row mb-2">
