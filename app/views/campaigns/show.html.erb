@@ -27,7 +27,7 @@
         </div>
         <div class="col text-right funding_goal">
           <div class="small mt-1"><%= t '.funding_goal' %></div>
-          <strong><%= @campaign.goal %> CHF</strong>
+          <strong><%= number_to_currency(@campaign.goal, precision: 0) %> </strong>
         </div>
       </div>
       <hr/>
@@ -42,6 +42,16 @@
       </div>
 
       <div class="campaign_date mb-4">
+        <div class="row mb-2">
+
+          <%- if @campaign.start_date > Date.today %>
+            <div class="col qa-time_until_start">
+              <span><%= t '.time_until_start', time: distance_of_time_in_words(@campaign.start_date, Date.today) %>
+            </div>
+          <% end %>
+
+        </div>
+
         <div class="row mb-2">
           <div class="col-2"><strong><%= t '.start' %></strong></div>
           <div class="col"><%= I18n.l @campaign.start_date %></div>

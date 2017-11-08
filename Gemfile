@@ -34,6 +34,7 @@ gem 'factory_bot_rails', '~> 4.0'
 gem 'friendly_id'
 gem 'exception_notification'
 gem 'httparty'
+gem 'timecop'
 
 #gem 'cancancan', '~> 2.0'
 
