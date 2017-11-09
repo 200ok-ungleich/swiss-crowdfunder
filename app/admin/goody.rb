@@ -4,7 +4,7 @@ ActiveAdmin.register Goody do
 #
   permit_params :title, :description, :price, :quantity, :campaign_id
 
-  form do
+  form do |f|
     inputs do
       input :campaign
       input :title
