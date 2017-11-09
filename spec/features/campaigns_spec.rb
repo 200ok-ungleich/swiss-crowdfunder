@@ -74,7 +74,7 @@ describe 'campaigns' do
 
         expect do
           first(".qa-pledge").click
-        end.to_not raise_error(Selenium::WebDriver::Error::UnknownError)
+        end.to_not raise_error
       end
     end
 

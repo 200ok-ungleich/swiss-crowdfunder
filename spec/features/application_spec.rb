@@ -26,7 +26,7 @@ describe "layout application", :type => :feature do
     basic_auth('letme', 'in')
     expect do
       visit static_exception_test_path
-    end.to raise_error
+    end.to raise_error(RuntimeError)
   end
 
 end
