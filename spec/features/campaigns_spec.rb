@@ -112,25 +112,25 @@ describe 'campaigns' do
       expect(page).to have_content I18n.t('errors.messages.blank')
     end
 
-    scenario 'with agreement, enough quantity and all fields filled out', js: true do
+    scenario 'with agreement, enough quantity and all fields filled out' do
       expect do
         Timecop.freeze(Date.today + 100) do
           visit campaign_goodies_path([@campaign])
-        end
-        expect(first('.qa-pledge')).to_not have_css("a.disabled")
-        first('.qa-pledge').click
+          expect(first('.qa-pledge')).to_not have_css("a.disabled")
+          first('.qa-pledge').click
 
-        fill_in I18n.t('orders.new.first_name'), with: "John"
-        fill_in I18n.t('orders.new.last_name'), with: "Doe"
-        fill_in I18n.t('orders.new.email'), with: "supporter@example.com"
-        fill_in I18n.t('orders.new.street'), with: "Spec Street"
-        fill_in I18n.t('orders.new.postal_code'), with: "12345"
-        fill_in I18n.t('orders.new.city'), with: "Glarus"
-        select "Schweiz", from: I18n.t('orders.new.country')
-        select "1950", from: "order_supporter_attributes_date_of_birth_1i"
-        find('.qa-agreement').click
-        find('.qa-submit').click
-        expect(page).to_not have_content I18n.t('errors.messages.blank')
+          fill_in I18n.t('orders.new.first_name'), with: "John"
+          fill_in I18n.t('orders.new.last_name'), with: "Doe"
+          fill_in I18n.t('orders.new.email'), with: "supporter@example.com"
+          fill_in I18n.t('orders.new.street'), with: "Spec Street"
+          fill_in I18n.t('orders.new.postal_code'), with: "12345"
+          fill_in I18n.t('orders.new.city'), with: "Glarus"
+          select "Schweiz", from: I18n.t('orders.new.country')
+          select "1950", from: "order_supporter_attributes_date_of_birth_1i"
+          find('.qa-agreement').click
+          find('.qa-submit').click
+          expect(page).to_not have_content I18n.t('errors.messages.blank')
+        end
       end.to change{Order.count}.from(0).to(1)
     end
 
