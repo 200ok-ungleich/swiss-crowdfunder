@@ -40,21 +40,41 @@ describe 'campaigns' do
         visit campaign_path(@campaign)
         expect(page).to have_css(".qa-support-project.disabled")
 
-        # Clicking the button is disabled via CSS. Trying to click on
-        # it with Capybara will raise an exception.
         expect do
           find(".qa-support-project").click
         end.to raise_error(Selenium::WebDriver::Error::UnknownError)
       end
 
+      scenario 'has diabled pledge buttons for goodies', js: true do
+        visit campaign_path(@campaign)
+        expect(page).to have_css(".qa-pledge.disabled")
+
+        expect do
+          first(".qa-pledge").click
+        end.to raise_error(Selenium::WebDriver::Error::UnknownError)
+      end
+
+
     end
 
     describe 'while the campaign runs' do
+
       scenario 'does not show a human readble starts until time' do
         Timecop.freeze(Date.today + 100) do
           visit campaign_path(@campaign)
-          expect(page).to_not have_css ".qa-time_until_start"
         end
+        expect(page).to_not have_css ".qa-time_until_start"
+      end
+
+      scenario 'has a working pledge button for goodies', js: true do
+        Timecop.freeze(Date.today + 100) do
+          visit campaign_path(@campaign)
+        end
+        expect(page).to have_css(".qa-pledge.disabled")
+
+        expect do
+          first(".qa-pledge").click
+        end.to raise_error(Selenium::WebDriver::Error::UnknownError)
       end
     end
 

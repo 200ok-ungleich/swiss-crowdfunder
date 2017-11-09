@@ -163,8 +163,8 @@ We are using Gitlab CI as a testing service.
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
 **** TODO Wenn start_date Kampagne nicht erreicht
-- [ ] 'support' seite link ausgrauen
-- [ ] 'goodie' weiter button ausgrauen
+- [X] 'support' seite link ausgrauen
+- [X] 'goodie' weiter button ausgrauen
 - [ ] 'order'#create verbieten
 **** TODO On creating a new Campaign, there's already two supporters    :bug:
 **** TODO Send Email on Order#create
