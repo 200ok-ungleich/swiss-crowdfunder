@@ -162,14 +162,10 @@ We are using Gitlab CI as a testing service.
 *** PROJECT Ready for Ungleich Crowdfunding
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
-**** DONE Validierung für Anzahl > 0 Goodies
-- [X] BO: -1 for Infinity
-- [X] Validation
-- [X] On goody: Disable button when there's no remaining_quantity
-- [X] Inform #crowdfuding on new logic
-
-**** TODO Wenn start_date Kampagne nicht erreicht, dann andere Logik: Newsletter Seite.
-- [ ] Alternativ: Ausgrauen von CTAs
+**** TODO Wenn start_date Kampagne nicht erreicht
+- [ ] 'support' seite link ausgrauen
+- [ ] 'goodie' weiter button ausgrauen
+- [ ] 'order'#create verbieten
 **** TODO On creating a new Campaign, there's already two supporters    :bug:
 **** TODO Send Email on Order#create
      - [ ] Campaign Model: E-Mail
@@ -177,6 +173,12 @@ We are using Gitlab CI as a testing service.
 **** TODO Create a proper 500 page
 - Right now, there's a redirect to the 404 page, so that kinda works!
 **** TODO Re-Add SRE team and Mattermost notifications
+
+**** DONE Validierung für Anzahl > 0 Goodies
+- [X] BO: -1 for Infinity
+- [X] Validation
+- [X] On goody: Disable button when there's no remaining_quantity
+- [X] Inform #crowdfuding on new logic
 **** DONE As a user, when on campaigns#show, I want to see either when the campaign starts or when it stops in "days remaining"
 **** DONE Add ExceptionNotification E-Mails
 - [X] Nico: Setup server side mail delivery

@@ -6,4 +6,9 @@ module CampaignsHelper
                          separator: '.')
     .delete(' ') # In some localizations there's whitespace between the number and the percent
   end
+
+  def is_campaign_active?(campaign)
+    campaign.is_active? ? '' : 'disabled'
+  end
+
 end

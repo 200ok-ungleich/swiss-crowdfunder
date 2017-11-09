@@ -6,19 +6,19 @@
 
   <div class="row">
     <div class="col-md-7 col-lg-8">
-        <div class="embed-responsive embed-responsive-16by9 mb-5">
+      <div class="embed-responsive embed-responsive-16by9 mb-5">
         <% unless @campaign.youtube_url.empty? %>
           <iframe class="embed-responsive-item" height="315" src="<%= @campaign.youtube_url %>" width="560"></iframe>
         <% else %>
           <img src="http://placekitten.com/g/560/315"/>
         <% end %>
-        </div>
+      </div>
     </div>
     <div class="col-md-5 col-lg-4">
       <div class="progress progress_thin mb-1">
         <div class="progress-bar bg_theme" role="progressbar"
-          style="width: <%= campaign_percentage(@campaign) %>;"
-          aria-valuenow="<%= @campaign.amount_raised %>" aria-valuemin="0" aria-valuemax="<%= @campaign.goal %>">
+             style="width: <%= campaign_percentage(@campaign) %>;"
+             aria-valuenow="<%= @campaign.amount_raised %>" aria-valuemin="0" aria-valuemax="<%= @campaign.goal %>">
         </div>
       </div>
       <div class="row">
@@ -63,13 +63,13 @@
       </div>
 
       <div class="mb-3">
-        <%= link_to "Support this project", campaign_goodies_path(@campaign), class: "btn btn_theme btn-lg btn-block qa-support-project" %>
+        <%= link_to "Support this project", campaign_goodies_path(@campaign), class: "btn btn_theme btn-lg btn-block qa-support-project #{is_campaign_active?(@campaign)}" %>
       </div>
 
       <div class="campaign_links mb-4"><!--
-          <div class="col col-lg-auto pr-0">
-            <a href="#" class="btn_card"><span class="fa fa-heart mr-2"></span>Remind me</a>
-          </div> -->
+                                            <div class="col col-lg-auto pr-0">
+                                            <a href="#" class="btn_card"><span class="fa fa-heart mr-2"></span>Remind me</a>
+                                            </div> -->
         <div class="row">
           <div class="col">
             <ul>
@@ -87,15 +87,15 @@
   </div>
 
   <!-- <nav class="nav nav-pills nav_underlines mt-5 mt-md-0" id="campaignTab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-campaign-tab" data-toggle="tab" href="#nav-campaign" role="tab"
-      aria-controls="nav-campaign" aria-expanded="true">Campaign</a>
-    <a class="nav-item nav-link" id="nav-faq-tab" data-toggle="tab" href="#nav-faq" role="tab"
-      aria-controls="nav-faq">FAQ</a>
-    <a class="nav-item nav-link" id="nav-updates-tab" data-toggle="tab" href="#nav-updates" role="tab"
-      aria-controls="nav-updates">Updates</a>
-    <a class="nav-item nav-link" id="nav-backers-tab" data-toggle="tab" href="#nav-backers" role="tab"
-      aria-controls="nav-backers">Backers</a>
-  </nav> -->
+       <a class="nav-item nav-link active" id="nav-campaign-tab" data-toggle="tab" href="#nav-campaign" role="tab"
+       aria-controls="nav-campaign" aria-expanded="true">Campaign</a>
+       <a class="nav-item nav-link" id="nav-faq-tab" data-toggle="tab" href="#nav-faq" role="tab"
+       aria-controls="nav-faq">FAQ</a>
+       <a class="nav-item nav-link" id="nav-updates-tab" data-toggle="tab" href="#nav-updates" role="tab"
+       aria-controls="nav-updates">Updates</a>
+       <a class="nav-item nav-link" id="nav-backers-tab" data-toggle="tab" href="#nav-backers" role="tab"
+       aria-controls="nav-backers">Backers</a>
+       </nav> -->
 </div>
 
 <hr class="mt-0 mb-4">
@@ -103,9 +103,9 @@
 <div class="container">
   <div class="campaign_body">
     <!-- <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-campaign" role="tabpanel" aria-labelledby="nav-campaign-tab">
-      </div>
-    </div> -->
+         <div class="tab-pane fade show active" id="nav-campaign" role="tabpanel" aria-labelledby="nav-campaign-tab">
+         </div>
+         </div> -->
     <div class="row">
       <div class="col-md-7 col-lg-8">
         <h2><%= t('.about') %></h2>
@@ -121,25 +121,25 @@
           <%= render partial: 'shared/goody', locals: { goody: goody } %>
         <% end %>
         <!-- <section class="card side_card">
-          <div class="card-body">
-            <h4 class="card-title strong">Pledge CHF 15 or more</h4>
-            <h5>CHF 15 Reward</h5>
-            <p class="card-text">
-              Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
-            </p>
+             <div class="card-body">
+             <h4 class="card-title strong">Pledge CHF 15 or more</h4>
+             <h5>CHF 15 Reward</h5>
+             <p class="card-text">
+             Receive regular project updates, plus your name listed on DCL website as a member of Glarnercrowd supporters.
+             </p>
 
-            <div class="card_point">ESTIMATED DELIVERY</div>
-            <time>Sep 2017</time>
+             <div class="card_point">ESTIMATED DELIVERY</div>
+             <time>Sep 2017</time>
 
-            <p class="card_point">200 Backers</p>
-          </div>
-          <div class="input_iconed">
-            <span class="input_icon">$</span>
-            <input type="text" class="form-control" placeholder="amount" aria-label="amount" aria-describedby="pledge-input" value="10">
-          </div>
-          <button class="btn btn_theme btn_bottom">Select</button>
-          <button class="btn btn_faded btn_bottom">Select</button>
-        </section> -->
+             <p class="card_point">200 Backers</p>
+             </div>
+             <div class="input_iconed">
+             <span class="input_icon">$</span>
+             <input type="text" class="form-control" placeholder="amount" aria-label="amount" aria-describedby="pledge-input" value="10">
+             </div>
+             <button class="btn btn_theme btn_bottom">Select</button>
+             <button class="btn btn_faded btn_bottom">Select</button>
+             </section> -->
       </aside>
     </div>
   </div>

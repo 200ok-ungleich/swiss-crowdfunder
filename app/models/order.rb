@@ -9,11 +9,9 @@ class Order < ApplicationRecord
   validates :supporter, presence: true
 
   validate :goody, :are_goodies_left?
-  before_save :are_goodies_left?
 
   def are_goodies_left?
     errors.add(:goody, "No goodies left!") if goody.remaining_quantity == 0
   end
-
 
 end

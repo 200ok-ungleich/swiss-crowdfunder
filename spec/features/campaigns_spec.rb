@@ -28,16 +28,33 @@ describe 'campaigns' do
 
   feature 'date based logic' do
 
-    scenario 'before the campaign starts' do
-      visit campaign_path(@campaign)
-      expect(page).to have_content "Noch 3 Monate bis zum Start!"
-      expect(page).to have_css ".qa-time_until_start"
+    describe 'before the campaign starts' do
+
+      scenario 'shows a human readable starts until time' do
+        visit campaign_path(@campaign)
+        expect(page).to have_content "Noch 3 Monate bis zum Start!"
+        expect(page).to have_css ".qa-time_until_start"
+      end
+
+      scenario 'has a disabled support button', js: true do
+        visit campaign_path(@campaign)
+        expect(page).to have_css(".qa-support-project.disabled")
+
+        # Clicking the button is disabled via CSS. Trying to click on
+        # it with Capybara will raise an exception.
+        expect do
+          find(".qa-support-project").click
+        end.to raise_error(Selenium::WebDriver::Error::UnknownError)
+      end
+
     end
 
-    scenario 'while the campaign runs' do
-      Timecop.freeze(Date.today + 100) do
-        visit campaign_path(@campaign)
-        expect(page).to_not have_css ".qa-time_until_start"
+    describe 'while the campaign runs' do
+      scenario 'does not show a human readble starts until time' do
+        Timecop.freeze(Date.today + 100) do
+          visit campaign_path(@campaign)
+          expect(page).to_not have_css ".qa-time_until_start"
+        end
       end
     end
 

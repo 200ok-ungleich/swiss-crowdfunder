@@ -19,6 +19,11 @@ class Campaign < ApplicationRecord
     end
   end
 
+  def is_active?
+    start_date <= Date.today &&
+    end_date >= Date.today
+  end
+
 
   private
 
