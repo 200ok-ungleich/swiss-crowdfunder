@@ -2,6 +2,25 @@ require 'rails_helper'
 
 RSpec.describe Campaign, type: :model do
 
+  describe 'Logic' do
+
+    it 'has no supporters in the beginning' do
+      campaign = FactoryBot.build :campaign
+      expect(campaign.supporters.count).to eq(0)
+    end
+
+    it 'has supporters' do
+      campaign = FactoryBot.build :campaign
+      goody = FactoryBot.create :goody, campaign: campaign, quantity: 5
+      3.times do
+        FactoryBot.create :order, goody: goody
+      end
+      expect(campaign.supporters.count).to eq(3)
+    end
+
+
+  end
+
   describe 'Timing' do
 
     it 'is not active when the start is in the future' do

@@ -2,6 +2,7 @@
 class Goody < ApplicationRecord
   belongs_to :campaign
   has_many :orders
+  has_many :supporters, through: :orders
 
   validates :price, numericality: true, presence: true
   validates :quantity, numericality: true, presence: true

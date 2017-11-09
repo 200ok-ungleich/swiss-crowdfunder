@@ -3,6 +3,7 @@ class Campaign < ApplicationRecord
   friendly_id :title, use: :slugged
 
   has_many :goodies, dependent: :destroy
+  has_many :supporters, through: :goodies
 
   validates_presence_of :description
   validates :goal, numericality: true, presence: true

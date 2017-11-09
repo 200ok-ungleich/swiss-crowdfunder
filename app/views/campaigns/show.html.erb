@@ -38,7 +38,7 @@
       </div>
       <div class="d-flex align-items-end flex-wrap campaign_stat mb-4">
         <div><%= t '.funding_supporters' %></div>
-        <div class="text-right number"><%= Supporter.count %></div>
+        <div class="text-right number"><%= @campaign.supporters.count %></div>
       </div>
 
       <div class="campaign_date mb-4">
