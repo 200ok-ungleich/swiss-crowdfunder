@@ -23,7 +23,6 @@ describe 'campaigns' do
       visit campaign_path(@campaign)
       expect(current_path).to include('spec-campaign')
     end
-
   end
 
   feature 'date based logic' do
@@ -53,8 +52,6 @@ describe 'campaigns' do
           first(".qa-pledge").click
         end.to raise_error(Selenium::WebDriver::Error::UnknownError)
       end
-
-
     end
 
     describe 'while the campaign runs' do
@@ -77,9 +74,7 @@ describe 'campaigns' do
         end.to_not raise_error
       end
     end
-
   end
-
 
   scenario 'navigation to the goodies' do
     visit campaign_path(@campaign)
@@ -143,7 +138,6 @@ describe 'campaigns' do
         expect(second('.qa-pledge')).to have_css("a.disabled")
       end
     end
-
   end
 
 
@@ -173,5 +167,4 @@ describe 'campaigns' do
       expect(current_path).to eq('/campaigns/some-new-title')
     end
   end
-
 end

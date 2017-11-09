@@ -162,10 +162,6 @@ We are using Gitlab CI as a testing service.
 *** PROJECT Ready for Ungleich Crowdfunding
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
-**** TODO Wenn start_date Kampagne nicht erreicht
-- [X] 'support' seite link ausgrauen
-- [X] 'goodie' weiter button ausgrauen
-- [ ] 'order'#create verbieten
 **** TODO On creating a new Campaign, there's already two supporters    :bug:
 **** TODO Send Email on Order#create
      - [ ] Campaign Model: E-Mail
@@ -173,6 +169,10 @@ We are using Gitlab CI as a testing service.
 **** TODO Create a proper 500 page
 - Right now, there's a redirect to the 404 page, so that kinda works!
 **** TODO Re-Add SRE team and Mattermost notifications
+**** DONE Wenn start_date Kampagne nicht erreicht
+- [X] 'support' seite link ausgrauen
+- [X] 'goodie' weiter button ausgrauen
+- [X] 'order'#create verbieten
 
 **** DONE Validierung für Anzahl > 0 Goodies
 - [X] BO: -1 for Infinity
@@ -228,6 +228,7 @@ We are using Gitlab CI as a testing service.
 
 *** PROJECT Ready beyond ungleich
 
+
 **** TODO Discuss deleting parent resources logic with Nico
 
 When destroying a Goodie which has Orders, what should happen?
@@ -247,6 +248,7 @@ When destroying a Goodie which has Orders, what should happen?
 **** TODO Implement Stripe
 **** TODO Integrate Favicon
 **** TODO Replace application.html.erb fonts and font-awesome CDN with local variant
+**** TODO When a campaign is not yet active, allow for users to subscribe to the newsletter
 **** TODO i18n all the strings
 **** TODO As soon as users can create/modify/delete resources or login: Implement global lock-down
 - See [[Security]] for more information
