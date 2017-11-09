@@ -8,7 +8,8 @@ describe 'campaigns' do
       start_date: 100.days.from_now,
       end_date: 200.days.from_now
 
-    @goody = FactoryBot.create :goody, title: 'Spec Goody', campaign: @campaign
+    @goody1 = FactoryBot.create :goody, title: 'Spec Goody 1', campaign: @campaign, quantity: 1
+    @goody2 = FactoryBot.create :goody, title: 'Spec Goody 2', campaign: @campaign, quantity: 0
   end
 
   feature 'campaigns#show' do
@@ -46,14 +47,14 @@ describe 'campaigns' do
   scenario 'navigation to the goodies' do
     visit campaign_path(@campaign)
     find('.qa-support-project').click
-    expect(page).to have_content 'Spec Goody'
+    expect(page).to have_content 'Spec Goody 1'
   end
 
   feature 'buying goodies' do
 
     scenario 'confirmation page' do
       visit campaign_goodies_path([@campaign])
-      find('.qa-pledge').click
+      first('.qa-pledge').click
       # Text from @campaign.order_description
       expect(page).to have_content("How to buy")
       expect(page).to have_content I18n.t('orders.new.confirmation')
@@ -61,23 +62,24 @@ describe 'campaigns' do
 
     scenario 'not without a agreement' do
       visit campaign_goodies_path([@campaign])
-      find('.qa-pledge').click
+      first('.qa-pledge').click
       find('.qa-submit').click
       expect(page).to have_content I18n.t('errors.messages.blank')
     end
 
     scenario 'not without nested supporter info' do
       visit campaign_goodies_path([@campaign])
-      find('.qa-pledge').click
+      first('.qa-pledge').click
       find('.qa-agreement').click
       find('.qa-submit').click
       expect(page).to have_content I18n.t('errors.messages.blank')
     end
 
-    scenario 'with agreement and all fields filled out' do
+    scenario 'with agreement, enough quantity and all fields filled out' do
       expect do
         visit campaign_goodies_path([@campaign])
-        find('.qa-pledge').click
+        expect(first('.qa-pledge')).to_not have_css("a.disabled")
+        first('.qa-pledge').click
 
         fill_in I18n.t('orders.new.first_name'), with: "John"
         fill_in I18n.t('orders.new.last_name'), with: "Doe"
@@ -92,6 +94,17 @@ describe 'campaigns' do
         expect(page).to_not have_content I18n.t('errors.messages.blank')
       end.to change{Order.count}.from(0).to(1)
     end
+
+
+    scenario 'with agreement, enough quantity and all fields filled out' do
+      expect do
+        visit campaign_goodies_path([@campaign])
+        second('.qa-pledge').click
+        expect(current_path).to be(campaign_goodies_path([@campaign]))
+        expect(second('.qa-pledge')).to have_css("a.disabled")
+      end
+    end
+
   end
 
 
