@@ -10,7 +10,7 @@ class Goody < ApplicationRecord
   end
 
   def remaining_quantity
-    if quantity
+    if quantity != -1
       quantity - orders_count
     else
       '∞'
