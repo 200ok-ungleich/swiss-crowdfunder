@@ -4,6 +4,14 @@ RSpec.describe Order, type: :model do
 
   describe 'security' do
 
+    it 'is not possible to buy goodies when the campaign does not run' do
+      campaign = FactoryBot.create :campaign, start_date: 100.days.from_now
+      goody = FactoryBot.create :goody, campaign: campaign
+      order = FactoryBot.build :order, goody: goody
+      expect(order).to_not be_valid
+      expect(order.errors.first).to eq([:goody, "Goody campaign is not active!"])
+    end
+
     it 'is not possible to buy when there are no goodies left' do
       goody = FactoryBot.create :goody, quantity: 0
       order = FactoryBot.build :order, goody: goody
