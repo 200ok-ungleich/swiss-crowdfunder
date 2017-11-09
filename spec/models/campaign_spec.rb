@@ -5,7 +5,7 @@ RSpec.describe Campaign, type: :model do
   describe 'Amount raised' do
     it 'works for zero orders' do
       campaign = FactoryBot.create :campaign
-      goody = FactoryBot.create :goody
+      FactoryBot.create :goody
       expect(campaign.amount_raised).to eq(0)
     end
 
@@ -25,7 +25,7 @@ RSpec.describe Campaign, type: :model do
       campaign = FactoryBot.create :campaign
       goody1 = FactoryBot.create :goody, campaign: campaign
       goody2 = FactoryBot.create :goody, campaign: campaign
-      goody3 = FactoryBot.create :goody, campaign: campaign
+      goody3 = FactoryBot.create :goody, campaign: campaign, quantity: 2
       supporter = FactoryBot.build :supporter
       goody1.orders.create! payment_type: "stripe", quantity: 1, amount: 10, agreement: true,
         supporter: supporter
