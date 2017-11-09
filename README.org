@@ -163,9 +163,10 @@ We are using Gitlab CI as a testing service.
     SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
 
 **** TODO Validierung für Anzahl > 0 Goodies
-- [ ] BO: -1 for Infinity
+- [X] BO: -1 for Infinity
 - [X] Validation
-- [ ] On goody: Disable button when there's no remaining_quantity
+- [X] On goody: Disable button when there's no remaining_quantity
+- [ ] Inform #crowdfuding on new logic
 
 **** TODO Wenn start_date Kampagne nicht erreicht, dann andere Logik: Newsletter Seite.
 - [ ] Alternativ: Ausgrauen von CTAs

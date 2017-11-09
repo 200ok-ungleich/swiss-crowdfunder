@@ -5,6 +5,9 @@ class Campaign < ApplicationRecord
   has_many :goodies, dependent: :destroy
 
   validates_presence_of :description
+  validates :goal, numericality: true, presence: true
+  validates :start_date, presence: true
+  validates :end_date, presence: true
 
   before_save :use_youtube_embedd_url
 
