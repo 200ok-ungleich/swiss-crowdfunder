@@ -74,7 +74,7 @@ describe 'campaigns' do
 
         expect do
           first(".qa-pledge").click
-        end.to raise_error(Selenium::WebDriver::Error::UnknownError)
+        end.to_not raise_error(Selenium::WebDriver::Error::UnknownError)
       end
     end
 
@@ -112,9 +112,11 @@ describe 'campaigns' do
       expect(page).to have_content I18n.t('errors.messages.blank')
     end
 
-    scenario 'with agreement, enough quantity and all fields filled out' do
+    scenario 'with agreement, enough quantity and all fields filled out', js: true do
       expect do
-        visit campaign_goodies_path([@campaign])
+        Timecop.freeze(Date.today + 100) do
+          visit campaign_goodies_path([@campaign])
+        end
         expect(first('.qa-pledge')).to_not have_css("a.disabled")
         first('.qa-pledge').click
 
