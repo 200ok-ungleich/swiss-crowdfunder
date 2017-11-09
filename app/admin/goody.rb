@@ -4,13 +4,15 @@ ActiveAdmin.register Goody do
 #
   permit_params :title, :description, :price, :quantity, :campaign_id
 
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+  form do
+    inputs do
+      input :campaign
+      input :title
+      input :description
+      input :price
+      input :quantity, label: "Quantity (-1 for infinite)"
+    end
+    actions
+  end
 
 end

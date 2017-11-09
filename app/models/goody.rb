@@ -4,7 +4,7 @@ class Goody < ApplicationRecord
   has_many :orders
 
   validates :price, numericality: true, presence: true
-  validates :quantity, numericality: true
+  validates :quantity, numericality: true, presence: true
 
   def orders_count
     orders.count
