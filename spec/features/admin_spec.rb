@@ -63,6 +63,19 @@ describe 'admin dashboard', :type => :feature do
       end
     end
 
+    context 'Goodies' do
+      it 'can update goodies' do
+        goody = FactoryBot.create :goody
+
+        click_on 'Goodies'
+        click_on('Bearbeiten')
+        fill_in 'goody_title', with: 'some new title'
+        click_on 'Goody aktualisieren'
+        expect(current_path).to eq(admin_goody_path(goody))
+        expect(goody.reload.title).to eq('some new title')
+      end
+    end
+
   end
 
 end
