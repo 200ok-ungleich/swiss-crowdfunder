@@ -50,6 +50,7 @@ de:
       state: "Bundesstaat"
       country: "Land"
     show:
+      back_to_campaign: "Zurück zur Kampagne"
       success: "Bestellung erfolgreich"
       bought_package: "Sie haben folgendes Paket erstanden: "
       text: "Sie haben eine grossartige Wahl getroffen!"

@@ -45,6 +45,7 @@ en:
       state: "State"
       country: "Country"
     show:
+      back_to_campaign: "Back to the campaign"
       success: "Order successful"
       text: "You've made a great choice!"
       bought_package: "You have successfully bought the package "
