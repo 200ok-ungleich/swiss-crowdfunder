@@ -8,7 +8,8 @@ class StaticController < ApplicationController
   end
 
   def countdown
-    render :layout => "blank.html.erb"
+    campaign = Campaign.find(1)
+    render :layout => "blank.html.erb", :locals => {:campaign => campaign}
   end
 
   def exception_test

@@ -25,9 +25,10 @@
 
   </head>
 
-  <body class="<%= [controller_name, action_name] * '-' %>">
+  <body class="<%= [controller_name, action_name] * '-' %>, hide">
     <!-- 'data-date' below in format YYYY/MM/DD to decide the countdown date -->
     <div class="your-clock" data-date="2017/11/11 20:00"></div>
+    <a id="active-campaign" href="<%= campaign_path(campaign)%>" class="hide"></a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
