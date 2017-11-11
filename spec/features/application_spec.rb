@@ -38,15 +38,4 @@ describe "layout application", :type => :feature do
     end.to raise_error(RuntimeError)
   end
 
-  describe 'go live' do
-    it 'before go live' do
-      new_time = Time.local(2017, 11, 11, 18, 0, 0)
-      Timecop.freeze(new_time)
-      visit root_path
-      expect(current_path).to eq(static_countdown_path)
-      Timecop.return
-    end
-  end
-
-
 end

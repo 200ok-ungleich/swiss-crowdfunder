@@ -9,6 +9,7 @@ class Campaign < ApplicationRecord
   validates :goal, numericality: true, presence: true
   validates :start_date, presence: true
   validates :end_date, presence: true
+  validate :end_date, :is_end_before_start?
 
   before_save :use_youtube_embedd_url
 
@@ -25,7 +26,6 @@ class Campaign < ApplicationRecord
     end_date >= Date.today
   end
 
-
   private
 
   # Regular Youtube URLs cannot be embedded into an iframe
@@ -41,5 +41,10 @@ class Campaign < ApplicationRecord
     self.description_html = renderer.render(description) if description
     self.order_description_html = renderer.render(order_description) if order_description
   end
+
+  def is_end_before_start?
+    errors.add(:end_date, "End date has to be after the start date!") if end_date < start_date
+  end
+
 
 end

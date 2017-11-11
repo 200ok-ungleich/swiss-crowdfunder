@@ -18,6 +18,13 @@ RSpec.describe Campaign, type: :model do
       expect(campaign.supporters.count).to eq(3)
     end
 
+    it 'forces the end date to be after the start date' do
+      campaign = FactoryBot.build :campaign, start_date: Date.today, end_date: 100.days.before
+
+      expect(campaign).to_not be_valid
+      expect(campaign.errors.first).to eq([:end_date, "End date has to be after the start date!"])
+    end
+
 
   end
 
