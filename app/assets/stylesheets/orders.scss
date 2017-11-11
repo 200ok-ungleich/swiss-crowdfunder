@@ -8,6 +8,13 @@
     color: #87BA8B;
   }
 
+  .go-back, .go-back a {
+    color: #87BA8B;
+    &:hover {
+      color: #36CBDA;
+    }
+  }
+
   .encouragement {
     font-size: 1.5em;
     font-weight: 300;
