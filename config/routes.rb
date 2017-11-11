@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   get '*any', via: :all, to: 'errors#not_found'
 
   # root to: "root#index"
-  # root to: redirect('/campaigns/ungleich-glarus-ag')
-  root to: redirect('/static/countdown')
+  if DateTime.now > DateTime.strptime('2017-11-11 20:00:00 +0100', '%Y-%m-%d %H:%M:%S %z')
+    root to: redirect('/campaigns/ungleich-glarus-ag')
+  else
+    root to: redirect('/static/countdown')
+  end
 end
