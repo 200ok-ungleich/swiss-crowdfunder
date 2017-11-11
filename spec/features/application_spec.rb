@@ -22,6 +22,15 @@ describe "layout application", :type => :feature do
     expect(current_path).to eq(static_terms_of_service_path)
   end
 
+  it "shows the privacy page" do
+    #visit root_path
+    visit campaign_path(@campaign)
+    find('.qa-terms-of-service a').click
+    find('a.qa-privacy-policy').click
+    expect(page.status_code).to eq(200)
+    expect(current_path).to eq(static_privacy_policy_path)
+  end
+
   it 'has an endpoint dedicated to testing failure' do
     basic_auth('letme', 'in')
     expect do

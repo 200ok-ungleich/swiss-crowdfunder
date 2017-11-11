@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'static/about-us', to: 'static#about_us'
   get 'static/terms-of-service', to: 'static#terms_of_service'
+  get 'static/privacy-policy', to: 'static#privacy_policy'
   get 'static/countdown', to: 'static#countdown'
   get 'static/exception_test', to: 'static#exception_test'
 

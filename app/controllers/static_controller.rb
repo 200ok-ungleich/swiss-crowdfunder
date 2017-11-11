@@ -7,6 +7,9 @@ class StaticController < ApplicationController
   def terms_of_service
   end
 
+  def privacy_policy
+  end
+
   def countdown
     campaign = Campaign.find(1)
     render :layout => "blank.html.erb", :locals => {:campaign => campaign}
