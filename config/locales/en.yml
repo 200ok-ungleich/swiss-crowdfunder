@@ -33,7 +33,7 @@ en:
       selected_package: "You have selected the package"
       i_hereby_acknowledge: "I hereby acknowledge that I want to pay <strong>%{price} %{currency}</strong> for it."
       credit_card: "Credit or debit card"
-      i_agree: "I agree and want to support this project"
+      i_agree: "I agree to support this project and accept the <a href='/static/terms-of-service'>terms of service</a> of Swiss Crowdfunder."
       create_order: "Create order"
       first_name: "First name"
       last_name: "Last name"

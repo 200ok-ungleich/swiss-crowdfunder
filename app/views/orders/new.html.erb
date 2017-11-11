@@ -50,7 +50,7 @@
       <% end %>
 
       <div class="text-right mb-4">
-        <%= f.input :agreement, required: true, label: t('.i_agree'), input_html: { class: "qa-agreement" } %>
+        <%= f.input :agreement, required: true, label: t('.i_agree').html_safe, input_html: { class: "qa-agreement" } %>
       </div>
       <div class="text-center">
         <%= f.submit t(".create_order"), class: "qa-submit btn btn_theme btn_wide" %>

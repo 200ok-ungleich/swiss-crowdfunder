@@ -38,7 +38,8 @@ de:
       selected_package: "Sie haben folgendes Paket gewählt: "
       i_hereby_acknowledge: "Ich bestätige hiermit <b>%{price} für %{currency}</b> zu bezahlen."
       credit_card: "Kreditkarte"
-      i_agree: "Ich bestätige hiermit dieses Projekt unterstützen zu möchten"
+      i_agree: "Ich bestätige hiermit dieses Projekt unterstützen zu
+  möchten und akzeptiere die <a href='/static/terms-of-service'>Nutzungsbedingungen</a> von Swiss Crowdfunder."
       create_order: "Unterstützen"
       first_name: "Vorname"
       last_name: "Nachname"
