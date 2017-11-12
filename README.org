@@ -165,7 +165,7 @@ We are using Gitlab CI as a testing service.
 **** TODO Send Email on Order#create
      - [ ] Campaign Model: E-Mail
 **** TODO On create order/user: Send Notification to Mattermost
-**** TODO Re-Add SRE team and Mattermost notifications
+**** DONE Re-Add SRE team and Mattermost notifications
 **** DONE From orders#show, have a link back to the campaign
 **** DONE On creating a new Campaign, there's already two supporters    :bug:
 **** DONE Wenn start_date Kampagne nicht erreicht
