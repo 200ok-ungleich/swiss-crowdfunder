@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
     @order.quantity = 1
     @order.paid = false
 
-    if @order.save
+    if NewOrderService.new(@order).call
       redirect_to [@goody.campaign, @goody, @order]
     else
       render action: 'new'

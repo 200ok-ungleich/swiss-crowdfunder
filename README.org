@@ -227,7 +227,10 @@ We are using Gitlab CI as a testing service.
 
 *** PROJECT Ready beyond ungleich
 
-
+**** TODO Don't respond to JSON/JS requests
+- [ ] Some Java crawler request campaigns as JSON/JS
+**** TODO Contact form
+**** TODO Mail icon
 **** TODO Create landing page
 **** TODO Discuss deleting parent resources logic with Nico
 
