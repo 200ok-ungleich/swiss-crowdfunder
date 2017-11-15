@@ -159,11 +159,55 @@ We are using Gitlab CI as a testing service.
 
 ** TODOs
 
-*** PROJECT Ready for Ungleich Crowdfunding
-    SCHEDULED: <2017-10-17 Tue> DEADLINE: <2017-10-27 Fri>
+*** PROJECT Swiss Crowdfunder
 
 **** TODO Send Email on Order#create
      - [ ] Campaign Model: E-Mail
+
+**** TODO Don't respond to JSON/JS requests
+- [ ] Some Java crawler request campaigns as JSON/JS
+**** TODO Re-Add SRE team and Mattermost notifications
+**** TODO Add Background worker
+- [ ] orders#create Email
+- [ ] orders#create Mattermost Notifications
+**** TODO Contact form
+**** TODO Create landing page
+**** TODO Discuss deleting parent resources logic with Nico
+
+When destroying a Goodie which has Orders, what should happen?
+
+- Delete the goodie and nullify foreign_keys in Orders?
+- Show a warning and don't delete anything?
+**** TODO campaigns#show: Add update ticker
+- [ ] Add tabs to campaigns#show
+- [ ] Add CampaignUpdate Model (markdown)
+- [ ] Let every CampaignUpdate have it's unique URL nested under Campaign
+- [ ] When going to a specific CampaignUpdate URL, go to the tab and
+  scroll to the specific update.
+- [ ] Alternatively let only have CampaignUpdates have a unique URL
+  for the tab as a start
+
+**** TODO Handle 500 with separate page (analogous to 404)
+- Right now, there's a redirect to the 404 page, so that kinda works!
+**** TODO Implement Stripe
+**** TODO Replace application.html.erb fonts and font-awesome CDN with local variant
+**** TODO When a campaign is not yet active, allow for users to subscribe to the newsletter
+**** TODO As soon as users can create/modify/delete resources or login: Implement global lock-down
+- See [[Security]] for more information
+
+**** TODO i18n custom model validations
+**** PROJECT Secret Keys
+
+- [ ]  More secret creation of Admin User than through =db/seeds.rb=
+- [ ]  More secret devise keys than in =config/devise.rb=
+- [X] Do not expose =SECRET_KEY_BASE= in this README
+**** DONE Mail icon
+**** DONE i18n all the strings
+**** DONE Integrate Favicon
+**** DONE Reconfigure GA link to the proper URL
+
+*** PROJECT Ready for Ungleich Crowdfunding
+
 **** DONE On create order/user: Send Notification to Mattermost
 **** DONE From orders#show, have a link back to the campaign
 **** DONE On creating a new Campaign, there's already two supporters    :bug:
@@ -222,48 +266,3 @@ We are using Gitlab CI as a testing service.
 **** DONE NF: Introduce capistrano for deployment by everyone
 **** DONE Introduce "About Us" Page without content
 **** DONE Introduce "TOS" Page without content
-
-
-*** PROJECT Ready beyond ungleich
-
-**** TODO Don't respond to JSON/JS requests
-- [ ] Some Java crawler request campaigns as JSON/JS
-**** TODO Re-Add SRE team and Mattermost notifications
-**** TODO Add Background worker
-- [ ] orders#create Email
-- [ ] orders#create Mattermost Notifications
-**** TODO Contact form
-**** TODO Mail icon
-**** TODO Create landing page
-**** TODO Discuss deleting parent resources logic with Nico
-
-When destroying a Goodie which has Orders, what should happen?
-
-- Delete the goodie and nullify foreign_keys in Orders?
-- Show a warning and don't delete anything?
-**** TODO campaigns#show: Add update ticker
-- [ ] Add tabs to campaigns#show
-- [ ] Add CampaignUpdate Model (markdown)
-- [ ] Let every CampaignUpdate have it's unique URL nested under Campaign
-- [ ] When going to a specific CampaignUpdate URL, go to the tab and
-  scroll to the specific update.
-- [ ] Alternatively let only have CampaignUpdates have a unique URL
-  for the tab as a start
-
-**** TODO Handle 500 with separate page (analogous to 404)
-- Right now, there's a redirect to the 404 page, so that kinda works!
-**** TODO Implement Stripe
-**** TODO Replace application.html.erb fonts and font-awesome CDN with local variant
-**** TODO When a campaign is not yet active, allow for users to subscribe to the newsletter
-**** PROJECT Secret Keys
-
-- [ ]  More secret creation of Admin User than through =db/seeds.rb=
-- [ ]  More secret devise keys than in =config/devise.rb=
-- [X] Do not expose =SECRET_KEY_BASE= in this README
-**** TODO As soon as users can create/modify/delete resources or login: Implement global lock-down
-- See [[Security]] for more information
-
-**** TODO i18n custom model validations
-**** DONE i18n all the strings
-**** DONE Integrate Favicon
-**** DONE Reconfigure GA link to the proper URL
