@@ -13,7 +13,7 @@
 
     <script src="https://js.stripe.com/v3/"></script>
 
-    <% unless Rails.env.development? %>
+    <% if Rails.env.production? %>
       <!-- Global Site Tag (gtag.js) - Google Analytics -->
       <script src="https://www.googletagmanager.com/gtag/js?id=UA-107377421-1"></script>
       <script>
