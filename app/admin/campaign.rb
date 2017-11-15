@@ -1,7 +1,7 @@
 ActiveAdmin.register Campaign do
 #
   permit_params :goal, :start_date, :end_date, :title, :youtube_url,
-    :description, :claim, :twitter_url, :facebook_url, :order_description
+    :description, :claim, :twitter_url, :facebook_url, :order_description, :email
 
   # friendly_id resource lookup
   controller do
@@ -27,6 +27,7 @@ ActiveAdmin.register Campaign do
       input :title
       input :claim
       input :goal
+      input :email
       input :start_date
       input :end_date
       input :youtube_url

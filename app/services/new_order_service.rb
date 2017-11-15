@@ -9,11 +9,7 @@ class NewOrderService
   def call
     if order_create
       # send_welcome_mail
-      begin
-        notify_mattermost
-      rescue Exception => e
-        Rails.logger.error "Error sending notification to Mattermost: " + e.full_message
-      end
+      notify_mattermost
     end
   end
 
@@ -30,6 +26,4 @@ class NewOrderService
   def campaign_title(order)
     order.goody.campaign.title
   end
-
-
 end

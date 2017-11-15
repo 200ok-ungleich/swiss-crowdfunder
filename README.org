@@ -165,7 +165,6 @@ We are using Gitlab CI as a testing service.
 **** TODO Send Email on Order#create
      - [ ] Campaign Model: E-Mail
 **** DONE On create order/user: Send Notification to Mattermost
-**** DONE Re-Add SRE team and Mattermost notifications
 **** DONE From orders#show, have a link back to the campaign
 **** DONE On creating a new Campaign, there's already two supporters    :bug:
 **** DONE Wenn start_date Kampagne nicht erreicht
@@ -229,6 +228,10 @@ We are using Gitlab CI as a testing service.
 
 **** TODO Don't respond to JSON/JS requests
 - [ ] Some Java crawler request campaigns as JSON/JS
+**** TODO Re-Add SRE team and Mattermost notifications
+**** TODO Add Background worker
+- [ ] orders#create Email
+- [ ] orders#create Mattermost Notifications
 **** TODO Contact form
 **** TODO Mail icon
 **** TODO Create landing page

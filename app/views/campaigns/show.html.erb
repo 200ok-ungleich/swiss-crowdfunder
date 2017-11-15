@@ -79,6 +79,12 @@
               <%- unless @campaign.facebook_url.blank? %>
                 <li><%= link_to raw('<span class="fa fa-facebook"></span>'), @campaign.facebook_url, target: "_blank" %></li>
               <% end %>
+              <li>
+                <%= mail_to @campaign.email,
+                subject: "Swiss Crowdfunder: #{@campaign.title}" do %>
+                  <span class="fa fa-envelope"></span>
+                <% end %>
+              </li>
             </ul>
           </div>
         </div>

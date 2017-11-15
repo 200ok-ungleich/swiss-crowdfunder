@@ -9,6 +9,7 @@ class Campaign < ApplicationRecord
   validates :goal, numericality: true, presence: true
   validates :start_date, presence: true
   validates :end_date, presence: true
+  validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
   validate :end_date, :is_end_before_start?
 
   before_save :use_youtube_embedd_url

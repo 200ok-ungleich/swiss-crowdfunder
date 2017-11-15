@@ -2,6 +2,7 @@ FactoryBot.define do
 
   factory :campaign do
     sequence(:title) { |n| "Campaign #{n}" }
+    sequence(:email) { |n| "campaign#{n}@example.com" }
     description "Spec Campaign"
     order_description "How to buy"
     claim 'Spec Claim'
