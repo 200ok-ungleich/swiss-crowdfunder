@@ -172,6 +172,7 @@ We are using Gitlab CI as a testing service.
 - [ ] orders#create Mattermost Notifications
 **** TODO Contact form
 **** TODO Create landing page
+- [ ] Add a flag 'active' on Campaign Model
 **** TODO Discuss deleting parent resources logic with Nico
 
 When destroying a Goodie which has Orders, what should happen?
