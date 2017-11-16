@@ -38,4 +38,21 @@ describe "layout application", :type => :feature do
     end.to raise_error(RuntimeError)
   end
 
+  describe 'locales' do
+    it 'has locales' do
+      visit campaign_path(@campaign, locale: :de)
+      expect(page).to have_content("Finanzierungsziel")
+      expect(page.status_code).to eq(200)
+      visit campaign_path(@campaign, locale: :en)
+      expect(page).to have_content("Funding goal")
+      expect(page.status_code).to eq(200)
+    end
+
+    it 'provides the default locale if a random locale is given' do
+      visit campaign_path(@campaign, locale: :i_totally_provide_a_random_locale)
+      expect(page).to have_content("Finanzierungsziel")
+      expect(page.status_code).to eq(200)
+    end
+
+  end
 end
