@@ -43,10 +43,7 @@ a {
 
 .progress_thin {
   border-radius: 0;
-
-  .progress-bar {
-    height: 1.8rem;
-  }
+  height: 1.8rem;
 }
 
 
@@ -101,8 +98,15 @@ a {
 
   &:hover, &:focus {
     transition: all linear 0.2s;
-    background-color: transparent;
+    background-color: #fff;
     color: #DB0808;
+  }
+}
+
+.btn_theme.no_trans {
+  &:hover, &:focus {
+    background-color: #FB2828;
+    color: #fff;
   }
 }
 
@@ -132,6 +136,10 @@ a {
     transition: all ease-out 0.2s;
     box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.4);
   }
+}
+
+.btn_spacey {
+  letter-spacing: 0.8px;
 }
 
 .btn_wide {
@@ -486,4 +494,80 @@ aside > h2 {
       font-weight: bold;
     }
   }
+}
+
+.carousel_text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  font-weight: 300;
+  font-size: 1.5rem;
+
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+.top_carousel {
+  margin-top: -1.5em;
+  .carousel-control-next, .carousel-control-prev {
+    font-size: 5em;
+  }
+}
+
+.campaign_card {
+  border: 1px solid #bbb;
+  margin-bottom: 1.5em;
+
+  .campaign_card_content {
+    padding: 2em 1em 1em;
+    position: relative;
+  }
+  .campaign_card_title {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #4b4e6b;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .campaign_card_claim {
+    font-weight: 300;
+    font-size: 90%;
+  }
+  .campaign_date {
+    line-height: 1.4;
+  }
+  .progress_thin {
+    height: 0.3em;
+  }
+  .funding_goal {
+    font-size: 1.2em;
+    line-height: 1.4;
+  }
+  .campaign_stat > .number {
+    color: #4b4e6b;
+    font-size: 1.25em;
+  }
+  .campaign_card_top_btn {
+    position: absolute;
+    top: -20px;
+    width: 150px;
+    font-weight: 600;
+  }
+}
+
+.campaign_card.coming_soon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #ddd;
 }

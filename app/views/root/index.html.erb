@@ -1,37 +1,46 @@
 <div class="site-wrapper">
-  <div class="site-wrapper-inner">
-
-    <div class="inner cover">
-      <main class="container">
-        <div class="text-center">
-          <h1 class="cover-heading"><%= t('.title') %></h1>
-          <p class="lead"><%= t(".claim") %></p>
-        </div>
-
-        <div style="margin-top: 5rem;">
-          <%- if !@campaigns %>
-            <%= t('.no_campaigns') %>
-          <%- end %>
-          <div class="row">
-            <% @campaigns.each do |campaign| %>
-              <div class="col-sm-6 mb-5 text-center">
-                <h2>
-                  <%= campaign.title %>
-                </h2>
-                <h5 class="mb-4">
-                  <%= campaign.claim %>
-                </h5>
-                <p class="lead">
-                  <a href="<%= campaign_path(campaign)%>"
-                     class="btn btn-lg btn-secondary">
-                    <%= t('.learn_more') %>
-                  </a>
-                </p>
-              </div>
-            <% end %>
+  <div id="carouselExampleControls" class="carousel slide top_carousel mb-5" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <% @campaigns.each_with_index do |campaign, index| %>
+        <li data-target="#carouselExampleIndicators" data-slide-to="<%= index %>" class="<% if !index %>active<% end %>"></li>
+      <% end %>
+    </ol>
+    <div class="carousel-inner">
+      <% @campaigns.each_with_index do |campaign, index| %>
+        <div class="carousel-item <% if index == 0 %>active<% end %>">
+          <img class="d-block w-100" src="/Landsgemeindering.jpg" alt="First slide">
+          <div class="carousel_text">
+            <h2><%= campaign.title %></h2>
+            <p class="mt-3 mb-5"><%= campaign.claim %></p>
+            <%= link_to t('.view_project'), campaign_path(campaign), class: "btn btn_theme no_trans btn_spacey btn-lg" %>
           </div>
         </div>
-      </main>
+      <% end %>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="fa fa-angle-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="fa fa-angle-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
+  <main class="container">
+    <% if !@campaigns %>
+      <%= t('.no_campaigns') %>
+    <% end %>
+    <div class="row">
+      <% @campaigns.each do |campaign| %>
+        <%= render partial: 'shared/campaign_card', locals: {campaign: campaign} %>
+      <% end %>
+      <% (3 - @campaigns.length % 3).times do |i| %>
+        <div class="col-md-4" style="padding-bottom: 1.5em;">
+          <div class="campaign_card coming_soon">
+            <div class="text-muted"><%= t '.coming_soon' %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </main>
 </div>

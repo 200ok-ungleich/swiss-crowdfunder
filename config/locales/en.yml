@@ -17,10 +17,16 @@ en:
       about-us: "About us"
   root:
     index:
-      title: "Swiss Crowdfunder"
       no_campaigns: "There are no campaigns currently featured."
-      claim: "Featuring the best projects!"
       learn_more: "Learn more"
+      view_project: "View Project"
+      funding_goal: "Funding goal"
+      raised: "raised"
+      supporters: "supporters"
+      start: "Start"
+      end: "End"
+      glarnerpick: "Glarnerpick"
+      coming_soon: "Coming Soon!"
   goodies:
     index:
       support_the_project: "Support this project"
