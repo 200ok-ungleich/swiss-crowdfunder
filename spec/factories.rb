@@ -5,6 +5,7 @@ FactoryBot.define do
     sequence(:email) { |n| "campaign#{n}@example.com" }
     description "Spec Campaign"
     order_description "How to buy"
+    order_success "We will get back to you"
     claim 'Spec Claim'
     start_date 10.days.before
     end_date 40.days.from_now

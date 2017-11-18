@@ -41,6 +41,7 @@ class Campaign < ApplicationRecord
                                        fenced_code_blocks: true)
     self.description_html = renderer.render(description) if description
     self.order_description_html = renderer.render(order_description) if order_description
+    self.order_success_html = renderer.render(order_success) if order_success
   end
 
   def is_end_before_start?

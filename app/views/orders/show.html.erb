@@ -13,6 +13,11 @@
       <%= t('.bought_package') %>
       <b> <%= @goody.title %> </b>.
     </p>
+    <%- unless @goody.campaign.order_success.blank? %>
+      <p>
+        <%= raw @goody.campaign.order_success_html %>
+      </p>
+    <% end %>
     <p class="go-back">
       <%= link_to "<i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i> #{t('.back_to_campaign')}"
           .html_safe,
