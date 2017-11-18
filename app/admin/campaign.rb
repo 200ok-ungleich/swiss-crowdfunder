@@ -1,7 +1,8 @@
 ActiveAdmin.register Campaign do
 #
   permit_params :goal, :start_date, :end_date, :title, :youtube_url,
-    :description, :claim, :twitter_url, :facebook_url, :order_description, :email
+    :description, :claim, :twitter_url, :facebook_url,
+    :order_description, :order_success, :email
 
   # friendly_id resource lookup
   controller do
@@ -35,6 +36,7 @@ ActiveAdmin.register Campaign do
       input :twitter_url
       input :description, label: "Description(Markdown)"
       input :order_description, label: "Order Description(Markdown)"
+      input :order_success, label: "Order Success(Markdown)"
     end
     actions
   end

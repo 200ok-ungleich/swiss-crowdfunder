@@ -125,6 +125,8 @@ describe 'campaigns' do
           find('.qa-agreement').click
           find('.qa-submit').click
           expect(page).to_not have_content I18n.t('errors.messages.blank')
+          # Text from @campaign.order_success
+          expect(page).to have_content('We will get back to you')
         end
       end.to change{Order.count}.from(0).to(1)
     end
