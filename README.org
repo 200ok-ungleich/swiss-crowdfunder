@@ -178,8 +178,6 @@ We are using Gitlab CI as a testing service.
 - [ ] orders#create Email
 - [ ] orders#create Mattermost Notifications
 **** TODO Contact form
-**** TODO Create landing page
-- [ ] Add a flag 'active' on Campaign Model
 **** TODO Discuss deleting parent resources logic with Nico
 
 When destroying a Goodie which has Orders, what should happen?
@@ -209,6 +207,8 @@ When destroying a Goodie which has Orders, what should happen?
 - [ ]  More secret creation of Admin User than through =db/seeds.rb=
 - [ ]  More secret devise keys than in =config/devise.rb=
 - [X] Do not expose =SECRET_KEY_BASE= in this README
+**** DONE Create landing page
+- [X] Add a flag 'active' on Campaign Model
 **** DONE Mail icon
 **** DONE i18n all the strings
 **** DONE Integrate Favicon
