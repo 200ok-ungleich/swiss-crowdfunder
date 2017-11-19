@@ -9,6 +9,8 @@ de:
       delimiter: ''
       separator: '.'
   errors:
+    messages:
+      extension_whitelist_error: "Keine %{extension} Dateien hochladen! Erlaubt sind: %{allowed_types}."
     not_found:
       page_not_found_1: "Seite nicht gefunden"
       page_not_found_2: "Etwas ist schief gelaufen!"
