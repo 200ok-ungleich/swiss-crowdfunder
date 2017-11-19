@@ -7,8 +7,14 @@ ActiveAdmin.register Campaign do
   # friendly_id resource lookup
   controller do
     def find_resource
-      scoped_collection.unscoped.friendly.find(params[:id])
+      scoped_collection.friendly.find(params[:id])
     end
+
+    protected
+    def scoped_collection
+      super.unscoped
+    end
+
   end
 
   index do
