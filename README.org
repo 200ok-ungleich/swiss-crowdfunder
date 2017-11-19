@@ -161,6 +161,7 @@ We are using Gitlab CI as a testing service.
 
 *** PROJECT Swiss Crowdfunder
 
+**** TODO Link =public/uploads= through cap after Nico has configured the folder
 **** TODO Add logic for GlarnerPick
 - [ ] Only one can be the GlarnerPick
 - [ ] Unlock the code from _campaign_card.html.erb
