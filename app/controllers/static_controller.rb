@@ -10,11 +10,6 @@ class StaticController < ApplicationController
   def privacy_policy
   end
 
-  def countdown
-    campaign = Campaign.find(1)
-    render :layout => "blank.html.erb", :locals => {:campaign => campaign}
-  end
-
   def exception_test
     raise "This endpoint is designed to fail!"
   end
