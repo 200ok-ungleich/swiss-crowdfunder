@@ -27,7 +27,7 @@
     </a>
   </div>
   <main class="container mb-3">
-    <% if !@campaigns %>
+    <% unless @campaigns %>
       <%= t('.no_campaigns') %>
     <% end %>
     <div class="row">
