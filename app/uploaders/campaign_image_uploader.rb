@@ -1,4 +1,5 @@
 class CampaignImageUploader < CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -28,6 +29,10 @@ class CampaignImageUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
+
+  version :resized do
+    process resize_to_fill: [1024, 515]
+  end
 
   # Create different versions of your uploaded files:
   # version :thumb do

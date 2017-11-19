@@ -36,6 +36,7 @@ gem 'exception_notification'
 gem 'httparty'
 gem 'timecop'
 gem 'carrierwave'
+gem 'mini_magick'
 
 #gem 'cancancan', '~> 2.0'
 
