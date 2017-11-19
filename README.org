@@ -161,6 +161,13 @@ We are using Gitlab CI as a testing service.
 
 *** PROJECT Swiss Crowdfunder
 
+**** TODO Add logic for GlarnerPick
+- [ ] Only one can be the GlarnerPick
+- [ ] Unlock the code from _campaign_card.html.erb
+
+**** TODO Discuss logic for categories with Nico
+- [ ] Unlock the code from _campaign_card.html.erb
+
 **** TODO Send Email on Order#create
      - [ ] Campaign Model: E-Mail
 

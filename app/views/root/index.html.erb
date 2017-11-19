@@ -34,7 +34,7 @@
       <% @campaigns.each do |campaign| %>
         <%= render partial: 'shared/campaign_card', locals: {campaign: campaign} %>
       <% end %>
-      <!-- Show a "Coming soon" cards to fill up remaining spots -->
+      <!-- Show "Coming soon" cards to fill up remaining spots -->
       <% (3 - @campaigns.length).times do |i| %>
         <div class="col-md-4" style="padding-bottom: 1.5em;">
           <div class="campaign_card coming_soon">
