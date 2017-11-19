@@ -2,12 +2,12 @@ ActiveAdmin.register Campaign do
 #
   permit_params :goal, :start_date, :end_date, :title, :youtube_url,
     :description, :claim, :twitter_url, :facebook_url,
-    :order_description, :order_success, :email, :image
+    :order_description, :order_success, :email, :image, :active
 
   # friendly_id resource lookup
   controller do
     def find_resource
-      scoped_collection.friendly.find(params[:id])
+      scoped_collection.unscoped.friendly.find(params[:id])
     end
   end
 
@@ -26,6 +26,7 @@ ActiveAdmin.register Campaign do
   form do |f|
     inputs do
       input :title
+      input :active, label: "Active (will otherwise only be visible through unique slug URL)"
       input :claim
       input :goal
       input :email

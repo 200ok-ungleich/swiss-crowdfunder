@@ -3,6 +3,8 @@ class Campaign < ApplicationRecord
   friendly_id :title, use: :slugged
   mount_uploader :image, CampaignImageUploader
 
+  default_scope { where(active: true) }
+
   has_many :goodies, dependent: :destroy
   has_many :supporters, through: :goodies
 

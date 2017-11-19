@@ -2,6 +2,13 @@ require 'rails_helper'
 
 RSpec.describe Campaign, type: :model do
 
+  describe 'Scopes' do
+    it 'has a default scope for "active campaigns"' do
+      FactoryBot.create :campaign, active: false
+      expect(Campaign.all.count).to be(0)
+    end
+  end
+
   describe 'Logic' do
 
     it 'has no supporters in the beginning' do
