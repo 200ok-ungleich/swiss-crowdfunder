@@ -25,3 +25,5 @@ config/database.yml
 /app/assets/javascripts/.tern-port
 .sourceme
 .tern-port
+
+public/uploads

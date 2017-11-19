@@ -8,7 +8,7 @@
     <div class="carousel-inner">
       <% @campaigns.each_with_index do |campaign, index| %>
         <div class="carousel-item <% if index == 0 %>active<% end %>">
-          <img class="d-block w-100" src="/Landsgemeindering.jpg" alt="First slide">
+          <img class="d-block w-100" src="<%= campaign.image.url %>" alt="First slide">
           <div class="carousel_text">
             <h2><%= campaign.title %></h2>
             <p class="mt-3 mb-5"><%= campaign.claim %></p>

@@ -35,6 +35,7 @@ gem 'friendly_id'
 gem 'exception_notification'
 gem 'httparty'
 gem 'timecop'
+gem 'carrierwave'
 
 #gem 'cancancan', '~> 2.0'
 

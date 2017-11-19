@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171118123625) do
+ActiveRecord::Schema.define(version: 20171119180257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20171118123625) do
     t.string "email"
     t.text "order_success"
     t.text "order_success_html"
+    t.string "image"
     t.index ["slug"], name: "index_campaigns_on_slug", unique: true
   end
 
