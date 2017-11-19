@@ -17,16 +17,10 @@ en:
       about-us: "About us"
   root:
     index:
+      coming_soon: "Coming Soon!"
+      view_project: "View Project"
       no_campaigns: "There are no campaigns currently featured."
       learn_more: "Learn more"
-      view_project: "View Project"
-      funding_goal: "Funding goal"
-      raised: "raised"
-      supporters: "supporters"
-      start: "Start"
-      end: "End"
-      glarnerpick: "Glarnerpick"
-      coming_soon: "Coming Soon!"
   goodies:
     index:
       support_the_project: "Support this project"
@@ -68,6 +62,13 @@ en:
       end: "End"
       about: "About this campaign"
   shared:
+    campaign_card:
+      funding_goal: "Funding goal"
+      raised: "raised"
+      supporters: "supporters"
+      start: "Start"
+      end: "End"
+      glarnerpick: "Glarnerpick"
     goody:
       pledge: "Pledge"
       price: "Price :"

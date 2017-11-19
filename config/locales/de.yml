@@ -24,16 +24,10 @@ de:
       about-us: "Über uns"
   root:
     index:
+      coming_soon: "Demnächst verfügbar"
+      view_project: "Projekt Ansehen"
       no_campaigns: "Im Moment gibt es keine Projekte."
       learn_more: "Mehr erfahren"
-      view_project: "Projekt Ansehen"
-      funding_goal: "Finanzierungsziel"
-      raised: "angehoben"
-      supporters: "unterstützer"
-      start: "Begin"
-      end: "Ziel"
-      glarnerpick: "Glarnerpick"
-      coming_soon: "Coming Soon!"
   goodies:
     index:
       support_the_project: "Unterstützen Sie dieses Projekt"
@@ -76,6 +70,13 @@ de:
       end: "Ziel"
       about: "Über diese Kampagne"
   shared:
+    campaign_card:
+      funding_goal: "Finanzierungsziel"
+      raised: "bereits erreicht"
+      supporters: "Unterstützer"
+      start: "Begin"
+      end: "Ziel"
+      glarnerpick: "Glarnerpick"
     goody:
       pledge: "Weiter"
       price: "Betrag :"
