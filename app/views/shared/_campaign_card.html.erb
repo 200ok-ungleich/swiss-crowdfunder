@@ -20,7 +20,7 @@
       </div>
       <div class="row">
         <div class="col-auto">
-          <strong class="text_theme"><%= number_to_percentage(100*(campaign.amount_raised.to_f / campaign.goal), precision: 1, separator: '.', format: "%n %") %></strong>
+          <strong class="text_theme"><%= campaign_percentage(campaign) %></strong>
         </div>
         <div class="col text-right funding_goal">
           <div class="small mt-1"><%= t '.funding_goal' %></div>
