@@ -1,14 +1,14 @@
 <div class="site-wrapper">
-  <div id="carouselExampleControls" class="carousel slide top_carousel mb-5" data-ride="carousel">
+  <div id="campaignsCarousel" class="carousel slide top_carousel mb-5" data-ride="carousel">
     <ol class="carousel-indicators">
       <% @campaigns.each_with_index do |campaign, index| %>
-        <li data-target="#carouselExampleIndicators" data-slide-to="<%= index %>" class='<%= active?(index) %>'></li>
+        <li data-target="#campaignsCarousel" data-slide-to="<%= index %>" class='<%= active?(index) %>'></li>
       <% end %>
     </ol>
     <div class="carousel-inner">
       <% @campaigns.each_with_index do |campaign, index| %>
         <div class="carousel-item <%= active?(index) %>">
-          <img class="d-block w-100" src="<%= campaign.image.resized.url %>" alt="First slide">
+          <img class="d-block w-100" src="<%= campaign.image.resized.url %>">
           <div class="carousel_text">
             <h2><%= campaign.title %></h2>
             <p class="mt-3 mb-5"><%= campaign.claim %></p>
@@ -17,11 +17,11 @@
         </div>
       <% end %>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#campaignsCarousel" role="button" data-slide="prev">
       <span class="fa fa-angle-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#campaignsCarousel" role="button" data-slide="next">
       <span class="fa fa-angle-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>

@@ -510,6 +510,7 @@ aside > h2 {
   background: rgba(0,0,0,0.4);
   font-weight: 300;
   font-size: 1.5rem;
+  padding: 0 15%;
 
   h2 {
     font-size: 3rem;
@@ -518,8 +519,12 @@ aside > h2 {
 
 .top_carousel {
   margin-top: -1.5em;
+
   .carousel-control-next, .carousel-control-prev {
     font-size: 5em;
+  }
+  .carousel-item > img {
+    filter: blur(2px);
   }
 }
 
