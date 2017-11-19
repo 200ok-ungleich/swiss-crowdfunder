@@ -1,10 +1,20 @@
 require 'rails_helper'
 
 describe 'landing page', :type => :feature do
-  pending 'shows the landing page' do
+  it 'shows the landing page' do
     visit root_path
-    expect(page).to have_content I18n.t('root.index.title')
+    expect(page).to have_content "Swiss Crowdfunder"
   end
+
+  it 'shows active campaigns' do
+    FactoryBot.create :campaign, title: "Spec 1 Campaign", active: true
+    FactoryBot.create :campaign, title: "Spec 2 Campaign", active: false
+
+    visit root_path
+    expect(page).to have_content "Spec 1 Campaign"
+    expect(page).to_not have_content "Spec 2 Campaign"
+  end
+
 end
 
 describe 'global errors', :type => :feature do
