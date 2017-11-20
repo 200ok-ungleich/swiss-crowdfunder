@@ -48,7 +48,9 @@ class Campaign < ApplicationRecord
   end
 
   def is_end_before_start?
-    errors.add(:end_date, "End date has to be after the start date!") if end_date < start_date
+    if end_date and start_date
+      errors.add(:end_date, "End date has to be after the start date!") if end_date < start_date
+    end
   end
 
 
