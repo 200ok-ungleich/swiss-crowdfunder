@@ -529,16 +529,16 @@ aside > h2 {
 }
 
 .campaign_card {
-  border: 1px solid #bbb;
   margin-bottom: 1.5em;
 
   .campaign_card_content {
     padding: 2em 1em 1em;
     position: relative;
+    border: 1px solid #ccc;
   }
   .campaign_card_title {
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1em;
     color: #4b4e6b;
     margin-bottom: 0.5rem;
     display: block;
@@ -546,9 +546,11 @@ aside > h2 {
   .campaign_card_claim {
     font-weight: 300;
     font-size: 90%;
+    color: #6D8292;
   }
   .campaign_date {
     line-height: 1.4;
+    color: #5B5A5A;
   }
   .progress_thin {
     height: 0.3em;
@@ -556,10 +558,14 @@ aside > h2 {
   .funding_goal {
     font-size: 1.2em;
     line-height: 1.4;
+    color: #858585;
   }
-  .campaign_stat > .number {
+  .campaign_stat {
     color: #4b4e6b;
-    font-size: 1.25em;
+
+    & > .number {
+      font-size: 1.25em;
+    }
   }
   .campaign_card_top_btn {
     position: absolute;
