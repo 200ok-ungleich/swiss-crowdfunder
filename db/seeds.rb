@@ -30,7 +30,8 @@ seed Campaign, { title: "ungleich glarus AG" },
    youtube_url: "https://www.youtube.com/watch?v=ZUgjm-XqKuc",
    twitter_url: "https://twitter.com/digitalglarus",
    facebook_url: "https://www.facebook.com/ungleich.ch/",
-   goal: 50000
+   goal: 50000,
+   email: "seed1@example.com"
 
  seed Goody, { title: "Aufkleber" },
    description: "Digtal Glarus Aufkleber",
