@@ -507,7 +507,7 @@ aside > h2 {
   justify-content: center;
   text-align: center;
   color: #fff;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.5);
   font-weight: 300;
   font-size: 1.5rem;
   padding: 0 15%;
@@ -522,9 +522,6 @@ aside > h2 {
 
   .carousel-control-next, .carousel-control-prev {
     font-size: 5em;
-  }
-  .carousel-item > img {
-    filter: blur(2px);
   }
 }
 
