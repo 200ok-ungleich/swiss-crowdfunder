@@ -1,6 +1,9 @@
 <div class="col-md-4">
   <div class="campaign_card">
-    <img class="d-block w-100" src="<%= campaign.image.resized.url %>" alt="First slide">
+
+    <%= link_to campaign_path(campaign) do %>
+      <img class="d-block w-100" src="<%= campaign.image.resized.url %>" alt="First slide">
+    <% end %>
     <div class="campaign_card_content">
 <%
 # There's no logic for the Glarnerpick and categories, yet
