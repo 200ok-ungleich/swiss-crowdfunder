@@ -23,4 +23,4 @@ Thanks! :heart: :heart: :heart:
 
 Swiss Crowdfunder Team
 
-200ok llc and ungleich glarus ag
+[200ok llc](https://200ok.ch) and [ungleich glarus ag](https://ungleich.ch)
