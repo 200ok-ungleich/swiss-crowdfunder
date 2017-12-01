@@ -1,6 +1,6 @@
 * README
 
-[[https://gitlab.com/200ok/crowdfunding/badges/master/pipeline.svg]]
+Tests: [[https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder.svg?style=svg]]
 
 ** Setup
 
