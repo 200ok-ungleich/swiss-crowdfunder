@@ -1,5 +1,9 @@
 ## How to contribute to Swiss Crowdfunder
 
+First off, thank you for considering contributing to Swiss
+Crowdfunder. It’s people like you that make Swiss Crowdfunder such a
+great tool.
+
 #### **Did you find a bug?**
 
 * **Ensure the bug was not already reported** by searching on GitHub
