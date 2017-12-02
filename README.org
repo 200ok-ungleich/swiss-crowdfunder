@@ -31,6 +31,8 @@ start their own crowdfunding platform or campaign.
 
 macOS: =brew install rbenv=
 
+Official rbenv documentation: https://github.com/rbenv/rbenv.
+
 **** Install Ruby version 2.4.1
 
 macOS: =rbenv install 2.4.1=
@@ -55,7 +57,7 @@ however that you can easily use by:
 
 =cd config; ln -s database.yml.example database.yml; cd -=
 
-Alternatively you can configure PG, MySQL or others.
+Alternatively you can configure PostgreSQL, MySQL or others.
 
 **** Migrate Database
 
@@ -74,7 +76,7 @@ Automatically run tests while development
 guard
 #+END_SRC
 
-For Emacs Users: When using `enh-ruby-mode`, this will also
+Note for Emacs Users: When using =enh-ruby-mode=, this will also
 automatically color your status bar either green on success or red on error.
 
 **** Live Reload
@@ -83,20 +85,6 @@ Using the Gems =guard-livereload= and =rack-livereload=, development
 and saving of =*.erb= files will reload your browser. Developing
 =*.scss= files will also hot-load the respective CSS within the
 browser.
-
-**** Development collaboration
-
-We have good quality assurance and an established workflow. This is it:
-
-1. New Story in this README, section TODOs
-  - In the form of a User Story (As =<persona>=, [When I =<state>= ],
-    I want =<something>=, so that =<measurable achievement>=
-1. New Branch in Git
-  - Naming: (feature|bugfix|chore)/short-description
-1. Develop / Test Locally until tests pass on CI
-1. Create Merge Request on Gitlab to Master. Assign someone to review.
-1. Finish Story
-1. Assigned person: Merge to Master, deploy and accept the story on Pivotal
 
 *** Deployment
 

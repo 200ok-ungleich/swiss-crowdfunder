@@ -16,12 +16,21 @@ great tool.
   **executable test case** demonstrating the expected behavior that is
   not occurring.
 
+### **Development collaboration**
 
-#### **Did you write a patch that fixes a bug?**
+We have good quality assurance and an established workflow. This is it:
 
-* Open a new GitHub pull request with the patch.
+1. Open a new GitHub pull request
+  - In the form of a User Story (As `<persona>`, [When I `<state>` ],
+    I want `<something>`, so that `<measurable achievement>`
+1. New Branch in Git
+  - Naming: (feature|bugfix|chore)/short-description
+1. Develop / Test Locally until tests pass on CI
+1. Create Merge Request on Gitlab to Integration.
+1. Core Team: Merge to Integration, deploy and accept the Issue on Github
 
-* Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
+* Ensure the PR description clearly describes the problem and
+  solution. Include the relevant issue number if applicable.
 
 Thanks! :heart: :heart: :heart:
 
