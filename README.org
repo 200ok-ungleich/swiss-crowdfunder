@@ -2,29 +2,48 @@
 
 Tests: [[https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder.svg?style=svg]]
 
-** Setup
+TODOs: [[file:TODO.org]]
 
-*** Install RBenv
+**    What does this project do?
+
+Swiss Crowdfunder is a Crowdfunding platform (doh). This repository is
+the open source community version of https://swiss-crowdfunder.com.
+
+[[file:doc/screenshot.png]]
+
+**    Why is this project useful?
+
+Crowdfunding using established platforms can be very expensive.
+Usually there is a fee of 12-20% that has to be paid.
+
+Swiss Crowdfunder is open source - so it can be used by anyone to
+start their own crowdfunding platform or campaign.
+
+**    How do I get started?
+
+*** Setup
+
+**** Install RBenv
 
 macOS: =brew install rbenv=
 
-*** Install Ruby version 2.4.1
+**** Install Ruby version 2.4.1
 
 macOS: =rbenv install 2.4.1=
 
-*** Install bundler
+**** Install bundler
 
 =gem install bundler=
 
-*** Clone the repository
+**** Clone the repository
 
-*** Install dependencies
+**** Install dependencies
 
 Within your local checkout run =bundle=.
 
 For testing, install =chromedriver= > v59.
 
-*** Configure Database
+**** Configure Database
 
 Every host that runs this application can have a different database
 configuration. There is an example configuration that runs on sqlite,
@@ -34,16 +53,16 @@ however that you can easily use by:
 
 Alternatively you can configure PG, MySQL or others.
 
-*** Migrate Database
+**** Migrate Database
 
 =rake db:create db:migrate db:seed=
 
-** Development
-*** Start Application
+*** Development
+**** Start Application
 
 =rails s=
 
-*** Run tests
+**** Run tests
 
 Automatically run tests while development
 
@@ -54,14 +73,14 @@ guard
 For Emacs Users: When using `enh-ruby-mode`, this will also
 automatically color your status bar either green on success or red on error.
 
-*** Live Reload
+**** Live Reload
 
 Using the Gems =guard-livereload= and =rack-livereload=, development
 and saving of =*.erb= files will reload your browser. Developing
 =*.scss= files will also hot-load the respective CSS within the
 browser.
 
-*** Development collaboration
+**** Development collaboration
 
 We have good quality assurance and an established workflow. This is it:
 
@@ -75,9 +94,9 @@ We have good quality assurance and an established workflow. This is it:
 1. Finish Story
 1. Assigned person: Merge to Master, deploy and accept the story on Pivotal
 
-** Deployment
+*** Deployment
 
-*** Premise
+**** Premise
 
 - You need to have the ssh-agent running, for example under Debian =eval
 `ssh-agent -s`=.
@@ -85,7 +104,7 @@ We have good quality assurance and an established workflow. This is it:
 - Your ssh identities need to be added to the ssh-agent: =ssh-add=
 
 
-*** Deploy
+**** Deploy
 
 We are using =capistrano= to deploy the newest version, roll back,
 compile assets and restart the app container.
@@ -96,7 +115,7 @@ Optionally you can locally set a local ENV variable =REVISION= to set
 a different branch than =master= for deployment.
 
 
-*** Delete DB in Production
+**** Delete DB in Production
 
 #+BEGIN_SRC
 
@@ -104,6 +123,11 @@ unicorn_wrapper stop
 DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 
 #+END_SRC
+
+
+**    Where can I get more help, if I need it?
+
+Ping us on info@200ok.ch or info@ungleich.ch or open a Github issue.
 
 ** SRE / Maintenance
 
@@ -131,7 +155,7 @@ I must send a short explanation of the problem and the steps I took to
 resolve it when I solve it. I should also follow up with steps that have
 been taken to prevent this issue in the future.
 
-** Documentation
+** Technical Documentation
 
 *** ERD
 There is an [[file:doc/erd.dot][ERD]] defined in dot-syntax which is also available as [[file:doc/erd.svg][SVG]].
@@ -155,123 +179,4 @@ have the ability to log in.
 
 *** Testing on CI
 
-We are using Gitlab CI as a testing service.
-
-** TODOs
-
-*** PROJECT Swiss Crowdfunder
-
-**** TODO Link =public/uploads= through cap after Nico has configured the folder
-**** TODO Add logic for GlarnerPick
-- [ ] Only one can be the GlarnerPick
-- [ ] Unlock the code from _campaign_card.html.erb
-
-**** TODO Discuss logic for categories with Nico
-- [ ] Unlock the code from _campaign_card.html.erb
-
-**** TODO Send Email on Order#create
-     - [ ] Campaign Model: E-Mail
-
-**** TODO Don't respond to JSON/JS requests
-- [ ] Some Java crawler request campaigns as JSON/JS
-**** TODO Re-Add SRE team and Mattermost notifications
-**** TODO Add Background worker
-- [ ] orders#create Email
-- [ ] orders#create Mattermost Notifications
-**** TODO Contact form
-**** TODO Discuss deleting parent resources logic with Nico
-
-When destroying a Goodie which has Orders, what should happen?
-
-- Delete the goodie and nullify foreign_keys in Orders?
-- Show a warning and don't delete anything?
-**** TODO campaigns#show: Add update ticker
-- [ ] Add tabs to campaigns#show
-- [ ] Add CampaignUpdate Model (markdown)
-- [ ] Let every CampaignUpdate have it's unique URL nested under Campaign
-- [ ] When going to a specific CampaignUpdate URL, go to the tab and
-  scroll to the specific update.
-- [ ] Alternatively let only have CampaignUpdates have a unique URL
-  for the tab as a start
-
-**** TODO Handle 500 with separate page (analogous to 404)
-- Right now, there's a redirect to the 404 page, so that kinda works!
-**** TODO Implement Stripe
-**** TODO Replace application.html.erb fonts and font-awesome CDN with local variant
-**** TODO When a campaign is not yet active, allow for users to subscribe to the newsletter
-**** TODO As soon as users can create/modify/delete resources or login: Implement global lock-down
-- See [[Security]] for more information
-
-**** TODO i18n custom model validations
-**** PROJECT Secret Keys
-
-- [ ]  More secret creation of Admin User than through =db/seeds.rb=
-- [ ]  More secret devise keys than in =config/devise.rb=
-- [X] Do not expose =SECRET_KEY_BASE= in this README
-**** DONE Create landing page
-- [X] Add a flag 'active' on Campaign Model
-**** DONE Mail icon
-**** DONE i18n all the strings
-**** DONE Integrate Favicon
-**** DONE Reconfigure GA link to the proper URL
-
-*** PROJECT Ready for Ungleich Crowdfunding
-
-**** DONE On create order/user: Send Notification to Mattermost
-**** DONE From orders#show, have a link back to the campaign
-**** DONE On creating a new Campaign, there's already two supporters    :bug:
-**** DONE Wenn start_date Kampagne nicht erreicht
-- [X] 'support' seite link ausgrauen
-- [X] 'goodie' weiter button ausgrauen
-- [X] 'order'#create verbieten
-
-**** DONE Validierung für Anzahl > 0 Goodies
-- [X] BO: -1 for Infinity
-- [X] Validation
-- [X] On goody: Disable button when there's no remaining_quantity
-- [X] Inform #crowdfuding on new logic
-**** DONE As a user, when on campaigns#show, I want to see either when the campaign starts or when it stops in "days remaining"
-**** DONE Add ExceptionNotification E-Mails
-- [X] Nico: Setup server side mail delivery
-- [X] Test mail delivery
-- [X] Activate Mattermost notifications
-**** DONE Camgains#show/Goodies#index: Show original and remaining quantity
-**** DONE NF: SEO friendly URLs for Campaigns
-**** DONE Address: Street, #, ZIP, City, Country
-**** DONE As a user, when checking out a goodie, I want to be able to pay with my bank account
-- Gleicher FLow wie jetzt
-- Anstelle CC Form: Bank-Einzugs Info
-**** [100%] NF: Nico should confirm
-
-- [X] Test itinerary
-- [X] cdist run
-- [X] SSL
-**** DONE Text Feld auf Order: Bank Einzug
-**** DONE [100%] Redirect root to Nicos campaign
-     - [X] Actual redirect
-     - [X] Feature Specs
-**** DONE Handle 404s
-**** DONE campaigns#show: I18n supporters
-**** DONE Regression: Progress bar doesn't work
-**** DONE As a user, when ordering, I need to give my email address
-**** DONE NF: Capistrano Bug - Migrations run on every deploy
-**** DONE Campaign Model: Introduce optional FB and Twitter Links
-**** DONE NF: Eval - Users as Nested Attributes through Orders
-**** DONE [100%] NF: Integrate FactoryGirl
-- [X] spec/features/admin_spec.rb
-- [X] spec/features/campaigns_spec.rb
-- [X] spec/features/application_spec.rb
-- [X] spec/features/root_spec.rb
-- [X] spec/models/supporter_spec.rb
-- [X] spec/models/campaign_spec.rb
-- [X] spec/controllers/orders_controller_spec.rb
-- [X] spec/controllers/root_controller_spec.rb
-
-**** DONE As a user, when checking out a goodie, I want to give user-info: Name, E-Mail, Date of Birth (>=18)
-- [ ] Validation
-
-**** DONE NF: Global Lock-Down
-**** DONE Remove icons from Goodies
-**** DONE NF: Introduce capistrano for deployment by everyone
-**** DONE Introduce "About Us" Page without content
-**** DONE Introduce "TOS" Page without content
+We are using [[https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder][CircleCI]].
