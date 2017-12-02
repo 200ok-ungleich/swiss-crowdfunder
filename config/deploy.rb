@@ -4,7 +4,7 @@ require 'json'
 lock "3.9.1"
 
 set :application, "crowdfunding"
-set :repo_url, "git@gitlab.com:200ok/crowdfunding.git"
+set :repo_url, "git@github.com:200ok-ungleich/swiss-crowdfunder.git"
 set :ssh_options, { forward_agent: true }
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.4.1'
@@ -81,11 +81,11 @@ namespace :deploy do
 end
 
 def mattermost(message)
-  url = "https://brandnewchat.ungleich.ch/hooks/q568tnt5jtywtftoz3ghfgicyw"
+  url = 'https://brandnewchat.ungleich.ch/hooks/q568tnt5jtywtftoz3ghfgicyw'
   payload = {
-    text: message,
+    text: message
   }
   json = JSON.unparse(payload)
   cmd = "curl -X POST --data-urlencode 'payload=#{json}' '#{url}' 2>&1"
-  %x[ #{cmd} ]
+  `#{cmd}`
 end
