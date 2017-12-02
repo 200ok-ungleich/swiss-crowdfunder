@@ -2,12 +2,16 @@
 
 Tests: [[https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder.svg?style=svg]]
 
-TODOs: [[file:TODO.org]]
+The core maintainers organize their to-dos in org-mode here: [[file:TODO.org]]
 
 **    What does this project do?
 
-Swiss Crowdfunder is a Crowdfunding platform (doh). This repository is
-the open source community version of https://swiss-crowdfunder.com.
+Swiss Crowdfunder is a Crowdfunding platform (doh).
+
+This repository is the open source community version of
+https://swiss-crowdfunder.com.
+
+*** Screenshot of a campaign
 
 [[file:doc/screenshot.png]]
 
