@@ -37,6 +37,7 @@ gem 'httparty'
 gem 'timecop'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'config'
 
 #gem 'cancancan', '~> 2.0'
 

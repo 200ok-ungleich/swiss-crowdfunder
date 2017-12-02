@@ -27,3 +27,6 @@ config/database.yml
 .tern-port
 
 public/uploads
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

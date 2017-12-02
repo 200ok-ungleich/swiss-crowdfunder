@@ -81,7 +81,9 @@ namespace :deploy do
 end
 
 def mattermost(message)
-  url = 'https://brandnewchat.ungleich.ch/hooks/q568tnt5jtywtftoz3ghfgicyw'
+  return false unless Settings.mattermost
+
+  url = Settings.mattermost_live_endpoint
   payload = {
     text: message
   }

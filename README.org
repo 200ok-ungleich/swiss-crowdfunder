@@ -99,11 +99,11 @@ some places where you can add your own configuration:
 
 - [ ] Configure Mattermost push notifications
 
-  - If you don't use Mattermost, remove the =:mattermost_*= callbacks
+  - [ ] If you want to use Mattermost push notifications,
+    enable/disable them in =config/settings.yml=
 
-  - If you use Mattermost, configure the webhook endpoint that should
-    receive the messages in the =mattermost= function
-
+  - [ ] If you use Mattermost, configure the webhook endpoint that should
+    receive the messages in the =config/settings.yml=
 
 ***** =config/deploy/*rb=
 **** =config/secrets.yml=

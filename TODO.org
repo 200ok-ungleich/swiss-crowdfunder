@@ -56,6 +56,8 @@ When destroying a Goodie which has Orders, what should happen?
 *** DONE Integrate Favicon
 *** DONE Reconfigure GA link to the proper URL
 
+*** TODO Add =config/settings= to cdist
+
 ** PROJECT Ready for Ungleich Crowdfunding
 
 *** DONE On create order/user: Send Notification to Mattermost
