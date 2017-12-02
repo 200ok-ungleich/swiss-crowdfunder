@@ -72,9 +72,7 @@ Alternatively you can configure PostgreSQL, MySQL or others.
 
 Automatically run tests while development
 
-#+BEGIN_SRC sh
-guard
-#+END_SRC
+=guard=
 
 Note for Emacs Users: When using =enh-ruby-mode=, this will also
 automatically color your status bar either green on success or red on error.
@@ -85,6 +83,36 @@ Using the Gems =guard-livereload= and =rack-livereload=, development
 and saving of =*.erb= files will reload your browser. Developing
 =*.scss= files will also hot-load the respective CSS within the
 browser.
+
+
+*** Configuration
+
+When cloning/forking your own version of Swiss Crowdfunder, there are
+some places where you can add your own configuration:
+
+**** Deployment
+***** =config/deploy.rb=
+
+- [ ] If you're using a fork of Swiss Crowdfunder, configure your =:repo_url=
+
+- [ ]  Configure where to get your =config/secrets.yml= file
+
+- [ ] Configure Mattermost push notifications
+
+  - If you don't use Mattermost, remove the =:mattermost_*= callbacks
+
+  - If you use Mattermost, configure the webhook endpoint that should
+    receive the messages in the =mattermost= function
+
+
+***** =config/deploy/*rb=
+**** =config/secrets.yml=
+
+- [ ] Either configure your own =config/secrets.yml= or set the
+  =SECRET_KEY_BASE= environment variable in production
+
+
+- [ ] Configure your own servers for deployment
 
 *** Deployment
 
@@ -120,32 +148,6 @@ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
 **    Where can I get more help, if I need it?
 
 Ping us on info@200ok.ch or info@ungleich.ch or open a Github issue.
-
-** SRE / Maintenance
-
-There is exception notification:
-
-- via email to sre@ungleich.ch
-- via mattermost to #crowdfunding-live
-
-** Exception handling process
-
-If I see the email and I am going to work on it, I immediately send a reply
-containing "ACK" to let people know that somebody is taking care of it. I
-do not say "ACK" if I am not going to work on it. (If it is urgent and
-needs to be handled now, I have to work on it right now, otherwise I don't
-send an ACK; if it is not urgent, I can send an ACK now and work on it
-later if I want to.)
-
-Sending an ACK means that I take ownership of the problem: other people do
-not need to worry about it if they see an ACK (unless I ask them for help,
-of course).
-
-When investigating, I can, but don't have to send updates.
-
-I must send a short explanation of the problem and the steps I took to
-resolve it when I solve it. I should also follow up with steps that have
-been taken to prevent this issue in the future.
 
 ** Technical Documentation
 
