@@ -15,7 +15,6 @@ set :rbenv_ruby, '2.4.1'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/app/app"
 
-
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -46,13 +45,6 @@ set :rails_env, 'production'
 
 namespace :deploy do
 
-  task :mattermost_started do
-    mattermost "#{fetch(:me)} STARTED a deployment of "+
-          "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
-  end
-  after :started, :mattermost_started
-
-
   task :mattermost_finished do
     mattermost "#{fetch(:me)} FINISHED a deployment of "+
           "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
@@ -81,12 +73,13 @@ namespace :deploy do
 end
 
 def mattermost(message)
-  return false unless Settings.mattermost_endpoint
+  config = YAML.load(File.open("config/settings.yml"))
+  return false unless config['mattermost_endpoint']
 
   payload = {
     text: message
   }
   json = JSON.unparse(payload)
-  cmd = "curl -X POST --data-urlencode 'payload=#{json}' '#{Settings.mattermost_endpoint}' 2>&1"
+  cmd = "curl -X POST --data-urlencode 'payload=#{json}' '#{config['mattermost_endpoint']}' 2>&1"
   `#{cmd}`
 end
