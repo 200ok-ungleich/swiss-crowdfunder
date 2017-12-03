@@ -82,12 +82,8 @@ namespace :deploy do
 end
 
 def mattermost(message)
-
-  require 'byebug'
-
   config = SelfConfig.new
   mattermost_endpoint = config.config['mattermost']["#{fetch(:stage)}_endpoint"]
-  byebug
   return false unless mattermost_endpoint
 
   payload = {
