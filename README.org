@@ -139,7 +139,9 @@ a different branch than =master= for deployment.
 
 **    Where can I get more help, if I need it?
 
-Ping us on info@200ok.ch or info@ungleich.ch or open a Github issue.
+We have a public Mattermost chat channel for the Swiss Crowdfunder: https://brandnewchat.ungleich.ch/ungleich/channels/swiss-crowdfunder
+
+Otherwise, please open a Github issue or get back to us via email (info@200ok.ch or info@ungleich.ch).
 
 ** Technical Documentation
 
