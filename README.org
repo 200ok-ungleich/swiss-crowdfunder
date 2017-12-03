@@ -99,7 +99,7 @@ Configuration is done through the [[https://github.com/railsconfig/config][confi
       =cp config/settings.local.yml.example config/settings.local.yml=
 
 - [ ] Configure the corresponding settings files for your different
-  stages and hosts
+  stages and hosts in the =config/settings= folder
 
 ***** =config/deploy.rb=
 
