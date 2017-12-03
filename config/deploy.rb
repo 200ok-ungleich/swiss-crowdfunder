@@ -81,13 +81,12 @@ namespace :deploy do
 end
 
 def mattermost(message)
-  return false unless Settings.mattermost
+  return false unless Settings.mattermost_endpoint
 
-  url = Settings.mattermost_live_endpoint
   payload = {
     text: message
   }
   json = JSON.unparse(payload)
-  cmd = "curl -X POST --data-urlencode 'payload=#{json}' '#{url}' 2>&1"
+  cmd = "curl -X POST --data-urlencode 'payload=#{json}' '#{Settings.mattermost_endpoint}' 2>&1"
   `#{cmd}`
 end

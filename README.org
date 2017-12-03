@@ -91,6 +91,16 @@ When cloning/forking your own version of Swiss Crowdfunder, there are
 some places where you can add your own configuration:
 
 **** Deployment
+
+Configuration is done through the [[https://github.com/railsconfig/config][config gem]].
+
+- [ ] Copy the example configuration:
+
+      =cp config/settings.local.yml.example config/settings.local.yml=
+
+- [ ] Configure the corresponding settings files for your different
+  stages and hosts
+
 ***** =config/deploy.rb=
 
 - [ ] If you're using a fork of Swiss Crowdfunder, configure your =:repo_url=

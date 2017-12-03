@@ -1,0 +1,8 @@
+mattermost_endpoint: 'https://example.com/hooks/'
+mattermost_channel: 'crowdfunding-live'
+
+mail:
+  from_address: 'rails@example.com'
+exception:
+  sender_address: '"swiss crowdfunder exception" <rails@example.com>'
+  exception_recipients: "notify@me.com"
