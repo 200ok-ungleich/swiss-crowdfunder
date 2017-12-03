@@ -126,14 +126,6 @@ Configuration is done through the [[https://github.com/railsconfig/config][confi
 
 *** Deployment
 
-**** Premise
-
-- You need to have the ssh-agent running, for example under Debian =eval
-`ssh-agent -s`=.
-
-- Your ssh identities need to be added to the ssh-agent: =ssh-add=
-
-
 **** Deploy
 
 We are using =capistrano= to deploy the newest version, roll back,
@@ -143,16 +135,6 @@ Deploy the newest version of =master=: =cap production deploy=
 
 Optionally you can locally set a local ENV variable =REVISION= to set
 a different branch than =master= for deployment.
-
-
-**** Delete DB in Production
-
-#+BEGIN_SRC
-
-unicorn_wrapper stop
-DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop db:create db:migrate db:seed
-
-#+END_SRC
 
 
 **    Where can I get more help, if I need it?
