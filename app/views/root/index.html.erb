@@ -36,7 +36,7 @@
       <% end %>
       <!-- Show "Coming soon" cards to fill up remaining spots -->
       <% (3 - @campaigns.length).times do |i| %>
-        <div class="col-md-4" style="padding-bottom: 1.5em;">
+        <div class="col-md-4 pb-3">
           <div class="campaign_card coming_soon">
             <div class="text-muted"><%= t '.coming_soon' %></div>
           </div>
