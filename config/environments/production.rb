@@ -93,21 +93,20 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = {from: 'rails@swiss-crowdfunder.net'}
+  config.action_mailer.default_options = { from: Settings.mail.from_address }
 
   config.middleware.use ExceptionNotification::Rack,
     # Ignore requests for random resources (that have probably never existed)
     ignore_exceptions: ['ActionView::MissingTemplate'] + ExceptionNotifier.ignored_exceptions,
     email: {
-               deliver_with: :deliver,
-               email_prefix: "[ERROR] ",
-               sender_address: %{"swiss crowdfunder exception" <rails@swiss-crowdfunder.net>},
-               exception_recipients: %w{alain@200ok.ch}
-               #exception_recipients: %w{alain@200ok.ch sre@ungleich.ch}
-              }#,
-  #mattermost: {
-  #            webhook_url: 'https://brandnewchat.ungleich.ch/hooks/91ijru7fitdc7mqpyhz9zgra3o',
-  #            channel: 'crowdfunding-live'
-  #           }
+            deliver_with: :deliver,
+            email_prefix: "[ERROR] ",
+            sender_address: %{Settings.exception.sender_address},
+            exception_recipients: %w{Settings.exception.exception_recipients}
+           },
+    mattermost: {
+                 webhook_url: Settings.mattermost_endpoint,
+                 channel: Settings.mattermost_channel
+                }
 
 end

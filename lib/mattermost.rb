@@ -9,13 +9,7 @@ class Mattermost
   end
 
   def webhook_url
-    if Rails.env.production?
-      # crowdfunding-live
-      'https://brandnewchat.ungleich.ch/hooks/91ijru7fitdc7mqpyhz9zgra3o'
-    elsif Rails.env.development?
-      # crowdfunding-test
-      'https://brandnewchat.ungleich.ch/hooks/ojd1d4ek838s7j8ps4r3s9wzqh'
-    end
+    Settings.mattermost_endpoint
   end
 
   def send(msg = nil)

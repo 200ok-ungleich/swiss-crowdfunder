@@ -7,7 +7,7 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server 'crowdfunding-staging.ungleich.ch', user: 'app', roles: %w{web app db}
+server 'staging.swiss-crowdfunder.com', user: 'app', roles: %w{web app db}
 set :branch, ENV['REVISION'] || 'integration'
 
 

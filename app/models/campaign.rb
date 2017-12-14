@@ -7,6 +7,7 @@ class Campaign < ApplicationRecord
 
   has_many :goodies, dependent: :destroy
   has_many :supporters, through: :goodies
+  has_many :orders, through: :goodies
 
   validates_presence_of :description
   validates :goal, numericality: true, presence: true
