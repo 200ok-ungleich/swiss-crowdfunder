@@ -103,37 +103,37 @@ some places where you can add your own configuration:
     Configuration is done through the [config
     gem](https://github.com/railsconfig/config).
 
-    -   \[ \] Copy the example configuration:
+    -   [ ] Copy the example configuration:
 
         `cp config/settings.local.yml.example config/settings.local.yml`
 
-    -   \[ \] Configure the corresponding settings files for your
+    -   [ ] Configure the corresponding settings files for your
         different stages and hosts in the `config/settings` folder
 
-    1.  `config/deploy.rb`
+    -   `config/deploy.rb`
 
-        -   \[ \] If you're using a fork of Swiss Crowdfunder, configure
+        -   [ ] If you're using a fork of Swiss Crowdfunder, configure
             your `:repo_url`
 
-        -   \[ \] Configure where to get your `config/secrets.yml` file
+        -   [ ] Configure where to get your `config/secrets.yml` file
 
-        -   \[ \] Configure Mattermost push notifications
+        -   [ ] Configure Mattermost push notifications
 
-            -   \[ \] If you want to use Mattermost push notifications,
+            -   [ ] If you want to use Mattermost push notifications,
                 enable/disable them in `config/settings.yml`
 
-            -   \[ \] If you use Mattermost, configure the webhook
+            -   [ ] If you use Mattermost, configure the webhook
                 endpoint that should receive the messages in the
                 `config/settings.yml`
 
-    2.  `config/deploy/*rb`
+    -   `config/deploy/*rb`
 
 2.  `config/secrets.yml`
 
-    -   \[ \] Either configure your own `config/secrets.yml` or set the
+    -   [ ] Either configure your own `config/secrets.yml` or set the
         `SECRET_KEY_BASE` environment variable in production
 
-    -   \[ \] Configure your own servers for deployment
+    -   [ ] Configure your own servers for deployment
 
 ### Deployment {#deployment-1}
 
