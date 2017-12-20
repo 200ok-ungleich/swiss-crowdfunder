@@ -26,7 +26,7 @@ en:
       support_the_project: "Support this project"
       pledge: "Pledge"
       price: "Price :"
-      quantity: "Quantity : %{quantity}"
+      quantity: "Quantity left: %{quantity}"
   orders:
     new:
       confirmation: "Confirmation"

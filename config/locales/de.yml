@@ -33,7 +33,7 @@ de:
       support_the_project: "Unterstützen Sie dieses Projekt"
       pledge: "Weiter"
       price: "Betrag :"
-      quantity: "Anzahl : %{quantity}"
+      quantity: "Anzahl übrig: %{quantity}"
   orders:
     new:
       confirmation: "Bestätigung"
