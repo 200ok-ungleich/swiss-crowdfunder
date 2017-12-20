@@ -1,9 +1,9 @@
 README
 ======
 
-Tests: ![](https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder.svg?style=svg)
+Tests (CircleCI): [![CircleCI](https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder.svg?style=svg)](https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder)
 
-Security: ![](https://hakiri.io/github/200ok-ungleich/swiss-crowdfunder/master.svg)
+Security (Hakiri): [![security](https://hakiri.io/github/200ok-ungleich/swiss-crowdfunder/master.svg)](https://hakiri.io/github/200ok-ungleich/swiss-crowdfunder/master)
 
 Maintainability (Codeclimate): [![Maintainability](https://api.codeclimate.com/v1/badges/c0aa14e9f972e1394f4a/maintainability)](https://codeclimate.com/github/200ok-ungleich/swiss-crowdfunder/maintainability)
 
