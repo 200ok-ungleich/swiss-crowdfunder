@@ -1,14 +1,12 @@
 README
 ======
 
-Tests:
-<https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder.svg?style=svg>
+Tests: ![](https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder.svg?style=svg)
 
-Security:
-![](https://hakiri.io/github/200ok-ungleich/swiss-crowdfunder/master.svg)
+Security: ![](https://hakiri.io/github/200ok-ungleich/swiss-crowdfunder/master.svg)
 
 The core maintainers organize their to-dos in org-mode here:
-[file:TODO.org](TODO.org)
+[TODO.org](TODO.org)
 
 What does this project do?
 --------------------------
