@@ -1,5 +1,5 @@
 <div class="site-wrapper">
-  <div id="campaignsCarousel" class="carousel slide top_carousel mb-5" data-ride="carousel">
+  <div id="campaignsCarousel" class="carousel slide top_carousel mb-5">
     <ol class="carousel-indicators">
       <% @campaigns.each_with_index do |campaign, index| %>
         <li data-target="#campaignsCarousel" data-slide-to="<%= index %>" class='<%= active?(index) %>'></li>
@@ -8,7 +8,7 @@
     <div class="carousel-inner">
       <% @campaigns.each_with_index do |campaign, index| %>
         <div class="carousel-item <%= active?(index) %>">
-          <img class="d-block w-100" src="<%= campaign.image.resized.url %>">
+          <div class="bg_img" style="background-image: url('<%= campaign.image.resized.url %>')"></div>
           <div class="carousel_text">
             <h2><%= campaign.title %></h2>
             <p class="mt-3 mb-5"><%= campaign.claim %></p>
@@ -36,7 +36,7 @@
       <% end %>
       <!-- Show "Coming soon" cards to fill up remaining spots -->
       <% (3 - @campaigns.length).times do |i| %>
-        <div class="col-md-4" style="padding-bottom: 1.5em;">
+        <div class="col-md-4 pb-3">
           <div class="campaign_card coming_soon">
             <div class="text-muted"><%= t '.coming_soon' %></div>
           </div>
