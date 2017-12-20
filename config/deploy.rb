@@ -48,18 +48,16 @@ set :rails_env, 'production'
 namespace :deploy do
 
   task :mattermost_started do
-    mattermost "#{fetch(:me)} STARTED a deployment of "+
-          "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
+    mattermost "#{fetch(:me)} STARTED a deployment of " \
+      "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
   end
   after :started, :mattermost_started
 
-
   task :mattermost_finished do
-    mattermost "#{fetch(:me)} FINISHED a deployment of "+
-          "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
+    mattermost "#{fetch(:me)} FINISHED a deployment of " \
+      "#{fetch(:application)} (#{fetch(:branch)}) to #{fetch(:stage)}"
   end
   after :finished, :mattermost_finished
-
 
   desc 'Restart application'
   task :restart do
