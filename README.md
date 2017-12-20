@@ -5,6 +5,8 @@ Tests: ![](https://circleci.com/gh/200ok-ungleich/swiss-crowdfunder.svg?style=sv
 
 Security: ![](https://hakiri.io/github/200ok-ungleich/swiss-crowdfunder/master.svg)
 
+Maintainability (Codeclimate): [![Maintainability](https://api.codeclimate.com/v1/badges/c0aa14e9f972e1394f4a/maintainability)](https://codeclimate.com/github/200ok-ungleich/swiss-crowdfunder/maintainability)
+
 The core maintainers organize their to-dos in org-mode here:
 [TODO.org](TODO.org)
 
