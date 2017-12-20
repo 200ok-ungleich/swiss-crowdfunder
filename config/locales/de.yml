@@ -80,7 +80,7 @@ de:
     goody:
       pledge: "Weiter"
       price: "Betrag :"
-      quantity: "Anzahl : %{quantity}"
+      quantity: "Anzahl übrig: %{quantity}"
       backers: "Unterstützer : %{quantity}"
   supporter:
     validation:

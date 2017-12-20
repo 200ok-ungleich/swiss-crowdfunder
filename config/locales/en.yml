@@ -72,7 +72,7 @@ en:
     goody:
       pledge: "Pledge"
       price: "Price :"
-      quantity: "Quantity : %{quantity}"
+      quantity: "Quantity left: %{quantity}"
       backers: "Backers : %{quantity}"
   supporter:
     validation:
