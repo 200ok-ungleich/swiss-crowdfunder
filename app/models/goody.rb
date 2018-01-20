@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 class Goody < ApplicationRecord
-  belongs_to :campaign
+  # Add relation, but also allow non-active campaigns to already
+  # create goodies
+  belongs_to :campaign, -> { unscope(where: 'active') }
   has_many :orders
   has_many :supporters, through: :orders
 

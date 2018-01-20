@@ -74,6 +74,27 @@ describe 'admin dashboard', :type => :feature do
         expect(current_path).to eq(admin_goody_path(goody))
         expect(goody.reload.title).to eq('some new title')
       end
+
+      it 'can create goodies for non-active campaigns' do
+       FactoryBot.create :campaign,
+         title: 'Non-active campaign',
+         active: false
+
+       expect(Campaign.all.count).to eq(0)
+       expect(Campaign.unscoped.count).to eq(1)
+       expect(Goody.count).to eq(0)
+
+       click_on 'Goodies'
+       click_on 'Goody erstellen'
+       select 'Non-active campaign', from: 'goody_campaign_id'
+       fill_in 'goody_title', with: 'New goodie for non-active campaign'
+       fill_in 'goody_price', with: '1000'
+       fill_in 'goody_quantity', with: '1'
+       click_on 'Goody anlegen'
+       expect(current_path).to eq(admin_goody_path(Goody.first))
+       expect(page).to have_content 'New goodie for non-active campaign'
+       expect(Goody.count).to eq(1)
+      end
     end
 
   end
