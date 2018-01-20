@@ -8,7 +8,7 @@
     <div class="carousel-inner">
       <% @campaigns.each_with_index do |campaign, index| %>
         <div class="carousel-item <%= active?(index) %>">
-          <div class="bg_img" style="background-image: url('<%= campaign.image.resized.url %>')"></div>
+          <div class="bg_img" style="background-image: url('<%= campaign.image.landing_page.url %>')"></div>
           <div class="carousel_text">
             <h2><%= campaign.title %></h2>
             <p class="mt-3 mb-5"><%= campaign.claim %></p>

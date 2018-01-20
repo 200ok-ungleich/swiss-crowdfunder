@@ -2,7 +2,7 @@
   <div class="campaign_card">
 
     <%= link_to campaign_path(campaign) do %>
-      <img class="d-block w-100" src="<%= campaign.image.resized.url %>">
+      <img class="d-block w-100" src="<%= campaign.image.landing_page.url %>">
     <% end %>
     <div class="campaign_card_content">
 <%

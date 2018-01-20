@@ -6,13 +6,13 @@
 
   <div class="row">
     <div class="col-md-7 col-lg-8">
-      <div class="embed-responsive embed-responsive-16by9 mb-5">
-        <% unless @campaign.youtube_url.empty? %>
+      <% unless @campaign.youtube_url.empty? %>
+        <div class="embed-responsive embed-responsive-16by9 mb-5">
           <iframe class="embed-responsive-item" height="315" src="<%= @campaign.youtube_url %>" width="560"></iframe>
-        <% else %>
-          <img src="http://placekitten.com/g/560/315"/>
-        <% end %>
-      </div>
+        </div>
+      <% else %>
+        <%= image_tag @campaign.image.campaign, class: "mb-5" %>
+      <% end %>
     </div>
     <div class="col-md-5 col-lg-4">
       <div class="progress progress_thin mb-1">

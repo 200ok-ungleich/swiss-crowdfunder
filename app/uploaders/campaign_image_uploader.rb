@@ -30,8 +30,12 @@ class CampaignImageUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  version :resized do
+  version :landing_page do
     process resize_to_fill: [1024, 515]
+  end
+
+  version :campaign do
+    process resize_to_fill: [560, 315]
   end
 
   # Create different versions of your uploaded files:
