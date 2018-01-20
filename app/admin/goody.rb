@@ -6,7 +6,7 @@ ActiveAdmin.register Goody do
 
   form do |f|
     inputs do
-      input :campaign
+      input :campaign, collection: Campaign.unscoped
       input :title
       input :description
       input :price
