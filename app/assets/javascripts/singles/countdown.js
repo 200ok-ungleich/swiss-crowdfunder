@@ -8,13 +8,13 @@ var dif = dateRelease - dateNow.getTime();
 var secondsToRelease = dif / 1000;
 
 if (secondsToRelease <= 0) {
-    console.log(secondsToRelease, $('#active-campaign').length)
-    window.location = $('#active-campaign').attr('href');
+  console.log(secondsToRelease, $('#active-campaign').length);
+  window.location = $('#active-campaign').attr('href');
 } else {
-    $('body').removeClass('hide');
+  $('body').removeClass('hide');
 }
 
 var clock = $('.your-clock').FlipClock(secondsToRelease, {
-    clockFace: 'DailyCounter',
-    countdown: true
+  clockFace: 'DailyCounter',
+  countdown: true
 });
