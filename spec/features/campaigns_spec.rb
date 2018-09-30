@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'campaigns' do
-
   before :each do
     @campaign = FactoryBot.create :campaign,
       title: 'Spec Campaign',
@@ -18,6 +17,7 @@ describe 'campaigns' do
       quantity: 0
   end
 
+
   feature 'campaigns#show' do
     scenario 'renders' do
       visit campaign_path(@campaign)
@@ -27,6 +27,33 @@ describe 'campaigns' do
     scenario 'has a slugged url' do
       visit campaign_path(@campaign)
       expect(current_path).to include('spec-campaign')
+    end
+
+    feature 'translatable campaigns' do
+      before do
+        # Pick any other locale than the default
+        @test_locale = I18n.available_locales.reject do |l|
+          l == I18n.locale
+        end.first
+
+        I18n.locale = @test_locale
+        # Set a translated title
+        @campaign.update_attribute :title, 'Other title through other locale'
+        I18n.locale = I18n.default_locale
+      end
+
+      scenario 'has translatable attributes' do
+        visit campaign_path(@campaign, locale: @test_locale)
+        # Doesn't show content with the values for the default locale
+        expect(page).not_to have_content 'Spec Campaign'
+        # But it shows it for the translated locale
+        expect(page).to have_content 'Other title through other locale'
+
+        # Check it the other way around, default locale still works
+        visit campaign_path(@campaign)
+        expect(page).to have_content 'Spec Campaign'
+        expect(page).not_to have_content 'Other title through other locale'
+      end
     end
   end
 

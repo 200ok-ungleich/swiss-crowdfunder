@@ -89,6 +89,8 @@ end
 
 group :test do
   gem 'database_cleaner'
+  # Installs `geckodriver` so that the OS does not have to provide it
+  # Required for Capyabara :firefox_headless
   gem 'geckodriver-helper'
   gem 'selenium-webdriver'
 end
