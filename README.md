@@ -183,6 +183,12 @@ are in place, though, for authorization and authentication as soon as
 supporters get the ability to create/modify/destroy any other data or
 have the ability to log in.
 
+### I18n
+
+The application is fully localized. Views are localized through
+standard Rails I18n practices. User generated content is localized
+through [Globalize](https://github.com/globalize/globalize).
+
 ### Testing on CI
 
 We are using

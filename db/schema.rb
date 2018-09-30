@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119185225) do
+ActiveRecord::Schema.define(version: 20180930104151) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -41,6 +41,23 @@ ActiveRecord::Schema.define(version: 20171119185225) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "campaign_translations", force: :cascade do |t|
+    t.integer "campaign_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "description"
+    t.text "description_html"
+    t.text "claim"
+    t.text "order_description"
+    t.text "order_description_html"
+    t.text "order_success"
+    t.text "order_success_html"
+    t.index ["campaign_id"], name: "index_campaign_translations_on_campaign_id"
+    t.index ["locale"], name: "index_campaign_translations_on_locale"
   end
 
   create_table "campaigns", force: :cascade do |t|
@@ -88,6 +105,17 @@ ActiveRecord::Schema.define(version: 20171119185225) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["campaign_id"], name: "index_goodies_on_campaign_id"
+  end
+
+  create_table "goody_translations", force: :cascade do |t|
+    t.integer "goody_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "description"
+    t.index ["goody_id"], name: "index_goody_translations_on_goody_id"
+    t.index ["locale"], name: "index_goody_translations_on_locale"
   end
 
   create_table "orders", force: :cascade do |t|

@@ -38,6 +38,7 @@ gem 'timecop'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'config'
+gem 'globalize', '~> 5.1.0'
 
 #gem 'cancancan', '~> 2.0'
 

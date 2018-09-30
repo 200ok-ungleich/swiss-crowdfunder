@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 class Goody < ApplicationRecord
+  translates :title, :description
+
   # Add relation, but also allow non-active campaigns to already
   # create goodies
   belongs_to :campaign, -> { unscope(where: 'active') }
