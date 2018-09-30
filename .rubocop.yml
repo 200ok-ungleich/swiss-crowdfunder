@@ -1,2 +1,5 @@
 Layout/AlignParameters:
   Enabled: false
+
+Layout/AlignHash:
+  Enabled: false
