@@ -41,7 +41,7 @@ describe 'campaigns' do
 
         expect do
           find(".qa-support-project").click
-        end.to raise_error(Selenium::WebDriver::Error::UnknownError)
+        end.to raise_error(Selenium::WebDriver::Error::ElementClickInterceptedError)
       end
 
       scenario 'has diabled pledge buttons for goodies', js: true do
@@ -50,7 +50,7 @@ describe 'campaigns' do
 
         expect do
           first(".qa-pledge").click
-        end.to raise_error(Selenium::WebDriver::Error::UnknownError)
+        end.to raise_error(Selenium::WebDriver::Error::ElementClickInterceptedError)
       end
     end
 

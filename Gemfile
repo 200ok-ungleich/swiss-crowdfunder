@@ -89,6 +89,8 @@ end
 
 group :test do
   gem 'database_cleaner'
+  gem 'geckodriver-helper'
+  gem 'selenium-webdriver'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,7 +1,15 @@
 require 'capybara/rspec'
 Capybara.asset_host = 'http://localhost:3000'
-Capybara.javascript_driver = :selenium_chrome_headless
 Capybara.server = :webrick
+
+Capybara.register_driver :firefox_headless do |app|
+  options = ::Selenium::WebDriver::Firefox::Options.new
+  options.args << '--headless'
+
+  Capybara::Selenium::Driver.new(app, browser: :firefox, options: options)
+end
+
+Capybara.javascript_driver = :firefox_headless
 
 require 'support/feature_helper'
 
