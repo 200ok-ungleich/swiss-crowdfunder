@@ -76,11 +76,20 @@ describe 'admin dashboard', type: :feature do
 
           campaign.reload
 
+          # Campaign has been saved according to selected locale
           I18n.locale = :de
           expect(campaign.title).to eq('Spec Campaign :DE')
           I18n.locale = :en
           expect(campaign.title).to eq('Spec Campaign :EN')
           I18n.locale = I18n.default_locale
+
+          # The translations are visible through AA
+          click_on 'EN'
+          expect(page).to have_content 'Spec Campaign :EN'
+          expect(page).not_to have_content 'Spec Campaign :DE'
+          click_on 'DE'
+          expect(page).to_not have_content 'Spec Campaign :EN'
+          expect(page).to have_content 'Spec Campaign :DE'
         end
       end
       
