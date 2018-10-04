@@ -16,6 +16,7 @@ FactoryBot.define do
 
   factory :goody do
     sequence(:title) { |n| "Goody #{n}" }
+    description 'Spec Description'
     quantity 1
     price 100
     campaign

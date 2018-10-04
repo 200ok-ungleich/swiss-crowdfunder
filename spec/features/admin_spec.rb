@@ -121,6 +121,7 @@ describe 'admin dashboard', type: :feature do
         click_on 'Goody erstellen'
         select 'Non-active campaign', from: 'goody_campaign_id'
         fill_in 'goody_title', with: 'New goodie for non-active campaign'
+        fill_in 'goody_description', with: 'Goody description'
         fill_in 'goody_price', with: '1000'
         fill_in 'goody_quantity', with: '1'
         click_on 'Goody anlegen'
