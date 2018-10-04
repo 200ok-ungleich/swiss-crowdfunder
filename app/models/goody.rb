@@ -11,6 +11,8 @@ class Goody < ApplicationRecord
   validates :price, numericality: true, presence: true
   validates :quantity, numericality: true, presence: true
 
+  validates_presence_of :title, :description
+
   def orders_count
     orders.count
   end
