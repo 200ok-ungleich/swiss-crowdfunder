@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20180930104151) do
     t.text "order_description_html"
     t.text "order_success"
     t.text "order_success_html"
+    t.string "youtube_url"
     t.index ["campaign_id"], name: "index_campaign_translations_on_campaign_id"
     t.index ["locale"], name: "index_campaign_translations_on_locale"
   end

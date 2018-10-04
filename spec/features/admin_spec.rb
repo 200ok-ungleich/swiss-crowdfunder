@@ -71,6 +71,7 @@ describe 'admin dashboard', type: :feature do
           click_on 'Campaigns'
           click_on 'Edit'
           fill_in 'campaign_title', with: 'Spec Campaign :EN'
+          fill_in 'campaign_claim', with: 'Spec Claim :EN'
           fill_in 'campaign_description', with: 'Spec Campaign Description :EN'
           click_on 'Update Campaign'
 

@@ -9,7 +9,8 @@ class AddTranslationsToCampaigns < ActiveRecord::Migration[5.1]
                                            :order_description => :text,
                                            :order_description_html => :text,
                                            :order_success => :text,
-                                           :order_success_html => :text
+                                           :order_success_html => :text,
+                                           :youtube_url => :string
       end
 
       dir.down do

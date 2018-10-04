@@ -10,7 +10,8 @@ class Campaign < ApplicationRecord
              :order_description,
              :order_description_html,
              :order_success,
-             :order_success_html
+             :order_success_html,
+             :youtube_url
 
   default_scope { where(active: true) }
 
