@@ -7,8 +7,8 @@ ActiveAdmin.register Goody do
   form do |f|
     inputs do
       input :campaign, collection: Campaign.unscoped
-      input :title
-      input :description
+      input :title, label: 'Title (I18n)'
+      input :description, label: 'Description (I18n)'
       input :price
       input :quantity, label: "Quantity (-1 for infinite)"
     end

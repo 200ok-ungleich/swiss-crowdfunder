@@ -31,20 +31,20 @@ ActiveAdmin.register Campaign do
 
   form do |f|
     inputs do
-      input :title
-      input :active, label: "Active (will otherwise only be visible through unique slug URL)"
-      input :claim
+      input :title, label: 'Title (I18n)'
+      input :active, label: 'Active (will otherwise only be visible through unique slug URL)'
+      input :claim, label: 'Claim (I18n)'
       input :goal
       input :email
       input :image
       input :start_date
       input :end_date
-      input :youtube_url
+      input :youtube_url, label: 'Youtube URL (I18n)'
       input :facebook_url
       input :twitter_url
-      input :description, label: "Description(Markdown)"
-      input :order_description, label: "Order Description(Markdown)"
-      input :order_success, label: "Order Success(Markdown)"
+      input :description, label: 'Description(I18n, Markdown)'
+      input :order_description, label: 'Order Description(I18n, Markdown)'
+      input :order_success, label: 'Order Success(I18n, Markdown)'
     end
     actions
   end
