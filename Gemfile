@@ -13,7 +13,6 @@ gem 'sqlite3'
 # Unicorn as app
 gem 'unicorn'
 
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -21,26 +20,23 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0.beta.2'
-
-gem 'devise'
 gem 'activeadmin'
-gem 'redcarpet'
-gem 'simple_form'
+gem 'bootstrap', '~> 4.1.2'
+gem 'carrierwave'
+gem 'config'
 gem 'country_select'
-gem 'rails-i18n', '~> 5.0.0'
+gem 'devise'
+gem 'exception_notification'
 gem 'factory_bot_rails', '~> 4.0'
 gem 'friendly_id'
-gem 'exception_notification'
-gem 'httparty'
-gem 'timecop'
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'config'
 gem 'globalize', '~> 5.1.0'
-
-#gem 'cancancan', '~> 2.0'
+gem 'httparty'
+gem 'jquery-rails'
+gem 'mini_magick'
+gem 'rails-i18n', '~> 5.0.0'
+gem 'redcarpet'
+gem 'simple_form'
+gem 'timecop'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -68,18 +64,20 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'pry'
-  gem 'pry-doc'
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rails', '~> 1.3'
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'letter_opener'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'pry'
+  gem 'pry-doc'
+  # Spring speeds up development by keeping your application running
+  # in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  # Access an IRB console on exception pages or by using `<%= console # %>`
+  # anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :production, :test do
