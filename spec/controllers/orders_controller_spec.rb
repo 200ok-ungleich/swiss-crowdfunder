@@ -13,7 +13,7 @@ RSpec.describe OrdersController, type: :controller do
   let(:valid_attributes) {
     {
      goody: @goody,
-     payment_type: "stripe",
+     payment_type: 'stripe',
      agreement: true,
      supporter_attributes: FactoryBot.attributes_for(:supporter)
     }
@@ -29,8 +29,8 @@ RSpec.describe OrdersController, type: :controller do
   # MiceController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #show" do
-    it "returns a success response" do
+  describe 'GET #show' do
+    it 'returns a success response' do
       order = Order.create! valid_attributes
       get :show, params: {id: order.to_param, campaign_id: @campaign.id, goody_id: @goody.id}
       expect(response).to be_success

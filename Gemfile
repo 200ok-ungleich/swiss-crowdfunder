@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -55,16 +55,16 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' anywhere in the code to stop execution and get a
+  # debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
-  gem 'launchy'
-  gem 'selenium-webdriver'
-  gem 'rspec-rails', '~> 3.6'
-  gem 'guard-rspec', require: false
-  gem "rack-livereload"
   gem 'guard-livereload', '~> 2.5', require: false
+  gem 'guard-rspec', require: false
+  gem 'launchy'
+  gem 'rack-livereload'
+  gem 'rspec-rails', '~> 3.6'
 end
 
 group :development do
@@ -99,6 +99,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Alain uses PG also for dev and testing to mimic the live server
-if `hostname` == "debzen"
+if `hostname` == 'debzen'
   gem 'pg'
 end

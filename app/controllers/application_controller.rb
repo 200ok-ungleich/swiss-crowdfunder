@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   private
   def render_404
-    render "errors/not_found"
+    render 'errors/not_found'
   end
 
 end

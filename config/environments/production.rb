@@ -80,7 +80,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
@@ -100,7 +100,7 @@ Rails.application.configure do
     ignore_exceptions: ['ActionView::MissingTemplate'] + ExceptionNotifier.ignored_exceptions,
     email: {
             deliver_with: :deliver,
-            email_prefix: "[ERROR] ",
+            email_prefix: '[ERROR] ',
             sender_address: %{Settings.exception.sender_address},
             exception_recipients: %w{Settings.exception.exception_recipients}
            },

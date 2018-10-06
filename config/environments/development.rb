@@ -42,10 +42,6 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  # config.sass.debug_info = true
-  # config.sass.line_comments = false # source maps don't get output if this is true
-  # config.assets.digest = false
-
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
@@ -59,5 +55,4 @@ Rails.application.configure do
   config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
 
   config.action_mailer.delivery_method = :letter_opener
-
 end
