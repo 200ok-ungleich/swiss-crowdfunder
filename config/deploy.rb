@@ -1,11 +1,11 @@
 require 'json'
-require_relative "../lib/self_config"
+require_relative '../lib/self_config'
 
 # config valid only for current version of Capistrano
-lock "3.9.1"
+lock '3.9.1'
 
-set :application, "crowdfunding"
-set :repo_url, "git@github.com:200ok-ungleich/swiss-crowdfunder.git"
+set :application, 'crowdfunding'
+set :repo_url, 'git@github.com:200ok-ungleich/swiss-crowdfunder.git'
 set :ssh_options, { forward_agent: true }
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.4.1'
@@ -14,7 +14,7 @@ set :rbenv_ruby, '2.4.1'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/app/app"
+set :deploy_to, '/home/app/app'
 
 
 # Default value for :format is :airbrussh.
@@ -32,7 +32,7 @@ append :linked_files, 'config/secrets.yml', 'config/database.yml', 'config/setti
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
-append :linked_dirs, "public/uploads"
+append :linked_dirs, 'public/uploads'
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }

@@ -29,7 +29,7 @@ RSpec.describe Campaign, type: :model do
       campaign = FactoryBot.build :campaign, start_date: Date.today, end_date: 100.days.before
 
       expect(campaign).to_not be_valid
-      expect(campaign.errors.first).to eq([:end_date, "End date has to be after the start date!"])
+      expect(campaign.errors.first).to eq([:end_date, 'End date has to be after the start date!'])
     end
 
 
@@ -94,18 +94,18 @@ RSpec.describe Campaign, type: :model do
       expect(campaign.amount_raised).to eq(123)
     end
 
-    it "works for multiple goodies/orders" do
+    it 'works for multiple goodies/orders' do
       campaign = FactoryBot.create :campaign
       goody1 = FactoryBot.create :goody, campaign: campaign
       goody2 = FactoryBot.create :goody, campaign: campaign
       goody3 = FactoryBot.create :goody, campaign: campaign, quantity: 2
       supporter = FactoryBot.build :supporter
-      goody1.orders.create! payment_type: "stripe", quantity: 1, amount: 10, agreement: true,
+      goody1.orders.create! payment_type: 'stripe', quantity: 1, amount: 10, agreement: true,
         supporter: supporter
       # goody2 has no orders
-      goody3.orders.create! payment_type: "stripe", quantity: 1, amount: 30, agreement: true,
+      goody3.orders.create! payment_type: 'stripe', quantity: 1, amount: 30, agreement: true,
         supporter: supporter
-      goody3.orders.create! payment_type: "stripe", quantity: 1, amount: 40, agreement: true,
+      goody3.orders.create! payment_type: 'stripe', quantity: 1, amount: 40, agreement: true,
         supporter: supporter
       expect(campaign.amount_raised).to eq(80)
     end

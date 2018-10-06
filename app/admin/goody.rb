@@ -10,7 +10,7 @@ ActiveAdmin.register Goody do
       input :title, label: 'Title (I18n)'
       input :description, label: 'Description (I18n)'
       input :price
-      input :quantity, label: "Quantity (-1 for infinite)"
+      input :quantity, label: 'Quantity (-1 for infinite)'
     end
     actions
   end

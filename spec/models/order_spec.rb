@@ -11,7 +11,7 @@ RSpec.describe Order, type: :model do
       goody = FactoryBot.create :goody, campaign: campaign
       order = FactoryBot.build :order, goody: goody
       expect(order).to_not be_valid
-      expect(order.errors.first).to eq([:goody, "Goody campaign is not active!"])
+      expect(order.errors.first).to eq([:goody, 'Goody campaign is not active!'])
     end
 
     it 'is possible to buy goodies when the campain starts today' do
@@ -26,7 +26,7 @@ RSpec.describe Order, type: :model do
       goody = FactoryBot.create :goody, quantity: 0
       order = FactoryBot.build :order, goody: goody
       expect(order).to_not be_valid
-      expect(order.errors.first).to eq([:goody, "No goodies left!"])
+      expect(order.errors.first).to eq([:goody, 'No goodies left!'])
     end
 
     it 'is possible to buy as long as there are goodies left' do
@@ -41,7 +41,7 @@ RSpec.describe Order, type: :model do
       # When there are no more goodies left
       order = FactoryBot.build :order, goody: goody
       expect(order).to_not be_valid
-      expect(order.errors.first).to eq([:goody, "No goodies left!"])
+      expect(order.errors.first).to eq([:goody, 'No goodies left!'])
     end
 
   end

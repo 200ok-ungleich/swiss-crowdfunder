@@ -24,13 +24,13 @@ class Mattermost
       request = Net::HTTP::Post.new(uri)
       request.body = "payload=#{JSON.unparse(message)}"
 
-      req_options = {use_ssl: uri.scheme == "https"}
+      req_options = {use_ssl: uri.scheme == 'https'}
 
       Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
         http.request(request)
       end
     rescue => e
-      Rails.logger.error("Error sending notification to Mattermost: " + e.message)
+      Rails.logger.error('Error sending notification to Mattermost: ' + e.message)
     end
   end
 end

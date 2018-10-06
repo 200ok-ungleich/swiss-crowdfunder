@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
@@ -63,7 +63,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6'
   gem 'guard-rspec', require: false
-  gem "rack-livereload"
+  gem 'rack-livereload'
   gem 'guard-livereload', '~> 2.5', require: false
 end
 
@@ -99,6 +99,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Alain uses PG also for dev and testing to mimic the live server
-if `hostname` == "debzen"
+if `hostname` == 'debzen'
   gem 'pg'
 end

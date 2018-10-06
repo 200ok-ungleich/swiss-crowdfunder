@@ -46,7 +46,7 @@ class Campaign < ApplicationRecord
   # Regular Youtube URLs cannot be embedded into an iframe
   def use_youtube_embedd_url
     if youtube_url =~ /watch/
-      youtube_url.sub!("watch?v=", "embed/")
+      youtube_url.sub!('watch?v=', 'embed/')
     end
   end
 
@@ -60,7 +60,7 @@ class Campaign < ApplicationRecord
 
   def is_end_before_start?
     if end_date and start_date
-      errors.add(:end_date, "End date has to be after the start date!") if end_date < start_date
+      errors.add(:end_date, 'End date has to be after the start date!') if end_date < start_date
     end
   end
 

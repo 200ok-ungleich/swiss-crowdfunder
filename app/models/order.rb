@@ -12,11 +12,11 @@ class Order < ApplicationRecord
   validate :goody, :is_campaign_active?
 
   def are_goodies_left?
-    errors.add(:goody, "No goodies left!") if goody.remaining_quantity == 0
+    errors.add(:goody, 'No goodies left!') if goody.remaining_quantity == 0
   end
 
   def is_campaign_active?
-    errors.add(:goody, "Goody campaign is not active!") unless goody.campaign.is_active?
+    errors.add(:goody, 'Goody campaign is not active!') unless goody.campaign.is_active?
   end
 
 
