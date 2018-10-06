@@ -2,7 +2,7 @@ require 'json'
 require_relative '../lib/self_config'
 
 # config valid only for current version of Capistrano
-lock '3.9.1'
+lock '3.11.0'
 
 set :application, 'crowdfunding'
 set :repo_url, 'git@github.com:200ok-ungleich/swiss-crowdfunder.git'
@@ -15,7 +15,6 @@ set :rbenv_ruby, '2.4.1'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/app/app'
-
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
