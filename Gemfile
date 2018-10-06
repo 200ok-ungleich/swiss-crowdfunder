@@ -55,16 +55,16 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' anywhere in the code to stop execution and get a
+  # debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
-  gem 'launchy'
-  gem 'selenium-webdriver'
-  gem 'rspec-rails', '~> 3.6'
-  gem 'guard-rspec', require: false
-  gem 'rack-livereload'
   gem 'guard-livereload', '~> 2.5', require: false
+  gem 'guard-rspec', require: false
+  gem 'launchy'
+  gem 'rack-livereload'
+  gem 'rspec-rails', '~> 3.6'
 end
 
 group :development do
