@@ -1,5 +1,15 @@
 * Swiss Crowdfunder TODOs
-** PROJECT Release: Upgrade 2018-10
+** PROJECT Backlog
+*** TODO Order Goodies on Campaign#show
+I think it would be good to have a way to manually select an order
+(i.e. if order is specified, map to that position, else do default) or
+at least to push one goodie to the top.
+*** TODO Order Campaigns on Landing Page
+- Criteria
+  - Currently running with the most raised money or best "raised to
+    requested" ratio wins
+
+** PROJECT Upgrades
 *** TODO Upgrade Sass
 
 #+BEGIN_EXAMPLE
