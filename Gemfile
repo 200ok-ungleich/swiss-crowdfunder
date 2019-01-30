@@ -37,6 +37,7 @@ gem 'rails-i18n', '~> 5.0.0'
 gem 'redcarpet'
 gem 'simple_form'
 gem 'timecop'
+gem 'bootsnap', require: false
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
