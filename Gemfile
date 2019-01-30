@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -21,7 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'activeadmin'
-gem 'bootstrap', '~> 4.1.2'
+gem 'bootstrap', '~> 4.2.1'
 gem 'carrierwave'
 gem 'config'
 gem 'country_select'
@@ -29,7 +29,7 @@ gem 'devise'
 gem 'exception_notification'
 gem 'factory_bot_rails', '~> 4.0'
 gem 'friendly_id'
-gem 'globalize', '~> 5.1.0'
+gem 'globalize'
 gem 'httparty'
 gem 'jquery-rails'
 gem 'mini_magick'
