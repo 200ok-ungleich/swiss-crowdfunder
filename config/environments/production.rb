@@ -16,7 +16,10 @@ Rails.application.configure do
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
-  config.require_master_key = true
+  # This is disabled, since Swiss Crowdfunder has not yet moved to
+  # Rails 5.2 credentials. For info on how to move there, see
+  # `bin/rails credentials:help`.
+  config.require_master_key = false
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
