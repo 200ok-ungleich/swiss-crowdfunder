@@ -11,7 +11,7 @@
           <iframe class="embed-responsive-item" height="315" src="<%= @campaign.youtube_url %>" width="560"></iframe>
         </div>
       <% else %>
-        <%= image_tag @campaign.image.campaign, class: "mb-5" %>
+        <%= image_tag @campaign.image.campaign.url, class: "mb-5" %>
       <% end %>
     </div>
     <div class="col-md-5 col-lg-4">
