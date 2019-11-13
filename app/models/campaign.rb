@@ -13,7 +13,7 @@ class Campaign < ApplicationRecord
              :order_success_html,
              :youtube_url
 
-  default_scope { where(active: true) }
+  default_scope { where(active: true).order(created_at: :desc) }
 
   has_many :goodies, dependent: :destroy
   has_many :supporters, through: :goodies
