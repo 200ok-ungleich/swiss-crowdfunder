@@ -1,0 +1,5 @@
+# For testing postgres locally
+postgres:
+  image: postgres:12.0
+  ports:
+    - 5432:5432
